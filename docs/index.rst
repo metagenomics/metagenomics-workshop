@@ -6,10 +6,8 @@
 Welcome to Metagenomics Workshop!
 =================================
 
-This is a one day metagenomics workshop. We will discuss quality checking, assembly, taxonomic classification, binning
-and annotation of metagenomic samples.
-
-Program:
+Welcome to the one-day metagenomics assembly. This tutorial will guide you through the
+typical steps of metagenome assembly and binning.
 
 * Getting started
     * :doc:`bibigrid`
@@ -18,7 +16,6 @@ Program:
     * :doc:`assembly/index`
     * :doc:`binning/index`
 
-Contents:
 
 .. toctree::
    :maxdepth: 2
