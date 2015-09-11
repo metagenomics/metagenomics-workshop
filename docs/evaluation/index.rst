@@ -22,8 +22,7 @@ Call `metaquast`::
   /mnt/mg-tutorial/genomes/Porphyromonas_gingivalis_W83_uid57641.fna,\
   /mnt/mg-tutorial/genomes/Wigglesworthia_glossinidia_endosymbiont_of_Glossina_morsitans__Yale_colony__uid88075.fna \
   -o quast \
-  -l GoldStandard,MegaHit,Ray_31,velvet_31 \
-  gold_std/gold_std.fas \
+  -l MegaHit,Ray_31,velvet_31 \
   megahit_out/final.contigs.fa \
   ray_31/Contigs.fasta \
   velvet_31/contigs.fa
