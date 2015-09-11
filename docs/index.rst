@@ -14,6 +14,7 @@ typical steps of metagenome assembly and binning.
     * :doc:`data`
 * Sessions
     * :doc:`assembly/index`
+    * :doc:`evaluation/index`
     * :doc:`binning/index`
 
 
