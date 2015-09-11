@@ -17,6 +17,6 @@ Call `metaquast`::
   /mnt/References/Staphylococcus_aureus_11819_97_uid159981.fna,\
   /mnt/References/Listeria_monocytogenes_J0161_uid54459.fna,\
   /mnt/References/Streptococcus_pneumoniae_Hungary19A_6_uid59117.fna \
-  -o $OUT
+  -o quast
 
 
