@@ -9,6 +9,8 @@ We will use the BiBiGrid framework to start an AWS instance. BiBiGrid is an auto
 
 First, download a special version of the BiBiGrid tool which you can use to start up an AWS instance which we pre-configured for this tutorial::
 
+  mkdir ~/mg-tutorial
+  cd ~/mg-tutorial
   wget http://somewhere/bibigrid_tutorial.tar.gz
 
 Unzip the tar-ball and change to the bibigrid directory::
