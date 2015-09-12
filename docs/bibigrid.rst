@@ -22,7 +22,7 @@ Now you can start an AWS Instance::
 
 Once the AWS instance is running, make sure you take note of its IP address. BiBiGrid will give you the necessary information you need to login to the instance (note that in your case the IP address will be different!)::
 
-  export BIBIGRID_MASTER=52.16.173.148
+  export BIBIGRID_MASTER=<AWS IP ADDRESS>
 
 You can then log on the master node with::
 
