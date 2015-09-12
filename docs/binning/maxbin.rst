@@ -12,7 +12,7 @@ Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to generate a
 abundance file from the mappes reads::
 
   ~/bbmap/pileup.sh in=megahit.sam  out=cov.txt
-  cut -f1,2  cov.txt > abundance.txt
+  awk '{print $1,$5}' cov.txt > abundance.txt
   
 Next, we can run MaxBin::
 
