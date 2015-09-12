@@ -9,9 +9,10 @@ Step 1: velveth
 outputs two files in an output directory (creating it if necessary), Sequences
 and Roadmaps, which are necessary for running ``velvetg`` in the next step.
 
-Let's create multiple hashtables using kmer-lengths of 31 and 51. We are going to redirect the output into a file `velveth.log`::
+Let's create multiple hashtables using kmer-lengths of 31 and 51. We are going to redirect the output into a file `velveth_31.log` and `velveth_51.log`::
 
-  velveth velvet 31,51,20 -shortPaired -fastq -separate read1.fq read2.fq >& velveth.log &
+  velveth velvet_31 31 -shortPaired -fastq -separate read1.fq read2.fq >& velveth_31.log &
+  velveth velvet_51 51 -shortPaired -fastq -separate read1.fq read2.fq >& velveth_51.log &
 
 This will create two output directories for the two different kmer-lengths: `velvet_31` and `velvet_51`.
 
