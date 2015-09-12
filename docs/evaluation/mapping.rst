@@ -12,11 +12,11 @@ BBMap: Short read aligner for DNA and RNA-seq data. Capable of handling arbitrar
   cd /vol/spool/tutorial-data/megahit_out
   ~/bbmap/bbmap.sh ref=final.contigs.fa
   
-Now that we have an index, we can map the reads. 
+Now that we have an index, we can map the reads::
 
   ~/bbmap/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh
   
-The output is in SAM format, usually you want to convert this into a sorted BAM file. ``bbamp`` creates a shell script which can be used to convert ``bbmap``'s output into BAM format::
+``bbmap`` produces output in `SAM format <http://samtools.github.io/hts-specs/SAMv1.pdf>`_ by default, usually you want to convert this into a sorted BAM file. ``bbmap`` creates a shell script which can be used to convert ``bbmap``'s output into BAM format::
 
   source sam2bam.sh
   
