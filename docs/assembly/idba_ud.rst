@@ -5,6 +5,7 @@ IDBA is the basic iterative de Bruijn graph assembler for second-generation sequ
 
 IDBA-UD can be run by the following command. Note that IDBA-UD requires paired-end reads stored in single FastA file and a pair of reads is in consecutive two lines. You can use `fq2fa` (part of the IDBA repository) to merge two FastQ read files to a single file. We have prepared such a FASTA formatted file called `reads.fas`. As our AWS instance has 16 cores, we use the option `--num_threads 16` to tell IDBA-UD it should use 16 parallel threads. The log output will be redirected to file `idba_ud.log`::
 
+  cd /vol/spool/tutorial-data
   idba_ud -r reads.fas --num_threads 16 -o idba_ud_out >& idba_ud.log &
 
 The contig sequences are located in the `idba_ud_out` directory in file `contig.fa`. Again, let's get some  basic statistics on the contigs::
