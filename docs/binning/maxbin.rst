@@ -1,8 +1,7 @@
 MaxBin Binning
 ===============
 
-MaxBin is a software for binning assembled metagenomic sequences based
-on an Expectation-Maximization algorithm. For users' convenience
+MaxBin is a software that is capable of clustering metagenomic contigs into different bins, each consists of contigs from one species. MaxBin uses the nucleotide composition information and contig abundance information to do achieve binning through an Expectation-Maximization algorithm. For users' convenience
 MaxBin will report genome-related statistics, including estimated
 completeness, GC content and genome size in the binning summary
 page. See the `MaxBin home page
@@ -12,10 +11,20 @@ Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to generate a
 abundance file from the mappes reads::
 
   ~/bbmap/pileup.sh in=megahit.sam  out=cov.txt
-  awk '{print $1,$5}' cov.txt | grep -v '^#' > abundance.txt
+  awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
   
 Next, we can run MaxBin::
 
   ~/MaxBin-2.1/run_MaxBin.pl -thread 16 -contig final.contigs.fa -out maxbin -abund abundance.txt
   
+Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
+===============     =================
+(out).0XX.fasta     the XX bin. XX are numbers, e.g. out.001.fasta
+(out).summary       a summary file describing which contigs are being classified into which bin.
+(out).log           a log file recording the core steps of MaxBin algorithm
+(out).marker        marker gene presence numbers for each bin. This table is ready to be plotted by R or other 3rd-party software.
+(out).marker.pdf    visualization of the marker gene presence numbers using R. Will only appear if -plotmarker is specified.
+(out).noclass       this file stores all sequences that pass the minimum length threshold but are not classified successfully.
+(out).tooshort      this file stored all sequences that do not meet the minimum length threshold.
+===============     =================
