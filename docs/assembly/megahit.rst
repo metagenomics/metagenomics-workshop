@@ -1,7 +1,12 @@
-MegaHit Assembly
-=======+========
+MEGAHIT Assembly
+================
 
-Megahit bla bla::
+MEGAHIT is a single node assembler for large and complex metagenomics NGS reads, such as soil. It makes use of succinct de Bruijn graph (SdBG) to achieve low memory assembly. MEGAHIT can optionally utilize a CUDA-enabled GPU to accelerate its SdBG contstruction. See the `MEGAHIT home page <https://github.com/voutcn/megahit/>`_ for more info.
 
-  /vol/cmg/bin/megahit -1 all1.fq -2 all2.fq -m  25000000000 -t 16 -o megahit_out
+MEGAHIT can be run by the following command. As our AWS instance has 16 cores, we use the option `-t 16` to tell MEGAHOT it should use 16 parallel threads::
 
+  megahit -1 read1.fq -2 read2.fq -t 16 -o megahit_out
+
+The contig sequences are located in the `megahit_out` directoriy in file `final.contigs.fa`. Again, let's get some  basic statistics on the contigs::
+
+  getN50.pl -s 500 -f megahit_out/final.contigs.fa
