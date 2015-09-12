@@ -14,11 +14,13 @@ Unzip the tar-ball and change to the data directory::
 
 The `tutorial-data` directory includes the following files:
 
-====      =======
-File      Content
-====      =======
-read1.fq  Read 1 of read pair (FASTQ format)
-read2.fq  Read 2 of read pair (FASTQ format)
-reads.fas Shuffled read (FASTA format)
-=====     ======
++---------------+---------------------------------+
+| File          | Content                         |
++===============+=================================+
+| read1.fq      | Read 1 of paired reads (FASTQ)  |
++---------------+---------------------------------+
+| read2.fq      | Read 2 of paired reads (FASTQ)  |
++---------------+---------------------------------+
+| reads.fas     | Shuffled FASTA file             |
++---------------+---------------------------------+
 
