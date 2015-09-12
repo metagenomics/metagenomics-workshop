@@ -19,12 +19,21 @@ Next, we can run MaxBin::
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
-===============     =================
-(out).0XX.fasta     the XX bin. XX are numbers, e.g. out.001.fasta
-(out).summary       a summary file describing which contigs are being classified into which bin.
-(out).log           a log file recording the core steps of MaxBin algorithm
-(out).marker        marker gene presence numbers for each bin. This table is ready to be plotted by R or other 3rd-party software.
-(out).marker.pdf    visualization of the marker gene presence numbers using R. Will only appear if -plotmarker is specified.
-(out).noclass       this file stores all sequences that pass the minimum length threshold but are not classified successfully.
-(out).tooshort      this file stored all sequences that do not meet the minimum length threshold.
-===============     =================
++==================+=============================================================+
+| (out).0XX.fasta  | the XX bin. XX are numbers, e.g. out.001.fasta              |
++------------------+-------------------------------------------------------------+
+| (out).summary    | summary file describing which contigs are being             |
+|                  | classified into which bin.                                  |
++------------------+-------------------------------------------------------------+
+| (out).log        | log file recording the core steps of MaxBin algorithm       |
++------------------+-------------------------------------------------------------+
+| (out).marker     | marker gene presence numbers for each bin. This table       |
+|                  | is ready to be plotted by R or other 3rd-party software.    |
++------------------+-------------------------------------------------------------+
+| (out).marker.pdf | visualization of the marker gene presence numbers using R   |
++------------------+-------------------------------------------------------------+
+| (out).noclass    | all sequences that pass the minimum length threshold but    |
+|                  | are not classified successfully.                            |
++------------------+-------------------------------------------------------------+
+| (out).tooshort   | all sequences that do not meet the minimum length threshold.|
++==================+=============================================================+
