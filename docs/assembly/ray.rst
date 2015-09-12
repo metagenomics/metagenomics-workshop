@@ -8,8 +8,8 @@ Ray can be run by the following command using a kmer-length of 31. As our AWS in
 
   mpiexec -n 16 Ray -k 31 -p read1.fq read2.fq -o ray_31 >& ray_31.log &
 
-This will create the output directory `ray_31` and the final contigs are located in `ray_31/Contigs.fasta` 
-Again, let's get some  basic statistics on the contigs::
+This will create the output directory `ray_31` and the final contigs are located in `ray_31/Contigs.fasta`.
+Again, let's get some basic statistics on the contigs::
 
   getN50.pl -s 500 -f ray_31/Contigs.fasta
 
