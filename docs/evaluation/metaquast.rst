@@ -39,14 +39,14 @@ not available, of course::
   velvet_51/contigs.fa \
   idba_ud_out/contig.fa
 
-QUAST generated a HTML reports including a number of interactive graphics. To access there reports, copy the
+QUAST generates HTML reports including a number of interactive graphics. To access these reports, copy the
 quast directory to your `public_html` folder::
 
   cp -r quast ~/public_html
 
-After that, the reports are available at
+After that, you can load the reports in your web browser::
 
-  http://YOUR_AWS_IP/~ubuntu/quast/summary
-  http://YOUR_AWS_IP/~ubuntu/quast/summary
+  http://YOUR_AWS_IP/~ubuntu/quast/summary/report.html
+  http://YOUR_AWS_IP/~ubuntu/quast/combined_quast_output/report.html
 
 
