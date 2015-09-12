@@ -13,4 +13,4 @@ Again, let's get some  basic statistics on the contigs::
 
   getN50.pl -s 500 -f ray_31/Contigs.fas
 
-
+.. include:: note_top.rst

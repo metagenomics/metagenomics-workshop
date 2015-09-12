@@ -10,3 +10,5 @@ IDBA-UD can be run by the following command. Note that IDBA-UD requires paired-e
 The contig sequences are located in the `idba_ud_out` directory in file `contig.fa`. Again, let's get some  basic statistics on the contigs::
 
   getN50.pl -s 500 -f idba_ud_out/contig.fa
+
+.. include:: note_top.rst

@@ -10,3 +10,5 @@ MEGAHIT can be run by the following command. As our AWS instance has 16 cores, w
 The contig sequences are located in the `megahit_out` directory in file `final.contigs.fa`. Again, let's get some  basic statistics on the contigs::
 
   getN50.pl -s 500 -f megahit_out/final.contigs.fa
+
+.. include:: note_top.rst
