@@ -30,9 +30,9 @@ To look at the BAM file use::
   
 We will use a genome browser to look at the mappings. For this, you have to (1) open a terminal window on **your local workstation**, (2) download the BAM file and (3) download and start `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_::
 
-  cd ~/bibigrid
-  scp -i MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/final.contigs.fa* .
-  scp -i MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.bam* .
+  cd ~/mg-tutorial
+  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/final.contigs.fa* .
+  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.bam* .
   wget http://data.broadinstitute.org/igv/projects/downloads/IGV_2.3.59.zip
   unzip IGV_2.3.59.zip
   IGV_2.3.59/igv.sh
