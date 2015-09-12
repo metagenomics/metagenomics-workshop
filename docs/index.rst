@@ -19,6 +19,9 @@ typical steps of metagenome assembly and binning.
 
 
 .. toctree::
-   :maxdepth: 3
-
+   :maxdepth: 2
+   
+   bibigrid
+   data
+   assembly/index
 
