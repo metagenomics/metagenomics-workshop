@@ -36,4 +36,4 @@ Assume your output file prefix is (out). MaxBin will generate information using 
 |                  | are not classified successfully.                            |
 +------------------+-------------------------------------------------------------+
 | (out).tooshort   | all sequences that do not meet the minimum length threshold.|
-+==================+=============================================================+
++------------------+-------------------------------------------------------------+
