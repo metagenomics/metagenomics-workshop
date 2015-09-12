@@ -8,5 +8,6 @@ We are going to use different assemblers and compare the results.
 
    velvet
    megahit
+   idba_ud
    ray
 
