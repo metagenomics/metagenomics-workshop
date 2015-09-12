@@ -9,15 +9,6 @@ Welcome to Metagenomics Workshop!
 Welcome to the one-day metagenomics assembly workshop. This tutorial will guide you through the
 typical steps of metagenome assembly and binning.
 
-* Getting started
-    * :doc:`bibigrid`
-    * :doc:`data`
-* Sessions
-    * :doc:`assembly/index`
-    * :doc:`evaluation/index`
-    * :doc:`binning/index`
-
-
 .. toctree::
    :maxdepth: 2
    
