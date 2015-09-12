@@ -16,21 +16,21 @@ the assembly. In real-world metagenomics, these references are usually
 not available, of course::
 
   python ~/quast-3.1/metaquast.py --threads 16 --gene-finding --meta \
-  -R /vol/spool/tutorial-data/genomes/Aquifex_aeolicus_VF5_uid57765.fna,\
-  /vol/spool/tutorial-data/genomes/Bdellovibrio_bacteriovorus_HD100_uid61595.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydia_psittaci_MN_uid175573.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_CWL029_uid57811.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_J138_uid57829.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_LPCoLN_uid159529.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_TW_183_uid57997.fna,\
-  /vol/spool/tutorial-data/genomes/Chlamydophila_psittaci_C19_98_uid159523.fna,\
-  /vol/spool/tutorial-data/genomes/Finegoldia_magna_ATCC_29328_uid58867.fna,\
-  /vol/spool/tutorial-data/genomes/Fusobacterium_nucleatum_ATCC_25586_uid57885.fna,\
-  /vol/spool/tutorial-data/genomes/Helicobacter_pylori_26695_uid57787.fna,\
-  /vol/spool/tutorial-data/genomes/Lawsonia_intracellularis_PHE_MN1_00_uid61575.fna,\
-  /vol/spool/tutorial-data/genomes/Mycobacterium_leprae_TN_uid57697.fna,\
-  /vol/spool/tutorial-data/genomes/Porphyromonas_gingivalis_W83_uid57641.fna,\
-  /vol/spool/tutorial-data/genomes/Wigglesworthia_glossinidia_endosymbiont_of_Glossina_morsitans__Yale_colony__uid88075.fna \
+  -R /vol/spool/tutorial-data/genomes/Aquifex_aeolicus_VF5.fna,\
+  /vol/spool/tutorial-data/genomes/Bdellovibrio_bacteriovorus_HD100.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydia_psittaci_MN.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_CWL029.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_J138.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_LPCoLN.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydophila_pneumoniae_TW_183.fna,\
+  /vol/spool/tutorial-data/genomes/Chlamydophila_psittaci_C19_98.fna,\
+  /vol/spool/tutorial-data/genomes/Finegoldia_magna_ATCC_29328.fna,\
+  /vol/spool/tutorial-data/genomes/Fusobacterium_nucleatum_ATCC_25586.fna,\
+  /vol/spool/tutorial-data/genomes/Helicobacter_pylori_26695.fna,\
+  /vol/spool/tutorial-data/genomes/Lawsonia_intracellularis_PHE_MN1_00.fna,\
+  /vol/spool/tutorial-data/genomes/Mycobacterium_leprae_TN.fna,\
+  /vol/spool/tutorial-data/genomes/Porphyromonas_gingivalis_W83.fna,\
+  /vol/spool/tutorial-data/genomes/Wigglesworthia_glossinidia.fna \
   -o quast \
   -l MegaHit,Ray_31,velvet_31,velvet_51,idba_ud \
   megahit_out/final.contigs.fa \
