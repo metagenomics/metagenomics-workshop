@@ -15,4 +15,4 @@ typical steps of metagenome assembly and binning.
    bibigrid
    data
    assembly/index
-
+   evaluation/index
