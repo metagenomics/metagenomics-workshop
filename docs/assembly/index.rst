@@ -7,5 +7,6 @@ We are going to use different assemblers and compare the results.
    :maxdepth: 1
 
    velvet
-   
+   megahit
+   ray
 
