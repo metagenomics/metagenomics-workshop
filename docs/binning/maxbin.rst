@@ -19,9 +19,9 @@ Next, we can run MaxBin::
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
-+==================+=============================================================+
-| (out).0XX.fasta  | the XX bin. XX are numbers, e.g. out.001.fasta              |
 +------------------+-------------------------------------------------------------+
+| (out).0XX.fasta  | the XX bin. XX are numbers, e.g. out.001.fasta              |
++==================+=============================================================+
 | (out).summary    | summary file describing which contigs are being             |
 |                  | classified into which bin.                                  |
 +------------------+-------------------------------------------------------------+
