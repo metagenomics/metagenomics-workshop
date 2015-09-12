@@ -12,15 +12,19 @@ Unzip the tar-ball and change to the data directory::
   tar xf tutorial-data.tar
   cd tutorial-data
 
-The `tutorial-data` directory includes the following files:
+The `tutorial-data` directory has the following content:
 
-+---------------+---------------------------------+
-| File          | Content                         |
-+===============+=================================+
-| read1.fq      | Read 1 of paired reads (FASTQ)  |
-+---------------+---------------------------------+
-| read2.fq      | Read 2 of paired reads (FASTQ)  |
-+---------------+---------------------------------+
-| reads.fas     | Shuffled FASTA file             |
-+---------------+---------------------------------+
++---------------+--------------------------------------------+
+| File          | Content                                    |
++===============+============================================+
+| genomes/      | Directory containing the reference genomes |
++---------------+--------------------------------------------+
+| gold_std/     | Gold Standard assemblies                   |
++---------------+--------------------------------------------+
+| read1.fq      | Read 1 of paired reads (FASTQ)             |
++---------------+--------------------------------------------+
+| read2.fq      | Read 2 of paired reads (FASTQ)             |
++---------------+--------------------------------------------+
+| reads.fas     | Shuffled reads (FASTA)                     |
++---------------+--------------------------------------------+
 
