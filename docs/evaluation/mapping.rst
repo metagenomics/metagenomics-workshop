@@ -19,5 +19,22 @@ Now that we have an index, we can map the reads::
 ``bbmap`` produces output in `SAM format <http://samtools.github.io/hts-specs/SAMv1.pdf>`_ by default, usually you want to convert this into a sorted BAM file. ``bbmap`` creates a shell script which can be used to convert ``bbmap``'s output into BAM format::
 
   source sam2bam.sh
+
+SAM and BAM files can be viewed and manipulated with `SAMtools <http://samtools.sourceforge.net/>`_. Let's first build an index for the FASTA file::
+
+  samtools faidx final.contigs.fa
+
+To look at the BAM file use::
+
+  samtools view megahit_sorted.bam | less
   
+We will use a genome browser to look at the mappings. For this, you have to (1) open a terminal window on **your local workstation**, (2) download the BAM file and (3) download and start `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_::
+
+  scp -i MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/final.contigs.fa* .
+  scp -i MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.bam* .
+  wget http://data.broadinstitute.org/igv/projects/downloads/IGV_2.3.59.zip
+  unzip IGV_2.3.59.zip
+  IGV_2.3.59/igv.sh
+  
+Now load the contigs sequences into IGV. Use the menu ``Genomes->Load Genome from File...`` After that you can load the BAM file into IGV. Use menu ``File->Load from File...``
 
