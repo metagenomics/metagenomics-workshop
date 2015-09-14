@@ -20,9 +20,14 @@ Unzip the tar-ball and change to the bibigrid directory::
 
 Now you can start an AWS Instance::
 
-  ./bibigrid.sh 
+  ./bibigrid -c -o bibigrid.properties -u USERNAME
 
-Once the AWS instance is running, make sure you take note of its IP address. BiBiGrid will give you the necessary information you need to login to the instance (note that in your case the IP address will be different!)::
+Once the AWS instance is running, make sure you **take note of its IP
+address**. We will need it later!
+
+BiBiGrid will give you the necessary information you need to
+login to the instance (note that in your case the IP address will be
+different!)::
 
   export BIBIGRID_MASTER=<AWS IP ADDRESS>
 
