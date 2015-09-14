@@ -38,5 +38,10 @@ We will use a genome browser to look at the mappings. For this, you have to (1) 
   unzip IGV_2.3.59.zip
   IGV_2.3.59/igv.sh
   
-Now load the contig sequences into IGV. Use the menu ``Genomes->Load Genome from File...`` After that you can load the BAM file into IGV. Use menu ``File->Load from File...`` You can also add the predictes genes as another track. Use menu ``File->Load from File...`` to load the GFF file.
+Now let's look at the mapped reads:
+
+1. Load the contig sequences into IGV. Use the menu ``Genomes->Load Genome from File...`` 
+2. Load the BAM file into IGV. Use menu ``File->Load from File...`` 
+3. Load the predicted genes as another track. Use menu ``File->Load from File...`` to load the GFF file.
+
 
