@@ -11,7 +11,7 @@ First, download a special version of the BiBiGrid tool which you can use to star
 
   mkdir ~/mg-tutorial
   cd ~/mg-tutorial
-  wget http://somewhere/bibigrid_tutorial.tar.gz
+  wget https://s3-eu-west-1.amazonaws.com/mg-tutorial-adm/bibigrid_tutorial.tar.gz
 
 Unzip the tar-ball and change to the bibigrid directory::
 
