@@ -33,9 +33,10 @@ We will use a genome browser to look at the mappings. For this, you have to (1) 
   cd ~/mg-tutorial
   scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/final.contigs.fa* .
   scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.bam* .
+  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.gff .
   wget http://data.broadinstitute.org/igv/projects/downloads/IGV_2.3.59.zip
   unzip IGV_2.3.59.zip
   IGV_2.3.59/igv.sh
   
-Now load the contig sequences into IGV. Use the menu ``Genomes->Load Genome from File...`` After that you can load the BAM file into IGV. Use menu ``File->Load from File...``
+Now load the contig sequences into IGV. Use the menu ``Genomes->Load Genome from File...`` After that you can load the BAM file into IGV. Use menu ``File->Load from File...`` You can also add the predictes genes as another track. Use menu ``File->Load from File...`` to load the GFF file.
 
