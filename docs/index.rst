@@ -14,6 +14,7 @@ typical steps of metagenome assembly and binning.
    
    bibigrid
    data
+   qc/index
    assembly/index
    evaluation/index
    binning/index
