@@ -10,6 +10,7 @@ page. See the `MaxBin home page
 Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to generate an
 abundance file from the mappes reads::
 
+  /vol/spool/tutorial-data/megahit_out
   ~/bbmap/pileup.sh in=megahit.sam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
   
