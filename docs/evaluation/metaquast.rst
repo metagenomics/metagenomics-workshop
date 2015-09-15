@@ -15,6 +15,7 @@ are used to calculate a number of different metrics for evaluation of
 the assembly. In real-world metagenomics, these references are usually
 not available, of course::
 
+  cd /vol/spool/tutorial-data
   python ~/quast-3.1/metaquast.py --threads 16 --gene-finding --meta \
   -R /vol/spool/tutorial-data/genomes/Aquifex_aeolicus_VF5.fna,\
   /vol/spool/tutorial-data/genomes/Bdellovibrio_bacteriovorus_HD100.fna,\
