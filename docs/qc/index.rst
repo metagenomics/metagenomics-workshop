@@ -21,12 +21,9 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 To run ``FastQC`` on our data, simply type::
 
   cd ~/workdir/assembly
-  fastqc read1.fq read2.fq
+  fastqc
 
-After ``FastQC`` finished running, you can access the report at::
-
-    firefox ~/workdir/assembly/read1.fq_fastqc/fastqc_report.html
-    firefox ~/workdir/assembly/read2.fq_fastqc/fastqc_report.html
+Start the analysis by loading the FASTQ files using menu "File -> Open..." 
 
 Check out the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_ for examples
 of reports including bad data.
