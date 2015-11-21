@@ -1,18 +1,8 @@
-Download the Tutorial Data Set
+The Tutorial Data Set
 ================================
 
-We have prepared a small toy data set for this tutorial. You can download
-the data set using the following commands::
-
-  cd /vol/spool
-  java -jar ~/bibis3-1.6.0.jar -d --region eu-west-1 s3://mg-tutorial/tutorial-data.tar .
-
-Unzip the tar-ball and change to the data directory::
-
-  tar xf tutorial-data.tar
-  cd tutorial-data
-
-The `tutorial-data` directory has the following content:
+We have prepared a small toy data set for this tutorial. The data is located 
+in `/vol/metagencourse/DATA/WGS-data` directory, which has the following content:
 
 +---------------+--------------------------------------------+
 | File          | Content                                    |
@@ -27,4 +17,13 @@ The `tutorial-data` directory has the following content:
 +---------------+--------------------------------------------+
 | reads.fas     | Shuffled reads (FASTA)                     |
 +---------------+--------------------------------------------+
+
+Create a working directory in your home directory and symbolic links
+to the data files::
+
+cd ~/workdir
+mkdir assembly
+cd assembly
+ln -s /vol/metagencourse/DATA/WGS-data/* .
+
 
