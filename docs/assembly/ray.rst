@@ -9,7 +9,7 @@ Ray can be run by the following command using a kmer-length of 31. As our comput
   cd ~/workdir/assembly/
 
   qsub -cwd -pe multislot 48 -N ray -l mtc=1 -b y \
-  /vol/cmg/bin/mpiexec -n 48 Ray -k 31 -p read1.fq read2.fq -o ray_31
+  /usr/lib64/openmpi/bin/mpiexec -n 48 /vol/cmg/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
 
 This will create the output directory `ray_31` and the final contigs are located in `ray_31/Contigs.fasta`.
 Again, let's get some basic statistics on the contigs::
