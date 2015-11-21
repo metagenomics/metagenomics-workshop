@@ -16,10 +16,10 @@ command ``qstat``::
 
   cd ~/workdir/assembly/
   
-  qsub -cwd -pe multislot 24 -N velveth_31  -l mtc=1 -b y \ 
+  qsub -cwd -pe multislot 24 -N velveth_31 -l mtc=1 -b y \ 
   /vol/cmg/bin/velveth velvet_31 31 -shortPaired -fastq -separate read1.fq read2.fq
   
-  qsub -cwd -pe multislot 24 -N velveth_51  -l mtc=1 -b y \ 
+  qsub -cwd -pe multislot 24 -N velveth_51 -l mtc=1 -b y \ 
   /vol/cmg/bin/velveth velvet_51 51 -shortPaired -fastq -separate read1.fq read2.fq
 
 Note: You can check the status of your job using the command ``qstat``::
@@ -37,10 +37,10 @@ Step 2: velvetg
 ---------------
 Now we have to start the actual assembly using ``velvetg``. ``velvetg`` is the core of Velvet where the de Bruijn graph is built then manipulated. Let's run assemblies for both kmer-lengths. See the `Velvet manual <https://www.ebi.ac.uk/~zerbino/velvet/Manual.pdf>`_ for more info about parameter settings. Again, we submit the job to the compute cluster::
 
-  qsub -cwd -pe multislot 24 -N velvetg_31  -l mtc=1 -b y \ 
+  qsub -cwd -pe multislot 24 -N velvetg_31 -l mtc=1 -b y \ 
   /vol/cmg/bin/velvetg velvet_31 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto
   
-  qsub -cwd -pe multislot 24 -N velvetg_51  -l mtc=1 -b y \ 
+  qsub -cwd -pe multislot 24 -N velvetg_51 -l mtc=1 -b y \ 
   /vol/cmg/bin/velvetg velvet_51 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto 
 
 The contig sequences are located in the `velvet_31` and `velvet_51` directories in file `contigs.fa`. Let's get some very basic statistics on the contigs. The script ``getN50.pl`` reads the contig file and computes the total length of the assembly, number of contigs, N50 and largest contig size. In our example we will exclude contigs shorter than 500bp (option `-s 500`)::
