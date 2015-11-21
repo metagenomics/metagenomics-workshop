@@ -9,16 +9,19 @@ BBMap: Short read aligner for DNA and RNA-seq data. Capable of handling arbitrar
 
 ``bbmap`` needs to build an index for the contigs sequences before it can map the reads onto them. Here is an example command line for mapping the reads back to the MEGAHIT assembly::
 
-  cd /vol/spool/tutorial-data/megahit_out
-  ~/bbmap/bbmap.sh ref=final.contigs.fa
+  cd ~/workdir/assembly/megahit_out
+
+  qsub -cwd -N bbmap_index -l mtc=1 -b y \
+  /vol/cmg/bin/bbmap.sh ref=final.contigs.fa
   
 Now that we have an index, we can map the reads::
 
-  ~/bbmap/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh
+  qsub -cwd -pe multislot 24 -N bbmap -l mtc=1 -b y \
+  /vol/cmg/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh threads=24
   
 ``bbmap`` produces output in `SAM format <http://samtools.github.io/hts-specs/SAMv1.pdf>`_ by default, usually you want to convert this into a sorted BAM file. ``bbmap`` creates a shell script which can be used to convert ``bbmap``'s output into BAM format::
 
-  source sam2bam.sh
+  qsub -cwd -pe multislot 4 -N bbmap_sam2bam -l mtc=1 sam2bam.sh
 
 SAM and BAM files can be viewed and manipulated with `SAMtools <http://samtools.sourceforge.net/>`_. Let's first build an index for the FASTA file::
 
@@ -28,15 +31,11 @@ To look at the BAM file use::
 
   samtools view megahit_sorted.bam | less
   
-We will use a genome browser to look at the mappings. For this, you have to (1) open a terminal window on **your local workstation**, (2) download the BAM file and (3) download and start `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_::
+We will use `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_
+to look at the mappings: ::
 
-  cd ~/mg-tutorial
-  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/final.contigs.fa* .
-  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.bam* .
-  scp -i bibigrid/MGAssemblyTutorial.pem ubuntu@52.16.173.148:/vol/spool/tutorial-data/megahit_out/*.gff .
-  wget http://data.broadinstitute.org/igv/projects/downloads/IGV_2.3.59.zip
-  unzip IGV_2.3.59.zip
-  IGV_2.3.59/igv.sh
+  cd ~/workdir/assembly/megahit_out
+  igv.sh
   
 Now let's look at the mapped reads:
 
