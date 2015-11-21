@@ -1,7 +1,15 @@
-.. note:: Most jobs above will be started in the backgroud using the ``&`` at the end of each command, which allows you to continue working in the shell. 
+.. note:: Most jobs above will be started on the compute cluster using the ``qsub``.
 
-  You can watch your running jobs by typing ``top`` (hit ``q`` to exit ``top``). 
-
-  You can look into the log-files by typing e.g. ``less LOGFILE`` (hit ``q`` to quit) or ``tail -f LOGFILE`` (hit ``^C`` to quit).
+  * ``qstat``:  check the status and JOBNUMBER of your jobs
+  * ``qdel JOBNUMBER``: delete job with job number JOBNUMBER
+  
+We usually submit the jobs to the cluster giving them a job name by using ``-N JOBNAME``.
+This will create log-files named 
+  
+  * ``JOBNAME.oJOBNUMBER``: standard output messages of the tool
+  * ``JOBNAME.eJOBNUMBER``: standard error messages of the tool
+  
+You can look into these files by typing e.g. ``less JOBNAME.oJOBNUMBER`` (hit ``q`` to quit) 
+or ``tail -f JOBNAME.oJOBNUMBER`` (hit ``^C`` to quit).
 
 
