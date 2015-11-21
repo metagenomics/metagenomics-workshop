@@ -20,17 +20,13 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 
 To run ``FastQC`` on our data, simply type::
 
-  cd /vol/spool/tutorial-data
+  cd ~/workdir/assembly
   fastqc read1.fq read2.fq
 
-After ``FastQC`` finished running, copy the results to your ``public_html`` directory::
+After ``FastQC`` finished running, you can access the report at::
 
-  cp -r read?.fq_fastqc ~/public_html/
-
-Now you can access the report at::
-
-    http://<YOUR_AWS_IP_ADDRESS>/~ubuntu/read1.fq_fastqc/fastqc_report.html
-    http://<YOUR_AWS_IP_ADDRESS>/~ubuntu/read2.fq_fastqc/fastqc_report.html
+    firefox ~/workdir/assembly/read1.fq_fastqc/fastqc_report.html
+    firefox ~/workdir/assembly/read2.fq_fastqc/fastqc_report.html
 
 Check out the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_ for examples
 of reports including bad data.
