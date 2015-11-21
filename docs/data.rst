@@ -21,9 +21,9 @@ in `/vol/metagencourse/DATA/WGS-data` directory, which has the following content
 Create a working directory in your home directory and symbolic links
 to the data files::
 
-cd ~/workdir
-mkdir assembly
-cd assembly
-ln -s /vol/metagencourse/DATA/WGS-data/* .
+  cd ~/workdir
+  mkdir assembly
+  cd assembly
+  ln -s /vol/metagencourse/DATA/WGS-data/* .
 
 
