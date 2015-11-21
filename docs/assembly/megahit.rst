@@ -8,7 +8,7 @@ MEGAHIT can be run by the following command. As our compute instance have multip
   cd ~/workdir/assembly/
 
   qsub -cwd -pe multislot 24 -N megahit -l mtc=1 -b y \
-  megahit -1 read1.fq -2 read2.fq -t 24 -o megahit_out
+  /vol/cmg/bin/megahit -1 read1.fq -2 read2.fq -t 24 -o megahit_out
 
 The contig sequences are located in the `megahit_out` directory in file `final.contigs.fa`. Again, let's get some  basic statistics on the contigs::
 
