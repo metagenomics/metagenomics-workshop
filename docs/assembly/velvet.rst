@@ -27,12 +27,11 @@ Note: You can check the status of your job using the command ``qstat``::
   >>>statler:~/workdir/assembly>qstat
   job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
   -----------------------------------------------------------------------------------------------------------------
-  3888957 0.65003 QRLOGIN    asczyrba     r     11/21/2015 06:40:50 interactive@statler.CeBiTec.Un     1        
   3888958 0.65000 velveth_31 asczyrba     r     11/21/2015 07:18:29 all.q@suc01016.CeBiTec.Uni-Bie    24        
   3888959 0.45213 velveth_51 asczyrba     r     11/21/2015 07:18:45 all.q@suc01003.CeBiTec.Uni-Bie    24        
 
-
-This will create two output directories for the two different kmer-lengths: `velvet_31` and `velvet_51`.
+If you do not see your jobs using ``qstat`` anymore, they are finished.
+You should have two output directories for the two different kmer-lengths: `velvet_31` and `velvet_51`.
 
 Step 2: velvetg
 ---------------
