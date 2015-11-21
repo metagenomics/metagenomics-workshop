@@ -16,7 +16,7 @@ IDBA-UD can be run by the following command. As our compute instances have multi
   cd ~/workdir/assembly/
 
   qsub -cwd -pe multislot 24 -N idba_ud -l mtc=1 -b y \
-  /vol/cmg/bin/idba_ud -r reads.fas --num_threads 24 -o idba_ud_out
+  /vol/cmg/bin/idba_ud -r reads12.fas --num_threads 24 -o idba_ud_out
 
 The contig sequences are located in the `idba_ud_out` directory in file `contig.fa`. Again, let's get some  basic statistics on the contigs::
 
