@@ -11,7 +11,8 @@ and Roadmaps, which are necessary for running ``velvetg`` in the next step.
 
 Let's create multiple hashtables using kmer-lengths of 31 and 51. We are going to 
 submit the jobs to the compute cluster using ``qsub``,asking for a machine with
-24 cores (``-pe multislot 24``)::
+24 cores (``-pe multislot 24``). You can check the status of your job using the
+command ``qstat``::
 
   cd ~/workdir/assembly/
   
@@ -20,6 +21,16 @@ submit the jobs to the compute cluster using ``qsub``,asking for a machine with
   
   qsub -cwd -pe multislot 24 -N velveth_51 -b y \ 
   /vol/cmg/bin/velveth velvet_51 51 -shortPaired -fastq -separate read1.fq read2.fq
+
+Note: You can check the status of your job using the command ``qstat``::
+
+  >>>statler:~/workdir/assembly>qstat
+  job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+  -----------------------------------------------------------------------------------------------------------------
+  3888957 0.65003 QRLOGIN    asczyrba     r     11/21/2015 06:40:50 interactive@statler.CeBiTec.Un     1        
+  3888958 0.65000 velveth_31 asczyrba     r     11/21/2015 07:18:29 all.q@suc01016.CeBiTec.Uni-Bie    24        
+  3888959 0.45213 velveth_51 asczyrba     r     11/21/2015 07:18:45 all.q@suc01003.CeBiTec.Uni-Bie    24        
+
 
 This will create two output directories for the two different kmer-lengths: `velvet_31` and `velvet_51`.
 
