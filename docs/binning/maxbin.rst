@@ -17,7 +17,7 @@ abundance file from the mappes reads::
 Next, we can run MaxBin::
 
   qsub -cwd -pe multislot 24 -N maxbin -l mtc=1 -b y \
-  /vol/cmg/lib/MaxBin-2.1.1/run_MaxBin.pl -thread 16 -contig final.contigs.fa -out maxbin -abund abundance.txt
+  /vol/cmg/lib/MaxBin-2.1.1/run_MaxBin.pl -thread 24 -contig final.contigs.fa -out maxbin -abund abundance.txt
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
