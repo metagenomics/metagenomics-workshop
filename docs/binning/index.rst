@@ -11,4 +11,4 @@ the samples community.
    :maxdepth: 1
 
    maxbin
-
+   metabat
