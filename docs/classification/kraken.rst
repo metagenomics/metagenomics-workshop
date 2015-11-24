@@ -23,7 +23,7 @@ Kraken database::
 
   cd ~/workdir/assembly/megahit_out
 
-  qsub -cwd -pe multislot 24 -N maxbin -l mtc=1 -b y \
+  qsub -cwd -pe multislot 24 -N kraken -l mtc=1 -b y \
   /vol/cmg/bin/kraken --db /vol/metagencourse/krakendb --threads 24 --fasta-input maxbin.001.fasta --output maxbin.001.kraken
 
   
