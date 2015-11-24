@@ -18,4 +18,4 @@ typical steps of metagenome assembly and binning.
    geneprediction/index
    evaluation/index
    binning/index
-   
+   classification/index
