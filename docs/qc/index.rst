@@ -21,14 +21,20 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 To run ``FastQC`` on our data, simply type::
 
   cd ~/workdir/assembly
-  fastqc
+  fastqc read1.fq read2.fq
 
-Start the analysis by loading the FASTQ files using menu "File -> Open..." 
+After ``FastQC`` finished running, copy the results to your ``public_html`` directory::
+
+  cp -r read?_fastqc* ~/public_html/
+
+Now you can access the report at::
+
+    http://<YOUR_OPENSTACK_INSTANCE_IP_ADDRESS>/~ubuntu/read1_fastqc.html
+    http://<YOUR_OPENSTACK_INSTANCE_IP_ADDRESS>/~ubuntu/read2_fastqc.html
 
 Check out the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_ for examples
 of reports including bad data.
 
 .. toctree::
    :maxdepth: 1
-
 
