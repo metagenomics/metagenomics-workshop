@@ -17,18 +17,20 @@ First, download a special version of the BiBiGrid tool which you can
 use to start up an OpenStack instance which we pre-configured for this
 tutorial::
 
-  mkdir ~/mg-tutorial
+  mkdir -p ~/mg-tutorial
   cd ~/mg-tutorial
-  wget https://s3-eu-west-1.amazonaws.com/mg-tutorial-adm/bibigrid_tutorial.tar.gz
+  cp -r /vol/metagencourse/bibigrid/ .
 
-Unzip the tar-ball and change to the bibigrid directory::
+Change to the bibigrid directory::
 
-  tar xvzf bibigrid_tutorial.tar.gz
-  cd bibigrid
+  cd ~/mg-tutorial/bibigrid
 
-Edit the bibigrid.properties file and add (1) user name (2) password,
-and (3) the path to your public SSH key for the OpenStack account
-which was provided to you earlier in the course.
+Edit the bibigrid.properties file and 
+
+1. add user name
+2. add password
+3. add path to your public SSH key for the OpenStack account
+4. chmod go-rwx bibigrid.properties
 
 Now you can start an OpenStack Instance::
 
