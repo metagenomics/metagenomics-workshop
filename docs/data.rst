@@ -1,8 +1,13 @@
 The Tutorial Data Set
 ================================
 
-We have prepared a small toy data set for this tutorial. The data is located 
-in `/vol/metagencourse/DATA/WGS-data` directory, which has the following content:
+From here on, make sure you are actually working on the OpenStack
+cloud instance (logged in via ssh) and not on your local workstation
+(see previous chapter).
+
+We have prepared a small toy data set for this tutorial. The data is
+already located on the OpenStack instance in the
+`~/WGS-data` directory, which has the following content:
 
 +---------------+--------------------------------------------+
 | File          | Content                                    |
@@ -21,9 +26,7 @@ in `/vol/metagencourse/DATA/WGS-data` directory, which has the following content
 Create a working directory in your home directory and symbolic links
 to the data files::
 
-  cd ~/workdir
-  mkdir assembly
-  cd assembly
-  ln -s /vol/metagencourse/DATA/WGS-data/* .
-
+  mkdir -p ~/workdir/assembly
+  cd ~/workdir/assembly
+  ln -s ~/WGS-data/* .
 
