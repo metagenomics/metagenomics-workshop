@@ -53,7 +53,7 @@ have to
 2. download the BAM file 
 3. start `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_
 
-Here are the commans to copy the files and open the IGV::
+Here are the commands to copy the files and open the IGV::
 
   cd ~/mg-tutorial
   scp -i PATH_TO_YOUR_SECRET_SSH_KEY_FILE ubuntu@$BIBIGRID_MASTER:workdir/assembly/megahit_out/final.contigs.fa* .
