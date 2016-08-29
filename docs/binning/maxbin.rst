@@ -14,7 +14,7 @@ for more info.
 Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to
 generate an abundance file from the mappes reads::
 
-  cd ~/workdir/assembly/megahit_out
+  cd /vol/spool/workdir/assembly/megahit_out
   mkdir maxbin
   cd maxbin
 

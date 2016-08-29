@@ -26,7 +26,7 @@ already located on the OpenStack instance in the
 Create a working directory in your home directory and symbolic links
 to the data files::
 
-  mkdir -p ~/workdir/assembly
-  cd ~/workdir/assembly
+  mkdir -p /vol/spool/workdir/assembly
+  cd /vol/spool/workdir/assembly
   ln -s ~/WGS-data/* .
 

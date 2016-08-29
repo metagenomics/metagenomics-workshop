@@ -12,7 +12,7 @@ our compute instance have multiple cores, we specify this in the
 `mpiexec -n 12 ` command to let Ray know it should use 12 parallel MPI
 processes::
 
-  cd ~/workdir/assembly/
+  cd /vol/spool/workdir/assembly/
 
   qsub -cwd -pe multislot 12 -N ray -b y \
   /usr/bin/mpiexec -n 12 /usr/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
@@ -24,7 +24,7 @@ Again, let's get some basic statistics on the contigs::
 
 Now that you have run assemblies using Velvet, MEGAHIT, IDBA-UD and Ray, let's have a quick look at the assembly statistics of all of them::
 
-  cd ~/workdir/assembly/
+  cd /vol/spool/workdir/assembly/
   ./get_assembly_stats.sh
   
 .. include:: note_top.rst

@@ -20,7 +20,7 @@ info.
 can map the reads onto them. Here is an example command line for
 mapping the reads back to the MEGAHIT assembly::
 
-  cd ~/workdir/assembly/megahit_out
+  cd /vol/spool/workdir/assembly/megahit_out
 
   qsub -cwd -N bbmap_index -b y \
   /usr/local/bin/bbmap.sh ref=final.contigs.fa

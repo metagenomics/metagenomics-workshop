@@ -13,7 +13,7 @@ have multiple cores, we use the option `-t 12` to tell MEGAHIT it
 should use 12 parallel threads. The output will be redirected to file
 `megahit.log`::
 
-  cd ~/workdir/assembly/
+  cd /vol/spool/workdir/assembly/
 
   qsub -cwd -pe multislot 12 -N megahit -b y \
   /usr/bin/megahit -1 read1.fq -2 read2.fq -t 12 -o megahit_out

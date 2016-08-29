@@ -21,7 +21,7 @@ are going to submit the jobs to the compute cluster using ``qsub``,
 asking for 12 cores (``-pe multislot 12``). You can check the status
 of your job using the command ``qstat``::
 
-  cd ~/workdir/assembly/
+  cd /vol/spool/workdir/assembly/
   
   qsub -cwd -pe multislot 12 -N velveth_31 -b y \ 
   /usr/bin/velveth velvet_31 31 -shortPaired -fastq -separate read1.fq read2.fq
@@ -31,7 +31,7 @@ of your job using the command ``qstat``::
 
 Note: You can check the status of your job using the command ``qstat``::
 
-  >>>ubuntu@host-192-168-10-45:~/workdir/assembly$ qstat
+  >>>ubuntu@host-192-168-10-45:/vol/spool/workdir/assembly$ qstat
   job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
   -----------------------------------------------------------------------------------------------------------------
         1 0.00000 velveth_31 ubuntu       r     08/28/2016 21:21:45 main.q@host-192-168-10-45.open    12        

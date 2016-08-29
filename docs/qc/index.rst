@@ -20,7 +20,7 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 
 To run ``FastQC`` on our data, simply type::
 
-  cd ~/workdir/assembly
+  cd /vol/spool/workdir/assembly
   fastqc read1.fq read2.fq
 
 After ``FastQC`` finished running, copy the results to your ``public_html`` directory::

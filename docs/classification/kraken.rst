@@ -21,7 +21,7 @@ Let's assign taxonomic labels to our binning results using
 Kraken. First, we need to compare the genome bins against the
 Kraken database::
 
-  cd ~/workdir/assembly/megahit_out/maxbin
+  cd /vol/spool/workdir/assembly/megahit_out/maxbin
   mkdir kraken
 
   for i in maxbin.*.fasta
