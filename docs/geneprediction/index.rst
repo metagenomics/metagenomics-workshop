@@ -11,8 +11,8 @@ To run ``prodigal`` on our data, simply type::
 
   cd ~/workdir/assembly/megahit_out
 
-  qsub -cwd -N prodigal -l mtc=1 -b y \
-  /vol/biotools/bin/prodigal -p meta -a final.contigs.genes.faa -d final.contigs.genes.fna -f gff -o final.contigs.genes.gff -i final.contigs.fa
+  qsub -cwd -N prodigal -b y \
+  /usr/bin/prodigal -p meta -a final.contigs.genes.faa -d final.contigs.genes.fna -f gff -o final.contigs.genes.gff -i final.contigs.fa
 
 Output files:
 
