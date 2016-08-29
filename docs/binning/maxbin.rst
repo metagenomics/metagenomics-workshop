@@ -1,14 +1,18 @@
 MaxBin Binning
 ===============
 
-MaxBin is a software that is capable of clustering metagenomic contigs into different bins, each consists of contigs from one species. MaxBin uses the nucleotide composition information and contig abundance information to do achieve binning through an Expectation-Maximization algorithm. For users' convenience
-MaxBin will report genome-related statistics, including estimated
-completeness, GC content and genome size in the binning summary
-page. See the `MaxBin home page
-<http://downloads.jbei.org/data/microbial_communities/MaxBin/MaxBin.html>`_ for more info.
+MaxBin is a software that is capable of clustering metagenomic contigs
+into different bins, each consists of contigs from one species. MaxBin
+uses the nucleotide composition information and contig abundance
+information to do achieve binning through an Expectation-Maximization
+algorithm. For users' convenience MaxBin will report genome-related
+statistics, including estimated completeness, GC content and genome
+size in the binning summary page. See the `MaxBin home page
+<http://downloads.jbei.org/data/microbial_communities/MaxBin/MaxBin.html>`_
+for more info.
 
-Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to generate an
-abundance file from the mappes reads::
+Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to
+generate an abundance file from the mappes reads::
 
   cd ~/workdir/assembly/megahit_out
   pileup.sh in=megahit.sam  out=cov.txt
@@ -16,8 +20,8 @@ abundance file from the mappes reads::
   
 Next, we can run MaxBin::
 
-  qsub -cwd -pe multislot 24 -N maxbin -l mtc=1 -b y \
-  /vol/cmg/lib/MaxBin-2.1.1/run_MaxBin.pl -thread 24 -contig final.contigs.fa -out maxbin -abund abundance.txt
+  qsub -cwd -pe multislot 12 -N maxbin -b y \
+  /usr/local/lib/MaxBin-2.2.1/run_MaxBin.pl -thread 12 -contig final.contigs.fa -out maxbin -abund abundance.txt
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
