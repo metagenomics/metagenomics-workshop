@@ -21,17 +21,26 @@ Let's assign taxonomic labels to our binning results using
 Kraken. First, we need to compare the genome bins against the
 Kraken database::
 
-  cd ~/workdir/assembly/megahit_out
+  cd ~/workdir/assembly/megahit_out/maxbin
+  mkdir kraken
 
-  qsub -cwd -pe multislot 24 -N kraken -l mtc=1 -b y \
-  /vol/cmg/bin/kraken --db /vol/metagencourse/krakendb --threads 24 --fasta-input maxbin.001.fasta --output maxbin.001.kraken
+  for i in maxbin.*.fasta
+  do
+  qsub -cwd -N kraken_$i -b y \
+  /usr/local/bin/kraken --db /usr/local/share/krakendb --threads 1 --fasta-input $i --output kraken/$i.kraken
+  done
 
-  
+
 If you need the full taxonomic name associated with each input
 sequence, Kraken provides a script named kraken-translate that produces two
 different output formats for classified sequences. The script operates
 on the output of kraken::
 
-  kraken-translate --db /vol/metagencourse/krakendb maxbin.001.kraken > maxbin.001.kraken.labels
+  cd kraken
+  for i in *.kraken
+  do
+  qsub -cwd -b y -o $i.labels \
+  /usr/local/bin/kraken-translate --db /usr/local/share/krakendb $i
+  done
   
 Does the abundance of the bins match the 16S profile of the community?
