@@ -15,13 +15,16 @@ Let's run a MaxBin binning on the MEGAHIT assembly. First, we need to
 generate an abundance file from the mappes reads::
 
   cd ~/workdir/assembly/megahit_out
-  pileup.sh in=megahit.sam  out=cov.txt
+  mkdir maxbin
+  cd maxbin
+
+  pileup.sh in=../megahit.sam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
   
 Next, we can run MaxBin::
 
   qsub -cwd -pe multislot 12 -N maxbin -b y \
-  /usr/local/lib/MaxBin-2.2.1/run_MaxBin.pl -thread 12 -contig final.contigs.fa -out maxbin -abund abundance.txt
+  /usr/local/lib/MaxBin-2.2.1/run_MaxBin.pl -thread 12 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
