@@ -37,7 +37,7 @@ Change file permissions for .properties file::
 
 Now you can start an OpenStack Instance::
 
-  ./bibigrid.sh -c -o bibigrid.properties -u USERNAME
+  ./bibigrid -c -o bibigrid.properties -u USERNAME
 
 Once the OpenStack instance is running, make sure you **take note of its IP
 address**. We will need it later!
