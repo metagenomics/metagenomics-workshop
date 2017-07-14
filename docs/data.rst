@@ -1,6 +1,11 @@
 The Tutorial Data Set
 ================================
 
+Note: This tutorial was prepared for a training workshop utilizing
+our local compute infrastrucutre. If you want to download the data set
+to your machine and run it locally, you can find the data 
+`here <https://uni-bielefeld.sciebo.de/index.php/s/FpiLaNWWp5MDVui>`_.
+
 We have prepared a small toy data set for this tutorial. The data is located 
 in `/vol/metagencourse/DATA/WGS-data` directory, which has the following content:
 
