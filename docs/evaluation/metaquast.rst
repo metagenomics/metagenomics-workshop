@@ -35,7 +35,7 @@ not available, of course::
   /vol/spool/workdir/assembly/genomes/Porphyromonas_gingivalis_W83.fna,\
   /vol/spool/workdir/assembly/genomes/Wigglesworthia_glossinidia.fna \
   -o quast \
-  -l MegaHit,Ray_31,velvet_31,velvet_51,idba_ud \
+  -l MegaHit,Ray_31,Ray_51,velvet_31,velvet_51,idba_ud \
   megahit_out/final.contigs.fa \
   ray_31/Contigs.fasta \
   ray_51/Contigs.fasta \
