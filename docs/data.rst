@@ -28,5 +28,5 @@ to the data files::
 
   mkdir -p /vol/spool/workdir/assembly
   cd /vol/spool/workdir/assembly
-  ln -s ~/WGS-data/* .
+  cp -rv ~/WGS-data/* .
 
