@@ -2,16 +2,14 @@ Setting up your OpenStack instance
 ==================================
 
 As metagenome assemblies require a lot of compute resources, we will run the tutorial
-in the CeBiTec OpenStack cloud. Each workshop participant will start an OpenStack instance and
-run all jobs on this instance.
+in the de.NBI OpenStack cloud. Each workshop participant will start an two OpenStack instances 
+and run all jobs on these instances.
 
-We will use the BiBiGrid framework to start an OpenStack instance. BiBiGrid
-is a command line tool for the automated setup of HPC environments on OpenStack
-or Amazon AWS cloud infrastructure. It offers easy configurability and maintenance
+We will use the BiBiGrid framework to start the OpenStack instances. BiBiGrid
+is a command line tool for the automated setup of HPC environments on OpenStack, Amazon AWS 
+or Google Compute Platform cloud infrastructure. It offers easy configurability and maintenance
 of an HPC compute cluster of arbitrary size via command-line. See the
-`BiBiGrid home page
-<https://wiki.cebitec.uni-bielefeld.de/bibiserv/index.php/BiBiGrid>`_ for more
-info.
+`BiBiGrid github page <https://github.com/BiBiServ/bibigrid>`_ for more info.
 
 First, download a special version of the BiBiGrid tool which you can
 use to start up an OpenStack instance which we pre-configured for this
@@ -25,19 +23,20 @@ Change to the bibigrid directory::
 
   cd ~/mg-tutorial/bibigrid
 
-Edit the bibigrid.properties file and 
+Edit the bibigrid.yml file and 
 
-1. add user name
-2. add password
-3. add path to your public SSH key for the OpenStack account
+1. add ELIXIR username
+2. add Openstack password
+3. add path to your SSH key file for the OpenStack account
+4. add name of OpenStack SSH key
 
-Change file permissions for .properties file::
+Change file permissions for bibigrid.yml file::
 
-  chmod go-rwx bibigrid.properties
+  chmod go-rwx bibigrid.yml
 
 Now you can start an OpenStack Instance::
 
-  ./bibigrid -c -o bibigrid.properties -u USERNAME
+  java -jar bibigrid-openstack-2.0.jar -c -v -o bibigrid.yml
 
 Once the OpenStack instance is running, make sure you **take note of its IP
 address**. We will need it later!
