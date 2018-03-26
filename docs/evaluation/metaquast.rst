@@ -18,7 +18,7 @@ not available, of course::
   cd /vol/spool/workdir/assembly
   
   qsub -cwd -pe multislot 14 -N metaquast -b y \
-  /usr/local/bin/metaquast.py --threads 14 --gene-finding --meta \
+  /usr/local/bin/metaquast.py --threads 14 --gene-finding \
   -R /vol/spool/workdir/assembly/genomes/Aquifex_aeolicus_VF5.fna,\
   /vol/spool/workdir/assembly/genomes/Bdellovibrio_bacteriovorus_HD100.fna,\
   /vol/spool/workdir/assembly/genomes/Chlamydia_psittaci_MN.fna,\
