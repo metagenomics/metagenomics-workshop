@@ -23,12 +23,12 @@ mapping the reads back to the MEGAHIT assembly::
   cd /vol/spool/workdir/assembly/megahit_out
 
   qsub -cwd -N bbmap_index -b y \
-  /usr/local/bin/bbmap.sh ref=final.contigs.fa
+  /usr/bin/bbmap.sh ref=final.contigs.fa
   
 Now that we have an index, we can map the reads::
 
   qsub -cwd -pe multislot 14 -N bbmap -b y \
-  /usr/local/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh threads=14
+  /usr/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh threads=14
   
 ``bbmap`` produces output in `SAM format
 <http://samtools.github.io/hts-specs/SAMv1.pdf>`_ by default, usually
