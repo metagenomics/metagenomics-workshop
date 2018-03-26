@@ -18,7 +18,7 @@ generate an abundance file from the mappes reads::
   mkdir maxbin
   cd maxbin
 
-  pileup.sh in=../megahit.sam  out=cov.txt
+  pileup.sh in=../megahit.bam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
   
 Next, we can run MaxBin::
