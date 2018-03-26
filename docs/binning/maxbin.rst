@@ -23,8 +23,8 @@ generate an abundance file from the mappes reads::
   
 Next, we can run MaxBin::
 
-  qsub -cwd -pe multislot 12 -N maxbin -b y \
-  /usr/local/lib/MaxBin-2.2.1/run_MaxBin.pl -thread 12 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
+  qsub -cwd -pe multislot 14 -N maxbin -b y \
+  /usr/local/lib/MaxBin-2.2.4/run_MaxBin.pl -thread 14 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
