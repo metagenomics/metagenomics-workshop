@@ -2,7 +2,7 @@ metaSPAdes Assembly
 ===================
 
 SPAdes – St. Petersburg genome assembler – is an assembly toolkit
-containing various assembly pipelines. See the SPAdes home page
+containing various assembly pipelines. See the `SPAdes home page
 <http://cab.spbu.ru/software/spades/>`_ for more info.
 
 metaSPAdes can be run by the following command::
