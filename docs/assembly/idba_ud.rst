@@ -20,7 +20,7 @@ called `reads12.fas` by "shuffling" the reads from FASTQ files
   cd /vol/spool/workdir/assembly/
 
   qsub -cwd -N fq2fa -b y \
-  /usr/local/bin/fq2fa --merge read1.fq read2.fq reads12.fas
+  /usr/bin/fq2fa --merge read1.fq read2.fq reads12.fas
   
 IDBA-UD can be run by the following command. As our compute instances
 have multiple cores, we use the option `--num_threads 14` to tell
@@ -29,7 +29,7 @@ IDBA-UD it should use 14 parallel threads::
   cd /vol/spool/workdir/assembly/
 
   qsub -cwd -pe multislot 14 -N idba_ud -b y \
-  /usr/local/bin/idba_ud -r reads12.fas --num_threads 14 -o idba_ud_out
+  /usr/bin/idba_ud -r reads12.fas --num_threads 14 -o idba_ud_out
 
 The contig sequences are located in the `idba_ud_out` directory in file `contig.fa`. Again, let's get some  basic statistics on the contigs::
 
