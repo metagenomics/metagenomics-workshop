@@ -36,7 +36,7 @@ Change file permissions for bibigrid.yml file::
 
 Now you can start an OpenStack Instance::
 
-  java -jar bibigrid-openstack-2.0.jar -c -v -o bibigrid.yml
+  java -jar bibigrid-openstack-2.0.jar -o bibigrid.yml -c
 
 Once the OpenStack instance is running, make sure you **take note of its IP
 address**. We will need it later!
