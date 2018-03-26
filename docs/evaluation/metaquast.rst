@@ -7,7 +7,7 @@ news and the latest version of the tool at `sourceforge
 <http://sourceforge.net/projects/quast>`_.  QUAST utilizes MUMmer,
 GeneMarkS, GeneMark-ES, GlimmerHMM, and GAGE. In addition, MetaQUAST
 uses MetaGeneMark, Krona tools, BLAST, and SILVA 16S rRNA
-database. See the `QUAST home page <http://quast.bioinf.spbau.ru//>`_
+database. See the `metaQuast home page <http://quast.sourceforge.net/metaquast//>`_
 for more info.
 
 To call ``metaquast.py`` we have to provide reference genomes which
@@ -17,8 +17,8 @@ not available, of course::
 
   cd /vol/spool/workdir/assembly
   
-  qsub -cwd -pe multislot 12 -N metaquast -b y \
-  /usr/local/bin/metaquast.py --threads 12 --gene-finding --meta \
+  qsub -cwd -pe multislot 14 -N metaquast -b y \
+  /usr/local/bin/metaquast.py --threads 14 --gene-finding --meta \
   -R /vol/spool/workdir/assembly/genomes/Aquifex_aeolicus_VF5.fna,\
   /vol/spool/workdir/assembly/genomes/Bdellovibrio_bacteriovorus_HD100.fna,\
   /vol/spool/workdir/assembly/genomes/Chlamydia_psittaci_MN.fna,\
@@ -38,6 +38,7 @@ not available, of course::
   -l MegaHit,Ray_31,velvet_31,velvet_51,idba_ud \
   megahit_out/final.contigs.fa \
   ray_31/Contigs.fasta \
+  ray_51/Contigs.fasta \
   velvet_31/contigs.fa \
   velvet_51/contigs.fa \
   idba_ud_out/contig.fa
