@@ -12,7 +12,7 @@ BBMap: Short read aligner for DNA and RNA-seq data. Capable of
 handling arbitrarily large genomes with millions of scaffolds. Handles
 Illumina, PacBio, 454, and other reads; very high sensitivity and
 tolerant of errors and numerous large indels. Very fast. See the
-`BBMap home page <http://sourceforge.net/projects/bbmap/>`_ for more
+`BBTools home page <https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/>`_ for more
 info.
 
 
@@ -27,8 +27,8 @@ mapping the reads back to the MEGAHIT assembly::
   
 Now that we have an index, we can map the reads::
 
-  qsub -cwd -pe multislot 12 -N bbmap -b y \
-  /usr/local/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh threads=12
+  qsub -cwd -pe multislot 14 -N bbmap -b y \
+  /usr/local/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.sam bamscript=sam2bam.sh threads=14
   
 ``bbmap`` produces output in `SAM format
 <http://samtools.github.io/hts-specs/SAMv1.pdf>`_ by default, usually
