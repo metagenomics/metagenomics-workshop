@@ -7,20 +7,25 @@ run in parallel on numerous interconnected computers using the
 message-passing interface (MPI) standard. See the `Ray home page
 <http://denovoassembler.sourceforge.net/>`_ for more info.
 
-Ray can be run by the following command using a kmer-length of 31. As
+Ray can be run by the following command using a kmer-length of 31 and 51, repectively. As
 our compute instance have multiple cores, we specify this in the
-`mpiexec -n 12 ` command to let Ray know it should use 12 parallel MPI
+`mpiexec -n 14 ` command to let Ray know it should use 14 parallel MPI
 processes::
 
   cd /vol/spool/workdir/assembly/
 
-  qsub -cwd -pe multislot 12 -N ray -b y \
-  /usr/bin/mpiexec -n 12 /usr/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
+  qsub -cwd -pe multislot 14 -N ray -b y \
+  /usr/bin/mpiexec -n 14 /usr/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
 
-This will create the output directory `ray_31` and the final contigs are located in `ray_31/Contigs.fasta`.
+  qsub -cwd -pe multislot 14 -N ray -b y \
+  /usr/bin/mpiexec -n 14 /usr/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51
+
+This will create the output directory `ray_31` and `ray_51` the final contigs are located in `ray_31/Contigs.fasta`
+and `ray_51/Contigs.fasta`.
 Again, let's get some basic statistics on the contigs::
 
   getN50.pl -s 500 -f ray_31/Contigs.fasta
+  getN50.pl -s 500 -f ray_51/Contigs.fasta
 
 Now that you have run assemblies using Velvet, MEGAHIT, IDBA-UD and Ray, let's have a quick look at the assembly statistics of all of them::
 
