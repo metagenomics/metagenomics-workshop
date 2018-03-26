@@ -9,7 +9,7 @@ a CUDA-enabled GPU to accelerate its SdBG contstruction. See the
 info.
 
 MEGAHIT can be run by the following command. As our compute instance
-have multiple cores, we use the option `-t 12` to tell MEGAHIT it
+have multiple cores, we use the option `-t 14` to tell MEGAHIT it
 should use 14 parallel threads. The output will be redirected to file
 `megahit.log`::
 
