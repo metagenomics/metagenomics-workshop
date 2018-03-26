@@ -9,6 +9,7 @@ We are going to use different assemblers and compare the results.
 
    velvet
    megahit
+   metaspades
    idba_ud
    ray
 
