@@ -31,9 +31,9 @@ of your job using the command ``qstat``::
 
 Note: You can check the status of your job using the command ``qstat``::
 
-  >>>ubuntu@host-192-168-2-3:/vol/spool/workdir/assembly$ qstat
-job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
------------------------------------------------------------------------------------------------------------------
+   ubuntu@host-192-168-2-3:/vol/spool/workdir/assembly$ qstat
+   job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 
+   -----------------------------------------------------------------------------------------------------------------
       3 0.00000 velveth_31 ubuntu       r     03/26/2018 09:03:34 main.q@host-192-168-2-11.opens    14        
       4 0.00000 velveth_51 ubuntu       r     03/26/2018 09:03:47 main.q@host-192-168-2-3.openst    14        
 
