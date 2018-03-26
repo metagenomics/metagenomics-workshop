@@ -25,7 +25,7 @@ To run ``FastQC`` on our data, simply type::
 
 After ``FastQC`` finished running, copy the results to your ``public_html`` directory::
 
-  cp -r read?_fastqc* ~/public_html/
+  cp -rv read?_fastqc* ~/public_html/
 
 Now you can access the report at::
 
