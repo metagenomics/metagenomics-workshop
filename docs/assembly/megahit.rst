@@ -13,10 +13,9 @@ have multiple cores, we use the option `-t 14` to tell MEGAHIT it
 should use 14 parallel threads. The output will be redirected to file
 `megahit.log`::
 
-  cd /vol/spool/workdir/assembly/
+  cd /mnt/volume/workdir/assembly/
 
-  qsub -cwd -pe multislot 14 -N megahit -b y \
-  /usr/bin/megahit -1 read1.fq -2 read2.fq -t 14 -o megahit_out
+  megahit -1 read1.fq -2 read2.fq -t 14 -o megahit_out
 
 The contig sequences are located in the `megahit_out` directory in
 file `final.contigs.fa`. Again, let's get some basic statistics on the
@@ -24,4 +23,3 @@ contigs::
 
   getN50.pl -s 500 -f megahit_out/final.contigs.fa
 
-.. include:: note_top.rst
