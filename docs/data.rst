@@ -21,7 +21,7 @@ already located on the SimpleVM instance in the
 
 Create a working directory in the additional storage volume which you
 configured when you started the SimpleVM and copy the data to the
-working directory:
+working directory::
 
   sudo chown ubuntu:ubuntu /mnt/volume
   mkdir -p /mnt/volume/workdir/assembly
