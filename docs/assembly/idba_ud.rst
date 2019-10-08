@@ -35,4 +35,3 @@ The contig sequences are located in the `idba_ud_out` directory in file `contig.
 
   getN50.pl -s 500 -f idba_ud_out/contig.fa
 
-.. include:: note_top.rst

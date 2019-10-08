@@ -52,4 +52,3 @@ than 500bp (option `-s 500`)::
   getN50.pl -s 500 -f velvet_31/contigs.fa
   getN50.pl -s 500 -f velvet_51/contigs.fa
   
-.. include:: note_top.rst
