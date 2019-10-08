@@ -20,17 +20,12 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 
 To run ``FastQC`` on our data, simply type::
 
-  cd /vol/spool/workdir/assembly
+  cd /mnt/volume/workdir/assembly
   fastqc read1.fq read2.fq
 
-After ``FastQC`` finished running, copy the results to your ``public_html`` directory::
+After ``FastQC`` finished running you can access the report using a web browser::
 
-  cp -rv read?_fastqc* ~/public_html/
-
-Now you can access the report at::
-
-    http://<YOUR_OPENSTACK_INSTANCE_IP_ADDRESS>/~ubuntu/read1_fastqc.html
-    http://<YOUR_OPENSTACK_INSTANCE_IP_ADDRESS>/~ubuntu/read2_fastqc.html
+    firefox *.html
 
 Check out the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_ for examples
 of reports including bad data.
