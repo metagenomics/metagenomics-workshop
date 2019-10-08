@@ -1,4 +1,4 @@
-Setting up your de.NBI CLoud SimpleVM instance
+Setting up your de.NBI Cloud SimpleVM instance
 ==============================================
 
 As metagenome assemblies require a lot of compute resources, we will run the tutorial
