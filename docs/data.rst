@@ -1,12 +1,8 @@
 The Tutorial Data Set
 ================================
 
-From here on, make sure you are actually working on the OpenStack
-cloud instance (logged in via ssh) and not on your local workstation
-(see previous chapter).
-
 We have prepared a small toy data set for this tutorial. The data is
-already located on the OpenStack instance in the
+already located on the SimpleVM instance in the
 `~/WGS-data` directory, which has the following content:
 
 +---------------+--------------------------------------------+
@@ -23,10 +19,12 @@ already located on the OpenStack instance in the
 | reads.fas     | Shuffled reads (FASTA)                     |
 +---------------+--------------------------------------------+
 
-Create a working directory in your home directory and symbolic links
-to the data files::
+Create a working directory in the additional storage volume which you
+configured when you started the SimpleVM and copy the data to the
+working directory:
 
-  mkdir -p /vol/spool/workdir/assembly
-  cd /vol/spool/workdir/assembly
+  sudo chown ubuntu:ubuntu /mnt/volume
+  mkdir -p /mnt/volume/workdir/assembly
+  cd /mnt/volume/workdir/assembly
   cp -rv ~/WGS-data/* .
 
