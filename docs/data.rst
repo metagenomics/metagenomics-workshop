@@ -28,3 +28,10 @@ working directory::
   cd /mnt/volume/workdir/assembly
   cp -rv ~/WGS-data/* .
 
+Next, we will activate the bioconda virtual environment, which
+includes all installed software tools::
+
+  source ~/miniconda3/bin/activate denbi
+
+
+
