@@ -14,12 +14,16 @@ processes::
 
   cd /mnt/volume/workdir/assembly/
 
-  mpiexec -n 7 /usr/local/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31 &
-  mpiexec -n 7 /usr/local/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51 &
+  mpiexec -n 14 /usr/local/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
 
-This will create the output directory `ray_31` and `ray_51` the final
-contigs are located in `ray_31/Contigs.fasta` and
-`ray_51/Contigs.fasta`.  Again, let's get some basic statistics on the
+If there is enough time, you can run another Ray assembly using a larger
+kmer size::
+
+  mpiexec -n 14 /usr/local/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51
+
+This will create the output directory `ray_31` (and `ray_51`), the final
+contigs are located in `ray_31/Contigs.fasta` (and
+`ray_51/Contigs.fasta`).  Again, let's get some basic statistics on the
 contigs::
 
   getN50.pl -s 500 -f ray_31/Contigs.fasta
