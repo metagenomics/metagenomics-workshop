@@ -52,5 +52,6 @@ not available, of course::
 QUAST generates HTML reports including a number of interactive graphics. To access these reports,
 load the reports in your web browser::
 
-  firefox quast/summary/report.html quast/combined_quast_output/report.html
+  firefox quast/report.html
+
 
