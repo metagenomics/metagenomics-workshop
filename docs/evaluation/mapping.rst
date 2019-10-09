@@ -20,15 +20,13 @@ info.
 can map the reads onto them. Here is an example command line for
 mapping the reads back to the MEGAHIT assembly::
 
-  cd /vol/spool/workdir/assembly/megahit_out
+  cd /mnt/volume/workdir/assembly/megahit_out
 
-  qsub -cwd -N bbmap_index -b y \
-  /usr/bin/bbmap.sh ref=final.contigs.fa
+  bbmap.sh ref=final.contigs.fa
   
 Now that we have an index, we can map the reads::
 
-  qsub -cwd -pe multislot 14 -N bbmap -b y \
-  /usr/bin/bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.bam threads=14
+  bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.bam threads=14
   
 ``bbmap`` produces output in BAM format (the binary version of the `SAM format
 <http://samtools.github.io/hts-specs/SAMv1.pdf>`_). BAM files can be viewed and manipulated with `SAMtools <http://www.htslib.org/>`_. Let's first build an index for the FASTA file::
@@ -47,20 +45,9 @@ To look at the BAM file use::
 
   samtools view megahit_sorted.bam | less
   
-We will use a genome browser to look at the mappings. For this, you
-have to 
+We will use the IGV genome browser to look at the mappings::
 
-1. open a terminal window on **your local workstation**
-2. download the BAM file 
-3. start `IGV: Integrative Genomics Viewer <http://www.broadinstitute.org/igv/>`_
-
-Here are the commands to copy the files and open the IGV::
-
-  cd ~/mg-tutorial
-  scp -i PATH_TO_YOUR_SECRET_SSH_KEY_FILE ubuntu@$BIBIGRID_MASTER:workdir/assembly/megahit_out/final.contigs.fa* .
-  scp -i PATH_TO_YOUR_SECRET_SSH_KEY_FILE ubuntu@$BIBIGRID_MASTER:workdir/assembly/megahit_out/*.bam* .
-  scp -i PATH_TO_YOUR_SECRET_SSH_KEY_FILE ubuntu@$BIBIGRID_MASTER:workdir/assembly/megahit_out/*.gff .
-  igv.sh
+  ~/IGV_Linux_2.7.0/igv.sh
   
 Now let's look at the mapped reads:
 
