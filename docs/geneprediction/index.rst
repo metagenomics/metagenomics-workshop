@@ -9,10 +9,9 @@ Oak Ridge National Laboratory and the University of Tennessee. See the
 
 To run ``prodigal`` on our data, simply type::
 
-  cd /vol/spool/workdir/assembly/megahit_out
+  cd /mnt/volume/workdir/assembly/megahit_out
 
-  qsub -cwd -N prodigal -b y \
-  /usr/bin/prodigal -p meta -a final.contigs.genes.faa -d final.contigs.genes.fna -f gff -o final.contigs.genes.gff -i final.contigs.fa
+  prodigal -p meta -a final.contigs.genes.faa -d final.contigs.genes.fna -f gff -o final.contigs.genes.gff -i final.contigs.fa
 
 Output files:
 
