@@ -15,14 +15,13 @@ for more info.
 
 Let's run a MetaBAT binning on the MEGAHIT assembly::
 
-  cd /vol/spool/workdir/assembly/megahit_out
+  cd /mnt/volume/workdir/assembly/megahit_out
   mkdir metabat
   cd metabat
   
-  qsub -cwd -pe multislot 14 -N metabat -b y \
-  /usr/bin/runMetaBat.sh ../final.contigs.fa ../megahit_sorted.bam
+  runMetaBat.sh ../final.contigs.fa ../megahit_sorted.bam
   
-MetaBAT will generate 12 bins from our assembly::
+MetaBAT will generate 11 bins from our assembly::
 
   ls final.contigs.fa.metabat-bins
   
@@ -37,4 +36,3 @@ MetaBAT will generate 12 bins from our assembly::
   bin.9.fa
   bin.10.fa
   bin.11.fa
-  bin.12.fa
