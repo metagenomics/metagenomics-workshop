@@ -8,10 +8,9 @@ following commands to download the data to your VM::
   cd /mnt
   wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/WGS-data.tar
   tar xvf WGS-data.tar
-  cd ~
-  ln -s /mnt/WGS-data .
+
   
-The `~/WGS-data` directory, which has the following content:
+The `/mnt/WGS-data` directory has the following content:
 
 +---------------+--------------------------------------------+
 | File          | Content                                    |
