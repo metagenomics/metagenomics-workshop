@@ -17,7 +17,7 @@ called `reads12.fas` by "shuffling" the reads from FASTQ files
 `read1.fq` and `read2.fq`::
 
 
-  cd /mnt/volume/workdir/assembly/
+  cd /mnt/WGS-data
 
   fq2fa --merge read1.fq read2.fq reads12.fas
   
@@ -25,7 +25,7 @@ IDBA-UD can be run by the following command. As our compute instances
 have multiple cores, we use the option `--num_threads 14` to tell
 IDBA-UD it should use 14 parallel threads::
 
-  cd /mnt/volume/workdir/assembly/
+  cd /mnt/WGS-data
 
   idba_ud -r reads12.fas --num_threads 14 -o idba_ud_out
 
