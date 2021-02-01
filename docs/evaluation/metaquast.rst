@@ -14,6 +14,8 @@ In case not all assemblies finished so far, copy the pre-computed
 assembly results to your local directory::
 
   cd /mnt/WGS-data
+  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/assembly_results.tar
+  tar xvf assembly_results.tar
   cp -v -r /mnt/WGS-data/assembly_results/* .
 
 To call ``metaquast.py`` we have to provide reference genomes which
