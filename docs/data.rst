@@ -2,7 +2,7 @@ The Tutorial Data Set
 ================================
 
 We have prepared a small toy data set for this tutorial. Please use the
-following commands to download the data to your VM:
+following commands to download the data to your VM::
 
   sudo chown ubuntu:ubuntu /mnt
   cd /mnt
