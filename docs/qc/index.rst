@@ -20,7 +20,7 @@ See the `FastQC home page <http://www.bioinformatics.babraham.ac.uk/projects/fas
 
 To run ``FastQC`` on our data, simply type::
 
-  cd /mnt/volume/workdir/assembly
+  cd /mnt/WGS-data
   fastqc read1.fq read2.fq
 
 After ``FastQC`` finished running you can access the report using a web browser::
