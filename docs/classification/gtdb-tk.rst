@@ -1,4 +1,4 @@
-Kraken Taxonomic Sequence Classification System
+Genome Taxonomy Database (GTDB)
 ===============
 
 GTDB-Tk is a software toolkit for assigning objective taxonomic 
