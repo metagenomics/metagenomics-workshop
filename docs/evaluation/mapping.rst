@@ -20,7 +20,7 @@ info.
 can map the reads onto them. Here is an example command line for
 mapping the reads back to the MEGAHIT assembly::
 
-  cd /mnt/volume/workdir/assembly/megahit_out
+  cd /mnt/WGS-data/megahit_out
 
   bbmap.sh ref=final.contigs.fa
   
@@ -47,7 +47,7 @@ To look at the BAM file use::
   
 We will use the IGV genome browser to look at the mappings::
 
-  ~/IGV_Linux_2.7.0/igv.sh
+  igv
   
 Now let's look at the mapped reads:
 
