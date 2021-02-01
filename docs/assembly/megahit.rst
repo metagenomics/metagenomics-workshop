@@ -13,7 +13,7 @@ have multiple cores, we use the option `-t 14` to tell MEGAHIT it
 should use 14 parallel threads. The output will be redirected to file
 `megahit.log`::
 
-  cd /mnt/volume/workdir/assembly/
+  cd /mnt/WGS-data
 
   megahit -1 read1.fq -2 read2.fq -t 14 -o megahit_out
 
