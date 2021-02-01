@@ -1,9 +1,17 @@
 The Tutorial Data Set
 ================================
 
-We have prepared a small toy data set for this tutorial. The data is
-already located on the SimpleVM instance in the
-`~/WGS-data` directory, which has the following content:
+We have prepared a small toy data set for this tutorial. Please use the
+following commands to download the data to your VM:
+
+  sudo chown ubuntu:ubuntu /mnt
+  cd /mnt
+  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/WGS-data.tar
+  tar xvf WGS-data.tar
+  cd ~
+  ln -s /mnt/WGS-data .
+  
+The `~/WGS-data` directory, which has the following content:
 
 +---------------+--------------------------------------------+
 | File          | Content                                    |
@@ -18,20 +26,4 @@ already located on the SimpleVM instance in the
 +---------------+--------------------------------------------+
 | reads.fas     | Shuffled reads (FASTA)                     |
 +---------------+--------------------------------------------+
-
-Create a working directory in the additional storage volume which you
-configured when you started the SimpleVM and copy the data to the
-working directory::
-
-  sudo chown ubuntu:ubuntu /mnt/volume
-  mkdir -p /mnt/volume/workdir/assembly
-  cd /mnt/volume/workdir/assembly
-  cp -rv ~/WGS-data/* .
-
-Next, we will activate the bioconda virtual environment, which
-includes all installed software tools::
-
-  source ~/miniconda3/bin/activate denbi
-
-
 
