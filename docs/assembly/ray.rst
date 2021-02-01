@@ -12,7 +12,7 @@ Ray can be run by the following command using a kmer-length of 51 and
 specify this in the `mpiexec -n 14 ` command to let Ray know it should
 use 14 parallel MPI processes::
 
-  cd /mnt/volume/workdir/assembly/
+  cd /mnt/WGS-data
 
   mpiexec -n 14 /usr/local/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51
 
@@ -31,6 +31,6 @@ contigs::
 
 Now that you have run assemblies using Velvet, MEGAHIT, IDBA-UD and Ray, let's have a quick look at the assembly statistics of all of them::
 
-  cd /mnt/volume/workdir/assembly/
-  ./get_assembly_stats.sh
+  cd /mnt/WGS-data
+  sh ./get_assembly_stats.sh
   
