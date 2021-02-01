@@ -7,7 +7,7 @@ containing various assembly pipelines. See the `SPAdes home page
 
 metaSPAdes can be run by the following command::
 
-  cd /mnt/volume/workdir/assembly/
+  cd /mnt/WGS-data
 
   metaspades.py -o metaspades_out --pe1-1 read1.fq --pe1-2 read2.fq
 
