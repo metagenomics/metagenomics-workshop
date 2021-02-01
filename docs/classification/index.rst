@@ -8,5 +8,6 @@ assembled contigs of metagenomic datasets.
 .. toctree:: 
    :maxdepth: 1
 
+   gtdb-tk
    kraken
 
