@@ -9,7 +9,7 @@ Oak Ridge National Laboratory and the University of Tennessee. See the
 
 To run ``prodigal`` on our data, simply type::
 
-  cd /mnt/volume/workdir/assembly/megahit_out
+  cd /mnt/WGS-data/megahit_out
 
   prodigal -p meta -a final.contigs.genes.faa -d final.contigs.genes.fna -f gff -o final.contigs.genes.gff -i final.contigs.fa
 
