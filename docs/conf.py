@@ -45,14 +45,14 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Metagenomics Workshop'
-copyright = '2015, Alex Sczyrba'
+copyright = '2021, Alexander Sczyrba'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '1'
+version = '1.1'
 # The full version, including alpha/beta/rc tags.
 release = '1'
 
