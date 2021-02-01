@@ -15,7 +15,7 @@ for more info.
 
 Let's run a MetaBAT binning on the MEGAHIT assembly::
 
-  cd /mnt/volume/workdir/assembly/megahit_out
+  cd /mnt/WGS-data/megahit_out
   mkdir metabat
   cd metabat
   
