@@ -17,6 +17,12 @@ generate an abundance file from the mappes reads::
   cd /mnt/WGS-data/megahit_out
   mkdir maxbin
   cd maxbin
+ 
+Activate the conda base environment to get MaxBin into the PATH::
+
+  conda activate base
+
+Then::
 
   pileup.sh in=../megahit_sorted.bam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
