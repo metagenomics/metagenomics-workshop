@@ -25,10 +25,3 @@ The `/mnt/WGS-data` directory has the following content:
 +---------------+--------------------------------------------+
 | reads.fas     | Shuffled reads (FASTA)                     |
 +---------------+--------------------------------------------+
-
-
-#After downloading the data we need to update some binaries on our VM::
-#
-#  cd /mnt/WGS-data/binaries
-#  sudo install * /usr/local/bin/
-  
