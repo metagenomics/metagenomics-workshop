@@ -6,5 +6,5 @@ text here ...
 .. toctree::
    :maxdepth: 1
 
-   mapping
-   metaquast
+   data_submission_intro
+   submit_study_1
