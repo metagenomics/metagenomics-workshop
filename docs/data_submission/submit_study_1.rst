@@ -4,9 +4,12 @@ Submitting a study
 There are two ways to submit a study at ENA:
 
 1) Using the Webinterface at https://wwwdev.ebi.ac.uk/ena/submit/webin/login
+-----------------------
 You could follow this guide: https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html
 
-2) Registering a study programmatically using the linux command line tool ``curl``
+2) Registering a study programmatically
+-----------------------
+... using the linux command line tool ``curl``
 We will use this approach in this short course. 
 
 First, create a work folder for submissions and a subfolder for the study files::
