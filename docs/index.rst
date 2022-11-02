@@ -20,3 +20,5 @@ typical steps of metagenome assembly and binning.
    evaluation/index
    binning/index
    classification/index
+   data_submission/index
+   
