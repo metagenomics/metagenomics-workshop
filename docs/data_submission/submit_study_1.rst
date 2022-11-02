@@ -15,8 +15,8 @@ We will use this approach in this short course.
 
 First, create a work folder for submissions and a subfolder for the study files::
 
-mkdir -p /mnt/submission/study
-cd /mnt/submission/study
+  mkdir -p /mnt/submission/study
+  cd /mnt/submission/study
 
 Create submission.xml
 ^^^^^^^^^^
@@ -53,10 +53,23 @@ Again, use ``gedit``, ``vi`` or any other editor to create the file. Change the 
 
 It is possible to submit multiple studies at once, just add additional PROJECTs in the PROJECT_SET.
 
+
+Set credentials as environment variables
+^^^^^^^^^^^^^^^^
+
+To not type your username password every time you submit, you can store them as environment variables::
+
+  export ENA_USER=Webin-xxxx
+  export ENA_PWD=password
+
 Submit the study
 ^^^^^^^^^^^^^^^^
 
+Now, it is time to submit:
 
+curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+Make sure to use wwwdev to submit to the ENA test server.
 
 
 References
