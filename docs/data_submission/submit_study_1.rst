@@ -40,17 +40,23 @@ Create study.xml
 Now create file study.xml with the following content::
 
   <PROJECT_SET>
-     <PROJECT alias="cheddar_cheese">
-        <TITLE>Characterisation of Microbial Diversity and Chemical Properties of Cheddar Cheese Prepared from Heat-treated Milk</TITLE>
-        <DESCRIPTION>This study aimed to characterise the interaction of microbial diversity and chemical properties of Cheddar cheese after three different heat treatments of milk</DESCRIPTION>
+     <PROJECT alias="Your course alias here! Be creative">
+        <TITLE>Test dataset from the de.NBI NFDI4Microbiota course on metagenomics 2022</TITLE>
+        <DESCRIPTION>This is an artificial dataset that should contain 12 organisms.</DESCRIPTION>
         <SUBMISSION_PROJECT>
            <SEQUENCING_PROJECT/>
         </SUBMISSION_PROJECT>
      </PROJECT>
   </PROJECT_SET>
 
-You can submit multiple 
-You can use an editor like ``gedit`` to do so. Fill in a valid date like "2022-11-25". You might as well delete the complete ACTION block containing HOLD if the data should be released immediately. 
+Again, use ``gedit``, ``vi`` or any other editor to create the file. Change the alias to something unique! You can also change title and description to your likings. 
+
+It is possible to submit multiple studies at once, just add additional PROJECTs in the PROJECT_SET.
+
+Submit the study
+^^^^^^^^^^^^^^^^
+
+
 
 
 References
