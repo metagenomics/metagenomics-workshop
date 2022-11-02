@@ -16,18 +16,18 @@ cd /mnt/submission/study
 
 The next thing you need to to is to create a file submission.xml with the following content::
 
-<SUBMISSION>
-   <ACTIONS>
-      <ACTION>
-         <ADD/>
-      </ACTION>
-      <ACTION>
-         <HOLD HoldUntilDate="TODO: release date"/>
-      </ACTION>
-   </ACTIONS>
-</SUBMISSION>
+  <SUBMISSION>
+     <ACTIONS>
+        <ACTION>
+           <ADD/>
+        </ACTION>
+        <ACTION>
+           <HOLD HoldUntilDate="TODO: release date"/>
+        </ACTION>
+     </ACTIONS>
+  </SUBMISSION>
 
-You can use an editor like ``gedit`` to do so. Fill in a valid date like "2022-11-25". You might as well delete the complete ACTION block containing HOLD if the data should be released immediately.
+You can use an editor like ``gedit`` to do so. Fill in a valid date like "2022-11-25". You might as well delete the complete ACTION block containing HOLD if the data should be released immediately. 
 
 
 References
