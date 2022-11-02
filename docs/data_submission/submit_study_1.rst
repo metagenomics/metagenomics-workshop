@@ -1,7 +1,7 @@
 Submitting a study
 ==================
 
-There are two ways to submit a study at ENA:
+There are two ways to submit a study to ENA:
 
 1) Using the Webinterface
 -----------------------
