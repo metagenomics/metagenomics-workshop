@@ -5,7 +5,7 @@ The submission of raw reads can be done programmatically, with the webinterface 
 
 We will need to create a manifest file, which contains the metadata for our read data and references the actual read files that should be submitted.
 
-First, we create another directory:
+First, we create another directory::
 
   mkdir /mnt/submission/assembly/reads
   cd /mnt/submission/assembly/reads
