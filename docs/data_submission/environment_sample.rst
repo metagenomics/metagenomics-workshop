@@ -107,27 +107,36 @@ we will reduce that to the mandatory fields only::
 	</SAMPLE_SET>
 
 
-sequencing method from:
+Some notes on the selected values:
+
+The sequencing method is choosen from the following recommended vocabulary:
 https://ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0400103
 
-broad/local scale environmental context:
+The broad/local scale environmental context is choosen from the following recommended vocabulary:
 http://purl.obolibrary.org/obo/ENVO_00000428
 
-environmental medium:
+The environmental medium is choosen from the following recommended vocabulary:
 http://purl.obolibrary.org/obo/ENVO_00010483
 
-taxid from:
+There are several designated taxids in the NCBI taxonomy for metagenomes. Here is a list:
 https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=408169
-...
+
+The chosen values in our example are of course fictitious.
 
 Submit the sample
 ^^^^^^^^^^^^^^^^
 
 Now, it is time to submit::
-
-  CHANGE THAT curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+  
+  cd /mnt/submission/assembly/sample
+  curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/" > receipt.xml
 
 Make sure to use wwwdev to submit to the ENA test server.
+
+Get the sample accession number
+^^^^^^^^^^^^^^^
+
+
 
 
 References
