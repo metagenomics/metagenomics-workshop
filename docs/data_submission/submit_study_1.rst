@@ -67,9 +67,28 @@ Submit the study
 
 Now, it is time to submit:
 
-  curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+  curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/" > receipt.xml
 
 Make sure to use wwwdev to submit to the ENA test server.
+
+
+Your study accession
+^^^^^^^^^^^^^^^^
+
+The response is stored in the file "receipt.xml". You can find the accession number for your study in this line::
+
+  <PROJECT accession="PRJEB57247" alias="mgw2022test" status="PRIVATE" holdUntilDate="2024-11-03Z">
+  
+Also note, that this number is only valid for today, since it is discarded after 24 hours::
+
+     <MESSAGES>
+          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+     </MESSAGES>
+
+Note your accession number somewhere, you will need it for the next steps.
+
+Now let's submit our environmental sample for this study.
+
 
 
 References
