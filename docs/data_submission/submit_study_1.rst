@@ -65,7 +65,7 @@ To not type your username password every time you submit, you can store them as 
 Submit the study
 ^^^^^^^^^^^^^^^^
 
-Now, it is time to submit:
+Now, it is time to submit::
 
   curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/" > receipt.xml
 
