@@ -104,6 +104,9 @@ we will reduce that to the mandatory fields only::
     </SAMPLE>
   </SAMPLE_SET>
 
+sequencing method from:
+https://ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0400103
+
 
 ...
 
