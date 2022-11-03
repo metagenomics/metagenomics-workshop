@@ -136,6 +136,19 @@ Make sure to use wwwdev to submit to the ENA test server.
 Get the sample accession number
 ^^^^^^^^^^^^^^^
 
+The response is stored in the file "receipt.xml". You can find the accession number for your sample in this line::
+
+  <SAMPLE accession="ERS13654528" alias="course_test_environmental sample" status="PRIVATE">
+  
+Also note, that this number is only valid for today (as for the study accession), since it is discarded after 24 hours::
+
+     <MESSAGES>
+          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+     </MESSAGES>
+
+Note your accession number somewhere, you will need it for the next steps.
+
+Now let's submit our environmental sample for this study.
 
 
 
