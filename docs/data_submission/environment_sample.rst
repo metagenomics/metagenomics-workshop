@@ -67,7 +67,7 @@ we will reduce that to the mandatory fields only::
 	      <SAMPLE_ATTRIBUTE>
 		<TAG>project name</TAG>
 		<VALUE>MGCourse 2022</VALUE>
-		</SAMPLE_ATTRIBUTE>
+	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 	       <TAG>sequencing method</TAG>
 		<VALUE>MiSeq</VALUE>
