@@ -50,59 +50,62 @@ Create sample.xml
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
 we will reduce that to the mandatory fields only::
 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <SAMPLE_SET>
-    <SAMPLE alias="MT5176">
-      <TITLE>human gastric microbiota, mucosal</TITLE>
-      <SAMPLE_NAME>
-			  <TAXON_ID>FILL THAT</TAXON_ID>
-			  <SCIENTIFIC_NAME>FILL THAT</SCIENTIFIC_NAME>
-			  <COMMON_NAME>FILL THAT</COMMON_NAME>
-      </SAMPLE_NAME>
-      <DESCRIPTION>DESCRIPTION</DESCRIPTION>
-      <SAMPLE_ATTRIBUTES>   
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>ENA-CHECKLIST</TAG>
-				  <VALUE>ERC000025</VALUE>
-			  </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>project name</TAG>
-				  <VALUE>PROJECT NAME</VALUE>
-			  </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>sequencing method</TAG>
-				  <VALUE>SEQUENCING METHOD</VALUE>
-			  </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>collection date</TAG>
-				  <VALUE>DATE</VALUE>
-			  </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>geographic location (country and/or sea)</TAG>
-				  <VALUE>country</VALUE>
-			  </SAMPLE_ATTRIBUTE>        
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>geographic location (latitude)</TAG>
-				  <VALUE>latitude</VALUE>
-			  </SAMPLE_ATTRIBUTE>  
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>geographic location (longitude)</TAG>
-				  <VALUE>longitude </VALUE>
-			  </SAMPLE_ATTRIBUTE>   
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>broad-scale environmental context</TAG>
-				  <VALUE>Report the major environmental system the sample or specimen came from. The system(s) identified should have a coarse spatial grain, to provide the general environmental context of where the sampling was done (e.g. in the desert or a rainforest). We recommend using subclasses of EnvO’s biome class: http://purl.obolibrary.org/obo/ENVO_00000428. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS. </VALUE>
-			  </SAMPLE_ATTRIBUTE>   
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>local environmental context</TAG>
-				  <VALUE>Report the entity or entities which are in the sample or specimen’s local vicinity and which you believe have significant causal influences on your sample or specimen. We recommend using EnvO terms which are of smaller spatial grain than your entry for "broad-scale environmental context". Terms, such as anatomical sites, from other OBO Library ontologies which interoperate with EnvO (e.g. UBERON) are accepted in this field. EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS. </VALUE>
-			  </SAMPLE_ATTRIBUTE>   
-        <SAMPLE_ATTRIBUTE>
-				  <TAG>environmental medium</TAG>
-				  <VALUE>Report the environmental material(s) immediately surrounding the sample or specimen at the time of sampling. We recommend using subclasses of 'environmental material' (http://purl.obolibrary.org/obo/ENVO_00010483). EnvO documentation about how to use the field: https://github.com/EnvironmentOntology/envo/wiki/Using-ENVO-with-MIxS . Terms from other OBO ontologies are permissible as long as they reference mass/volume nouns (e.g. air, water, blood) and not discrete, countable entities (e.g. a tree, a leaf, a table top). </VALUE>
-			  </SAMPLE_ATTRIBUTE>          
-    </SAMPLE>
-  </SAMPLE_SET>
+	<SAMPLE_SET>
+	  <SAMPLE alias="course_test_environmental sample">
+	    <TITLE>Environmental sample for the metagenomic course 2022</TITLE>
+	    <SAMPLE_NAME>
+	      <TAXON_ID>1839947</TAXON_ID>
+	      <SCIENTIFIC_NAME>outdoor metagenome</SCIENTIFIC_NAME>
+	      <COMMON_NAME>outdoor metagenome</COMMON_NAME>
+	    </SAMPLE_NAME>
+	    <DESCRIPTION>DESCRIPTION</DESCRIPTION>
+	    <SAMPLE_ATTRIBUTES>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>ENA-CHECKLIST</TAG>
+		<VALUE>ERC000025</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>project name</TAG>
+		<VALUE>MGCourse 2022</VALUE>
+		</SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+	       <TAG>sequencing method</TAG>
+		<VALUE>MiSeq</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>collection date</TAG>
+		<VALUE>2022-11-03</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>geographic location (country and/or sea)</TAG>
+		<VALUE>Germany</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>geographic location (latitude)</TAG>
+		<VALUE>52.019101</VALUE>
+		<UNITS>DD</UNITS>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		 <TAG>geographic location (longitude)</TAG>
+		 <VALUE>8.531007</VALUE>
+		 <UNITS>DD</UNITS>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>broad-scale environmental context</TAG>
+		<VALUE>temperate woodland</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>local environmental context</TAG>
+		<VALUE>temperate woodland</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		<TAG>environmental medium</TAG>
+		<VALUE>stable manure</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	    </SAMPLE_ATTRIBUTES>
+	  </SAMPLE>
+	</SAMPLE_SET>
+
 
 sequencing method from:
 https://ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0400103
