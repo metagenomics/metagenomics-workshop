@@ -113,6 +113,8 @@ http://purl.obolibrary.org/obo/ENVO_00000428
 environmental medium:
 http://purl.obolibrary.org/obo/ENVO_00010483
 
+taxid from:
+https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=408169
 ...
 
 Submit the sample
