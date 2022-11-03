@@ -67,7 +67,7 @@ Submit the study
 
 Now, it is time to submit:
 
-curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+  curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
 
 Make sure to use wwwdev to submit to the ENA test server.
 
