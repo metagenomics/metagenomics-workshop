@@ -3,6 +3,9 @@ Data submission to ENA - Intro
 
 We will submit our analysis to ENA now. We will use the ENA dev/test Server for all submissions. Submissions sent there will be deleted every night, so it is a good environment for all kind of tests regarding submissions.
 
+Structure of this lesson
+^^^^^^^^^^^^^^^^^^
+
 The aim of this lesson is to submit everything we generated so far: raw data, assembly, binning and MAGs. To reduce the amount of work, we will submit one bin/MAG after the submission of assemblies. The complete submission will work in the following order:
 
 1. Create a study
