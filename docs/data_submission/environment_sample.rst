@@ -107,6 +107,10 @@ we will reduce that to the mandatory fields only::
 sequencing method from:
 https://ontobee.org/ontology/OBI?iri=http://purl.obolibrary.org/obo/OBI_0400103
 
+broad scale environmental context:
+http://purl.obolibrary.org/obo/ENVO_00000428
+
+
 
 ...
 
