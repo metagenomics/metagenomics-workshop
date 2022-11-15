@@ -42,29 +42,29 @@ Create a file named ``manifest`` and fill it with the content above - fill the f
 Validating the assembly submission
 ^^^^^^^^^^^^^^^^^^
 
-Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=read`` since we are submitting reads. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
-
-  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -validate -test
+Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=genome`` since we are submitting an assembly. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
+  
+  cd /mnt/submission/assembly/assembly
+  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -validate -test
 
 When everything was successfully validated, you should get a message like::
 
   INFO : The submission has been validated successfully.
 
 
-Submit the reads
+Submit the assembly
 ^^^^^^^^^^^^^^^^
 
-Now, that our read submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
+Now, that our assembly submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
 
-  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -submit -test
+  cd /mnt/submission/assembly/assembly
+  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -submit -test
  
 If everything works fine, you should receive a message like::
 
-  INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following experiment accession was assigned to  the submission: ERX10008217
-  INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following run accession was assigned to the submission: ERR10488906
+INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following analysis accession was assigned to the submission: ERZ14243535
 
-
-Now we can go on and submit our assembly.
+Great! Now let's go on by adding bins and MAGs to this assembly.
 
 
 References
