@@ -59,25 +59,25 @@ we will reduce that to the mandatory fields only, and we can copy some values fr
 	        <TAG>sequencing method</TAG>
 		      <VALUE>MiSeq</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>assembly software</TAG>
-		      <VALUE>MEGAHIT</VALUE>
+		<VALUE>MEGAHIT</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>binning software</TAG>
-		      <VALUE>METABAT</VALUE>
+		<VALUE>METABAT</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>investigation type</TAG>
-		      <VALUE>metagenome</VALUE>
+		<VALUE>metagenome</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>binning parameters</TAG>
-		      <VALUE>default</VALUE>
+		<VALUE>default</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>isolation source</TAG>
-		      <VALUE>stable manure</VALUE>
+		<VALUE>stable manure</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>collection date</TAG>
