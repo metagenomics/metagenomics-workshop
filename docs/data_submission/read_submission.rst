@@ -15,7 +15,7 @@ Then, we ``gzip`` the read files, since they need to be zipped for submission::
   cd /mnt/WGS-data/
   gzip read?.fq
   
-And change to our submission directory  
+And change to our submission directory::
   
   cd /mnt/submission/assembly/reads
 
