@@ -123,6 +123,8 @@ we will reduce that to the mandatory fields only, and we can copy some values fr
 
 Don't forget to fill in your environmental sample accession in the appropriate field.
 
+Note that you would need to add one sample for each of your bins, if you would like to submit all of them! In our case, we will only submit one bin for demonstration purposes.
+
 Submit the sample
 ^^^^^^^^^^^^^^^^
 
@@ -146,12 +148,12 @@ Also note, that this number is only valid for today (as for the study accession)
           <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
      </MESSAGES>
 
-Note your accession number somewhere, you will need it for the next steps.
+Note your bin sample accession number somewhere, you will need it for the next steps.
 
-Now let's submit our environmental sample for this study.
-
+Now let's submit our bin for this sample.
 
 
 References
 ^^^^^^^^^^
+
 **ENA - Registering a Sample** https://ena-docs.readthedocs.io/en/latest/submit/samples.html
