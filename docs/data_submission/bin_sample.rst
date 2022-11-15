@@ -34,6 +34,8 @@ https://www.ebi.ac.uk/ena/browser/view/ERC000050
 Create sample.xml
 ^^^^^^^^^^
 
+TODO: format xml
+
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
 we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission::
 
@@ -155,5 +157,5 @@ Now let's submit our bin for this sample.
 
 References
 ^^^^^^^^^^
-
+TODO: add bin submission link from ENA
 **ENA - Registering a Sample** https://ena-docs.readthedocs.io/en/latest/submit/samples.html
