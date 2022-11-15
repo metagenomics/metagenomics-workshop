@@ -1,62 +1,157 @@
 Submitting a bin sample
 ==================
 
-There are two ways to submit a sample to ENA:
+For every bin we like to submit, we will need to create a  bin sample. That bin sample should be linked to the environmental sample.
 
-1) Using the Webinterface
------------------------
-The Webinterface for the dev submission database can be found at: https://wwwdev.ebi.ac.uk/ena/submit/webin/login
-You could follow this guide: https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html
+As before, we will rely upon the programmatical submission using ``curl`` and an XML file.
 
-2) Registering a study programmatically
------------------------
-... using the linux command line tool ``curl``
-We will use this approach in this short course. 
+First, create a work folder for submissions and a subfolder for the sample files::
 
-First, create a work folder for submissions and a subfolder for the study files::
-
-  mkdir -p /mnt/submission/study
-  cd /mnt/submission/study
+  mkdir -p /mnt/submission/bins/sample/
+  cd /mnt/submission/bins/sample
 
 Create submission.xml
 ^^^^^^^^^^
-The next thing you need to to is to create a file submission.xml with the following content::
+The next thing you need to to is to create a file submission.xml with the following content (same as before so you could just copy the file from previous submissions)::
   
-  TODO: CHANGE THAT
   <SUBMISSION>
      <ACTIONS>
         <ACTION>
            <ADD/>
         </ACTION>
-        <ACTION>
-           <HOLD HoldUntilDate="TODO: release date"/>
-        </ACTION>
      </ACTIONS>
   </SUBMISSION>
 
-You can use an editor like ``gedit`` to do so. Fill in a valid date like "2022-11-25". You might as well delete the complete ACTION block containing HOLD if the data should be released immediately. 
+You can use an editor like ``gedit`` to do so. It is actually the same file as the submission.xml for the study (except the HOLD part) so you could just copy that as well.
 
 Get the correct ENA checklist
 ^^^^^^^^^^
 
-...
+The following checklist should be used for binned assemblies:
+https://www.ebi.ac.uk/ena/browser/view/ERC000050
 
 
 Create sample.xml
 ^^^^^^^^^^
 
-...
+There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
+we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission::
+
+	<SAMPLE_SET>
+	  <SAMPLE alias="course_test_bin_sample">
+	    <TITLE>Bin sample for the metagenomic course 2022</TITLE>
+	    <SAMPLE_NAME>
+	      <TAXON_ID>1839947</TAXON_ID>
+	      <SCIENTIFIC_NAME>outdoor metagenome</SCIENTIFIC_NAME>
+	      <COMMON_NAME>outdoor metagenome</COMMON_NAME>
+	    </SAMPLE_NAME>
+	    <DESCRIPTION>DESCRIPTION</DESCRIPTION>
+	    <SAMPLE_ATTRIBUTES>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>ENA-CHECKLIST</TAG>
+		      <VALUE>ERC000050</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>project name</TAG>
+		      <VALUE>MGCourse 2022</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+	        <TAG>sequencing method</TAG>
+		      <VALUE>MiSeq</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+	        <TAG>assembly software</TAG>
+		      <VALUE>MEGAHIT</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+	        <TAG>binning software</TAG>
+		      <VALUE>METABAT</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+	        <TAG>investigation type</TAG>
+		      <VALUE>metagenome</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+	        <TAG>binning parameters</TAG>
+		      <VALUE>default</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+        <SAMPLE_ATTRIBUTE>
+	        <TAG>isolation source</TAG>
+		      <VALUE>stable manure</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>collection date</TAG>
+		      <VALUE>2022-11-03</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>geographic location (country and/or sea)</TAG>
+		      <VALUE>Germany</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>geographic location (latitude)</TAG>
+		      <VALUE>52.019101</VALUE>
+		      <UNITS>DD</UNITS>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>geographic location (longitude)</TAG>
+		      <VALUE>8.531007</VALUE>
+		      <UNITS>DD</UNITS>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>broad-scale environmental context</TAG>
+		      <VALUE>temperate woodland</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>local environmental context</TAG>
+		      <VALUE>temperate woodland</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>environmental medium</TAG>
+		      <VALUE>stable manure</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>sample derived from</TAG>
+		      <VALUE>TODO: you environmental sample accession here!</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+		      <TAG>metagenomic source</TAG>
+		      <VALUE>outdoor metagenome</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	    </SAMPLE_ATTRIBUTES>
+	  </SAMPLE>
+	</SAMPLE_SET>
+
+Don't forget to fill in your environmental sample accession in the appropriate field.
 
 Submit the sample
 ^^^^^^^^^^^^^^^^
 
 Now, it is time to submit::
-
-  CHANGE THAT curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "PROJECT=@study.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+  
+  cd /mnt/submission/assembly/sample
+  curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/" > receipt.xml
 
 Make sure to use wwwdev to submit to the ENA test server.
+
+Get the sample accession number
+^^^^^^^^^^^^^^^
+
+The response is stored in the file "receipt.xml". You can find the accession number for your sample in this line::
+
+  <SAMPLE accession="ERS13654528" alias="course_test_environmental sample" status="PRIVATE">
+  
+Also note, that this number is only valid for today (as for the study accession), since it is discarded after 24 hours::
+
+     <MESSAGES>
+          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+     </MESSAGES>
+
+Note your accession number somewhere, you will need it for the next steps.
+
+Now let's submit our environmental sample for this study.
+
 
 
 References
 ^^^^^^^^^^
-**ENA - Registering a Study** https://ena-docs.readthedocs.io/en/latest/submit/study.html
+**ENA - Registering a Sample** https://ena-docs.readthedocs.io/en/latest/submit/samples.html
