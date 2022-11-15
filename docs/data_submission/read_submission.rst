@@ -8,6 +8,15 @@ We will need to create a manifest file, which contains the metadata for our read
 First, we create another directory::
 
   mkdir /mnt/submission/assembly/reads
+  
+
+Then, we ``gzip`` the read files, since they need to be zipped for submission::
+
+  cd /mnt/WGS-data/
+  gzip read?.fq
+  
+And change to our submission directory  
+  
   cd /mnt/submission/assembly/reads
 
 Create the manifest file
@@ -36,16 +45,29 @@ Create a file named ``manifest`` and fill it with the content above - fill the f
 Validating the read submission
 ^^^^^^^^^^^^^^^^^^
 
-...
+Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=read`` since we are submitting reads. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
+
+  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -validate -test
+
+When everything was successfully validated, you should get a message like::
+
+  INFO : The submission has been validated successfully.
+
 
 Submit the reads
 ^^^^^^^^^^^^^^^^
 
-Now, it is time to submit::
+Now, that our read submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
 
-  java -jar ....
+  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -submit -test
  
-Make sure to use wwwdev to submit to the ENA test server.
+If everything works fine, you should receive a message like::
+
+  INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following experiment accession was assigned to  the submission: ERX10008217
+  INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following run accession was assigned to the submission: ERR10488906
+
+
+Now we can go on and submit our assembly.
 
 
 References
