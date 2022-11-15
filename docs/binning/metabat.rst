@@ -19,7 +19,7 @@ Let's run a MetaBAT binning on the MEGAHIT assembly::
   mkdir metabat
   cd metabat
   
-  runMetaBat.sh ../megahit_out/final.contigs.fa ../megahit_out/megahit_sorted.bam
+  runMetaBat.sh ../final.contigs.fa ../megahit_sorted.bam
   
 MetaBAT will generate 11 bins from our assembly::
 
