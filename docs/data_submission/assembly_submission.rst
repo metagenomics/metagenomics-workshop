@@ -23,7 +23,7 @@ Create the manifest file
 TODO: coverage?
 TODO: mingaplength
 
-We will use this short manifest template for our submission::
+We will use this short manifest template for our submission, fill in YOUR values for STUDY, SAMPLE and RUN accession::
 
   STUDY   TODO
   SAMPLE   TODO
