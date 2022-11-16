@@ -12,7 +12,7 @@ Computing completeness and contamination using CheckM
 
 Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
 
-  checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/
+  checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
 
 
 ...
