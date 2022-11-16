@@ -27,23 +27,22 @@ Create the manifest file
 TODO: coverage?
 TODO: mingaplength
 
-We will use this short manifest template for our submission, fill in YOUR values for STUDY, SAMPLE and RUN accession::
+We will use this short manifest template for our submission (almost the same as the assembly except for the 'binned metagenome' and different fasta file ofr course), fill in YOUR values for STUDY, SAMPLE and RUN accession, be careful to fill in your BINNED SAMPLE ACCESSION, not the environmental sample accession::
 
   STUDY   TODO
   SAMPLE   TODO
   RUN_REF   TODO
   ASSEMBLYNAME   TODO
-  ASSEMBLY_TYPE   primary metagenome
+  ASSEMBLY_TYPE   binned metagenome
   COVERAGE   20
   PROGRAM   MEGAHIT
   PLATFORM   ILLUMINA
   MOLECULETYPE   genomic DNA
-  DESCRIPTION   MEGAHIT assembly of the MG course 2022 dataset
-  FASTA   /mnt/WGS-data/assembly_results/megahit_out/final.contigs.fa.gz
+  FASTA  /mnt/WGS-data/megahit_out/metabat/bin.*.fa
   
 Create a file named ``manifest`` and fill it with the content above - fill the fields marked with TODO with the appropriate content. Then continue with the next step.
 
-Validating the assembly submission
+Validating the bin submission
 ^^^^^^^^^^^^^^^^^^
 
 Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=genome`` since we are submitting an assembly. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
@@ -56,10 +55,10 @@ When everything was successfully validated, you should get a message like::
   INFO : The submission has been validated successfully.
 
 
-Submit the assembly
+Submit the bin
 ^^^^^^^^^^^^^^^^
 
-Now, that our assembly submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
+Now, that our bin submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
 
   cd /mnt/submission/assembly/assembly
   java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -submit -test
