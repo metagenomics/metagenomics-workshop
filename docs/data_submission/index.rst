@@ -14,7 +14,7 @@ text here ...
    assembly_submission
    bin_sample
    bin_submission
-   mag_sample
    mag_annotation
+   mag_sample
    mag_submission
   
