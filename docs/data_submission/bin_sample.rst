@@ -37,15 +37,19 @@ Create sample.xml
 TODO: format xml
 
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
-we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission::
+we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission.
+
+However, you will need to fill the taxon fields yourself. Have a look in the GTDBtk results, look for your bin, and search the taxa in the NCBI taxonomy:
+https://www.ncbi.nlm.nih.gov/taxonomy
+Find out the taxid, common name and scientific name for your bin and fill the information in the XML file::
 
 	<SAMPLE_SET>
 	  <SAMPLE alias="course_test_bin_sample">
 	    <TITLE>Bin sample for the metagenomic course 2022</TITLE>
 	    <SAMPLE_NAME>
-	      <TAXON_ID>1839947</TAXON_ID>
-	      <SCIENTIFIC_NAME>outdoor metagenome</SCIENTIFIC_NAME>
-	      <COMMON_NAME>outdoor metagenome</COMMON_NAME>
+	      <TAXON_ID>TODO: your taxid</TAXON_ID>
+	      <SCIENTIFIC_NAME>TODO: taxons name</SCIENTIFIC_NAME>
+	      <COMMON_NAME>TODO: taxons name</COMMON_NAME>
 	    </SAMPLE_NAME>
 	    <DESCRIPTION>DESCRIPTION</DESCRIPTION>
 	    <SAMPLE_ATTRIBUTES>
