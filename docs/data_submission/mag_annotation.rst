@@ -10,7 +10,12 @@ By checking the mandatory fields, we need an information, that is missing so far
 Computing completeness and contamination using CheckM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-TODO....
+Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
+
+  checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/
+
+
+...
 
 Annotation with prokka
 ^^^^^^^^^^^^^^^^^^^
@@ -36,7 +41,20 @@ Create an EMBL flat file
 
 Unfortunately, prokka does not produce a format, that we can submit to ENA. However, we have all the information we need in the fasta and gff3 files. An EMBL compatible flat file can be generated using the tool ``EMBLmyGFF3``. 
 
-TODO: command
+Call::
+
+  EMBLmyGFF3 maker.gff3 maker.fa \
+        --data_class STD \
+        --topology linear \
+        --molecule_type "genomic DNA" \
+        --transl_table 1  \
+        --species 'Drosophila melanogaster' \
+        --taxonomy INV \
+        --locus_tag LOCUSTAG \
+        --project_id PRJXXXXXXX \
+        --rg MYGROUP \
+        -o result.embl
+
 
 
 References
