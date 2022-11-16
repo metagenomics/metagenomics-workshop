@@ -41,21 +41,24 @@ Create an EMBL flat file
 
 Unfortunately, prokka does not produce a format, that we can submit to ENA. However, we have all the information we need in the fasta and gff3 files. An EMBL compatible flat file can be generated using the tool ``EMBLmyGFF3``. 
 
+An important note: In order to submit annotated sequences to ENA, you would need to get a locus tag prefix for each of your MAGs. See: https://ena-docs.readthedocs.io/en/latest/faq/locus_tags.html
+
+These need to be registered along with your study and take at least 24 hours to be available. The test service however, does not allow registration of locus tags. We just use the placeholder LOCUSTAG instead. 
+
 Call::
 
-  EMBLmyGFF3 maker.gff3 maker.fa \
+  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff \
         --data_class STD \
         --topology linear \
         --molecule_type "genomic DNA" \
         --transl_table 1  \
-        --species 'Drosophila melanogaster' \
-        --taxonomy INV \
+        --species TODO: your taxid here! \
         --locus_tag LOCUSTAG \
-        --project_id PRJXXXXXXX \
-        --rg MYGROUP \
-        -o result.embl
+        --project_id TODO: PRJXXXXXXX \
+        -o /mnt/WGS-data/megahit_out/metabat/mybin.embl
 
-
+Data class might be HTG as well:
+https://ena-docs.readthedocs.io/en/latest/retrieval/general-guide/data-classes.html
 
 References
 ^^^^^^^^^^
