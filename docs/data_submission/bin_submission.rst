@@ -1,7 +1,7 @@
 Submitting a metagenome bin
 ==================
 
-The submission of the assembly can be done only using ``webin-cli``.
+The submission of the bin can be done only using ``webin-cli``.
 
 Again, We will need to create a manifest file, which contains the metadata for our read data and references the assembly ``fasta`` file that should be submitted.
 
