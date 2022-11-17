@@ -63,7 +63,7 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 	    <SAMPLE_ATTRIBUTES>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>ENA-CHECKLIST</TAG>
-		      <VALUE>ERC000050</VALUE>
+		      <VALUE>ERC000047</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>project name</TAG>
