@@ -83,7 +83,7 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 	      </SAMPLE_ATTRIBUTE>
               <SAMPLE_ATTRIBUTE>
 	        <TAG>isolation source</TAG>
-		<VALUE>stable manure</VALUE>
+		<VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>collection date</TAG>
@@ -113,7 +113,7 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>environmental medium</TAG>
-		      <VALUE>stable manure</VALUE>
+		      <VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		      <TAG>sample derived from</TAG>
