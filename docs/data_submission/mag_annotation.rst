@@ -56,7 +56,7 @@ The following command yields us an EMBL compatible flat file, you need to fill i
         --molecule_type "genomic DNA" \
         --transl_table 1  \
         --species TODO: your taxid here! \
-        --environmental_sample TODO: your environmemntal sample accession here! \
+        --environmental_sample \
         --isolation_source "forest soil" \
         --locus_tag LOCUSTAG \
         --project_id TODO: PRJXXXXXXX \
