@@ -34,8 +34,6 @@ https://www.ebi.ac.uk/ena/browser/view/ERC000047
 Create sample.xml
 ^^^^^^^^^^
 
-TODO: format xml
-
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
 we will reduce that to the mandatory fields only, and we can copy some values from our previous bin sample submission.
 
