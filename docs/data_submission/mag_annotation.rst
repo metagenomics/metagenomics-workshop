@@ -56,8 +56,8 @@ The following command yields us an EMBL compatible flat file, you need to fill i
         --molecule_type "genomic DNA" \
         --transl_table 1  \
         --species TODO: your taxid here! \
-        --environmental_sample TODO
-        --isolation_source TODO
+        --environmental_sample TODO: your environmemntal sample accession here! \
+        --isolation_source "forest soil" \
         --locus_tag LOCUSTAG \
         --project_id TODO: PRJXXXXXXX \
         -o /mnt/WGS-data/megahit_out/metabat/mybin.embl
