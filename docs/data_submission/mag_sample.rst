@@ -52,8 +52,8 @@ https://www.ncbi.nlm.nih.gov/taxonomy
 Find out the taxid, common name and scientific name for your bin and fill the information in the XML file, also fill in completeness and contamination score from the CheckM results and the bin sample accession::
 
 	<SAMPLE_SET>
-	  <SAMPLE alias="course_test_bin_sample">
-	    <TITLE>Bin sample for the metagenomic course 2022</TITLE>
+	  <SAMPLE alias="TODO: fill in an alias">
+	    <TITLE>Mag number TODO: xxx sample for the metagenomic course 2022</TITLE>
 	    <SAMPLE_NAME>
 	      <TAXON_ID>TODO: your taxid</TAXON_ID>
 	      <SCIENTIFIC_NAME>TODO: taxons name</SCIENTIFIC_NAME>
