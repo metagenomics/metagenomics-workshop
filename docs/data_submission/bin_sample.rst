@@ -28,6 +28,7 @@ Get the correct ENA checklist
 ^^^^^^^^^^
 
 The following checklist should be used for binned assemblies:
+
 https://www.ebi.ac.uk/ena/browser/view/ERC000050
 
 
@@ -40,7 +41,9 @@ There are a number of fields to be filled. You can download the XML file to see 
 we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission.
 
 However, you will need to fill the taxon fields yourself. Have a look in the GTDBtk results, look for your bin, and search the taxa in the NCBI taxonomy:
+
 https://www.ncbi.nlm.nih.gov/taxonomy
+
 Find out the taxid, common name and scientific name for your bin and fill the information in the XML file::
 
 	<SAMPLE_SET>
