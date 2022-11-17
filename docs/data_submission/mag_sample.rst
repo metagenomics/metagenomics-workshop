@@ -81,69 +81,69 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 	      </SAMPLE_ATTRIBUTE>
               <SAMPLE_ATTRIBUTE>
 	        <TAG>completeness software</TAG>
-		      <VALUE>CheckM</VALUE>
+		<VALUE>CheckM</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>contamination score</TAG>
-		      <VALUE>TODO: fill in the contamination score of your MAG!</VALUE>
+		<VALUE>TODO: fill in the contamination score of your MAG!</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>binning software</TAG>
-		      <VALUE>METABAT</VALUE>
+		<VALUE>METABAT</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>assembly quality</TAG>
-		      <VALUE>Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.</VALUE>
+		<VALUE>Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S and 5S rRNA genes and at least 18 tRNAs.</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>binning parameters</TAG>
-		      <VALUE>default</VALUE>
+		<VALUE>default</VALUE>
 	      </SAMPLE_ATTRIBUTE> 
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>taxonomic identity marker</TAG>
-		      <VALUE>multi marker approach (GTDBtk)</VALUE>
+	        <VALUE>multi marker approach (GTDBtk)</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>isolation source</TAG>
-		      <VALUE>forest soil</VALUE>
+	        <VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>collection date</TAG>
-		      <VALUE>2022-11-03</VALUE>
+	        <TAG>collection date</TAG>
+	        <VALUE>2022-11-03</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (country and/or sea)</TAG>
-		      <VALUE>Germany</VALUE>
+	        <TAG>geographic location (country and/or sea)</TAG>
+	        <VALUE>Germany</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (latitude)</TAG>
-		      <VALUE>52.019101</VALUE>
-		      <UNITS>DD</UNITS>
+	        <TAG>geographic location (latitude)</TAG>
+	        <VALUE>52.019101</VALUE>
+	        <UNITS>DD</UNITS>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (longitude)</TAG>
-		      <VALUE>8.531007</VALUE>
-		      <UNITS>DD</UNITS>
+	        <TAG>geographic location (longitude)</TAG>
+	        <VALUE>8.531007</VALUE>
+	        <UNITS>DD</UNITS>
 	      </SAMPLE_ATTRIBUTE>
-   	    <SAMPLE_ATTRIBUTE>
-		      <TAG>broad-scale environmental context</TAG>
-		      <VALUE>temperate woodland</VALUE>
-	      </SAMPLE_ATTRIBUTE>
-	      <SAMPLE_ATTRIBUTE>
-		      <TAG>local environmental context</TAG>
-		      <VALUE>temperate woodland</VALUE>
+   	      <SAMPLE_ATTRIBUTE>
+	          <TAG>broad-scale environmental context</TAG>
+	          <VALUE>temperate woodland</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>environmental medium</TAG>
-		      <VALUE>forest soil</VALUE>
+                <TAG>local environmental context</TAG>
+	        <VALUE>temperate woodland</VALUE>
+	      </SAMPLE_ATTRIBUTE>
+	      <SAMPLE_ATTRIBUTE>
+	        <TAG>environmental medium</TAG>
+	        <VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>     
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>sample derived from</TAG>
-		      <VALUE>TODO: you bin sample accession here!</VALUE>
+	        <TAG>sample derived from</TAG>
+	        <VALUE>TODO: you bin sample accession here!</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>metagenomic source</TAG>
-		      <VALUE>outdoor metagenome</VALUE>
+	        <TAG>metagenomic source</TAG>
+	        <VALUE>outdoor metagenome</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	    </SAMPLE_ATTRIBUTES>
 	  </SAMPLE>
