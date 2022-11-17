@@ -37,20 +37,20 @@ Then have look at the output folder::
 
   ls -l /mnt/WGS-data/megahit_out/metabat/prokka
 
-It contains a ``.ffn`` file and a ``.gff`` file. We will use those files to generate an EMBL compatible flat file now.
+It contains``.gff`` file that we will use along with the bin fasta file to generate an EMBL compatible flat file now.
 
 Create an EMBL flat file
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-Unfortunately, prokka does not produce a format, that we can submit to ENA. However, we have all the information we need in the fasta and gff3 files. An EMBL compatible flat file can be generated using the tool ``EMBLmyGFF3``. 
+Unfortunately, prokka does not produce a format, that we can submit to ENA. However, we have all the information we need in the bin fasta and gff3 files. An EMBL compatible flat file can be generated using the tool ``EMBLmyGFF3``. 
 
 An important note: In order to submit annotated sequences to ENA, you would need to get a locus tag prefix for each of your MAGs. See: https://ena-docs.readthedocs.io/en/latest/faq/locus_tags.html
 
 These need to be registered along with your study and take at least 24 hours to be available. The test service however, does not allow registration of locus tags. We just use the placeholder LOCUSTAG instead. 
 
-The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (study/project accession and taxid)::
+The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (correct bin fasta file, study/project accession, and taxid)::
 
-  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.ffn \
+  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/bin.*.fa \
         --data_class STD \
         --topology linear \
         --molecule_type "genomic DNA" \
@@ -64,6 +64,8 @@ The following command yields us an EMBL compatible flat file, you need to fill i
 
 Data class might be HTG as well:
 https://ena-docs.readthedocs.io/en/latest/retrieval/general-guide/data-classes.html
+
+Inspect your EMBL file. Then we proceed with the submission of a MAG sample before we submit the generated EMBL file.
 
 References
 ^^^^^^^^^^
