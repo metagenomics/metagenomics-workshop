@@ -100,7 +100,7 @@ we will reduce that to the mandatory fields only::
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 		<TAG>environmental medium</TAG>
-		<VALUE>stable manure</VALUE>
+		<VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	    </SAMPLE_ATTRIBUTES>
 	  </SAMPLE>
