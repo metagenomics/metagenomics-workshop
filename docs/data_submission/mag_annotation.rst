@@ -14,8 +14,11 @@ Run checkm on all bins (replace the bin folder name with the correct path from y
 
   checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
 
+Now, the results can be found in the file ``checkm.log``::
 
-...
+  tail -20 /mnt/WGS-data/megahit_out/metabat/checkm.log
+
+Note the completeness and contamination values for your MAG, you will need them later. 
 
 Annotation with prokka
 ^^^^^^^^^^^^^^^^^^^
@@ -26,7 +29,7 @@ The multiplex capability and high yield of current day DNA-sequencing instrument
 
   gunzip /mnt/WGS-data/megahit_out/metabat/bin.*.fa.gz
   
-Check the taxonomy of your bin again, we need the kingdom to call prokka correctly. It probably is a Bacteria (if not, change accordingly to archaea. Then we call Prokka with the bin sequence, the kingdom and specify an output directory::
+Check the taxonomy of your bin again, we need the kingdom to call prokka correctly. It probably is a Bacteria (if not, change accordingly to archaea). Then we call Prokka with the bin sequence, the kingdom and specify an output directory::
   
   prokka --kingdom bacteria --cpus 28 /mnt/WGS-data/megahit_out/metabat/bin.*.fa --outdir /mnt/WGS-data/megahit_out/metabat/prokka
 
@@ -45,14 +48,16 @@ An important note: In order to submit annotated sequences to ENA, you would need
 
 These need to be registered along with your study and take at least 24 hours to be available. The test service however, does not allow registration of locus tags. We just use the placeholder LOCUSTAG instead. 
 
-Call::
+The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (study/project accession and taxid)::
 
-  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff \
+  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.ffn \
         --data_class STD \
         --topology linear \
         --molecule_type "genomic DNA" \
         --transl_table 1  \
         --species TODO: your taxid here! \
+        --environmental_sample TODO
+        --isolation_source TODO
         --locus_tag LOCUSTAG \
         --project_id TODO: PRJXXXXXXX \
         -o /mnt/WGS-data/megahit_out/metabat/mybin.embl
