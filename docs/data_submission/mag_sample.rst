@@ -71,15 +71,15 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 		      <TAG>project name</TAG>
 		      <VALUE>MGCourse 2022</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>assembly software</TAG>
-		      <VALUE>MEGAHIT</VALUE>
+		<VALUE>MEGAHIT</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>completeness score</TAG>
-		      <VALUE>TODO: fill in the completeness score of your MAG!</VALUE>
+		<VALUE>TODO: fill in the completeness score of your MAG!</VALUE>
 	      </SAMPLE_ATTRIBUTE>
-        <SAMPLE_ATTRIBUTE>
+              <SAMPLE_ATTRIBUTE>
 	        <TAG>completeness software</TAG>
 		      <VALUE>CheckM</VALUE>
 	      </SAMPLE_ATTRIBUTE>
