@@ -18,7 +18,7 @@ will take a couple of minutes. After downloading, we need to extract the
 tar archive (please be patient ;)::
 
   cd /mnt
-  wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvzf
+  wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvz
   
 Now we need to set an environment variable that stores the path to
 the database::
