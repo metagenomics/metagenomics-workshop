@@ -26,7 +26,7 @@ mapping the reads back to the MEGAHIT assembly::
   
 Now that we have an index, we can map the reads::
 
-  bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.bam threads=14
+  bbmap.sh in=../read1.fq in2=../read2.fq out=megahit.bam threads=28
   
 ``bbmap`` produces output in BAM format (the binary version of the `SAM format
 <http://samtools.github.io/hts-specs/SAMv1.pdf>`_). BAM files can be viewed and manipulated with `SAMtools <http://www.htslib.org/>`_. Let's first build an index for the FASTA file::
@@ -35,7 +35,7 @@ Now that we have an index, we can map the reads::
 
 We have to sort the BAM file by starting position of the alignments. This can be done using samtools again::
 
-  samtools sort -o megahit_sorted.bam -@ 14 megahit.bam 
+  samtools sort -o megahit_sorted.bam -@ 28 megahit.bam 
   
 Now we have to index the sorted BAM file::
 
