@@ -31,7 +31,7 @@ Then::
   
 Next, we can run MaxBin::
 
-  run_MaxBin.pl -thread 14 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
+  run_MaxBin.pl -thread 28 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
   
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
