@@ -30,6 +30,6 @@ Next, let's assign taxonomic labels to our binning results using
 GTDB-Tk::
 
   cd /mnt/WGS-data/megahit_out/maxbin
-  gtdbtk classify_wf --extension fasta --cpus 14 --genome_dir . --out_dir gtdbtk_out
+  gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir . --out_dir gtdbtk_out
 
 
