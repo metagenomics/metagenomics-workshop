@@ -15,7 +15,7 @@ should use 14 parallel threads. The output will be redirected to file
 
   cd /mnt/WGS-data
 
-  megahit -1 read1.fq -2 read2.fq -t 14 -o megahit_out
+  megahit -1 read1.fq -2 read2.fq -t 28 -o megahit_out
 
 The contig sequences are located in the `megahit_out` directory in
 file `final.contigs.fa`. Again, let's get some basic statistics on the
