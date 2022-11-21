@@ -9,5 +9,4 @@ assembled contigs of metagenomic datasets.
    :maxdepth: 1
 
    gtdb-tk
-   kraken
 
