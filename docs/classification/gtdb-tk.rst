@@ -13,18 +13,17 @@ See the `GTDBTk homepage <https://ecogenomics.github.io/GTDBTk/index.html>`_
 for more info.
 
 First, we need to download the GTDB database files. The database is pretty
-big (33 Gb), so even downloading it from our local copy in the de.NBI Cloud
+big (64 Gb), so even downloading it from our local copy in the de.NBI Cloud
 will take a couple of minutes. After downloading, we need to extract the
 tar archive (please be patient ;)::
 
   cd /mnt
-  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_r95_data.tar.gz
-  tar xvzf gtdbtk_r95_data.tar.gz
+  wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvzf
   
 Now we need to set an environment variable that stores the path to
 the database::
 
-  export GTDBTK_DATA_PATH=/mnt/release95
+  export GTDBTK_DATA_PATH=/mnt/release207_v2
   
 Next, let's assign taxonomic labels to our binning results using
 GTDB-Tk::
