@@ -9,17 +9,17 @@ message-passing interface (MPI) standard. See the `Ray home page
 
 Ray can be run by the following command using a kmer-length of 51 and
 31, repectively. As our compute instance have multiple cores, we
-specify this in the `mpiexec -n 14 ` command to let Ray know it should
-use 14 parallel MPI processes::
+specify this in the `mpiexec -n 28 ` command to let Ray know it should
+use 28 parallel MPI processes::
 
   cd /mnt/WGS-data
 
-  mpiexec -n 14 /usr/local/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51
+  mpiexec -n 28 /usr/local/bin/Ray -k 51 -p read1.fq read2.fq -o ray_51
 
 If there is enough time, you can run another Ray assembly using a smaller
 kmer size::
 
-  mpiexec -n 14 /usr/local/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
+  mpiexec -n 28 /usr/local/bin/Ray -k 31 -p read1.fq read2.fq -o ray_31
 
 This will create the output directory `ray_51` (and `ray_31`), the final
 contigs are located in `ray_51/Contigs.fasta` (and
