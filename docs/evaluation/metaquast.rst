@@ -25,7 +25,7 @@ not available, of course::
 
   cd /mnt/WGS-data
   
-  metaquast.py --threads 14 --gene-finding \
+  metaquast.py --threads 28 --gene-finding \
   -R /mnt/WGS-data/genomes/Aquifex_aeolicus_VF5.fna,\
   /mnt/WGS-data/genomes/Bdellovibrio_bacteriovorus_HD100.fna,\
   /mnt/WGS-data/genomes/Chlamydia_psittaci_MN.fna,\
