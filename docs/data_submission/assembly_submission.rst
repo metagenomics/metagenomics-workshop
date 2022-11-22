@@ -20,9 +20,6 @@ And change to our submission directory::
 Create the manifest file
 ^^^^^^^^^^
 
-TODO: coverage?
-TODO: mingaplength
-
 We will use this short manifest template for our submission, fill in YOUR values for STUDY, SAMPLE and RUN accession::
 
   STUDY   TODO
@@ -45,7 +42,7 @@ Validating the assembly submission
 Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=genome`` since we are submitting an assembly. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
   
   cd /mnt/submission/assembly/assembly
-  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -validate -test
+  java -jar ~/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -validate -test
 
 When everything was successfully validated, you should get a message like::
 
