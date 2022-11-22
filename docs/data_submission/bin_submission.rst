@@ -24,9 +24,6 @@ And change to our submission directory::
 Create the manifest file
 ^^^^^^^^^^
 
-TODO: coverage?
-TODO: mingaplength
-
 We will use this short manifest template for our submission (almost the same as the assembly except for the 'binned metagenome' and different fasta file ofr course), fill in YOUR values for STUDY, SAMPLE and RUN accession, be careful to fill in your BINNED SAMPLE ACCESSION, not the environmental sample accession::
 
   STUDY   TODO
@@ -38,7 +35,7 @@ We will use this short manifest template for our submission (almost the same as 
   PROGRAM   MEGAHIT
   PLATFORM   ILLUMINA
   MOLECULETYPE   genomic DNA
-  FASTA  /mnt/WGS-data/megahit_out/metabat/bin.*.fa
+  FASTA  /mnt/WGS-data/megahit_out/metabat/bin.*.fa.gz
   
 Create a file named ``manifest`` and fill it with the content above - fill the fields marked with TODO with the appropriate content. Then continue with the next step.
 
