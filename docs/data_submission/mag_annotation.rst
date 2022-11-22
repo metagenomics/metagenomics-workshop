@@ -64,7 +64,7 @@ The following command yields us an EMBL compatible flat file, you need to fill i
         --data_class STD \
         --topology linear \
         --molecule_type "genomic DNA" \
-        --transl_table 1  \
+        --transl_table 11  \
         --species TODO: your taxid here! \
         --environmental_sample \
         --isolation_source "forest soil" \
