@@ -55,7 +55,7 @@ Submit the assembly
 Now, that our assembly submission is validated successfully, we can go on with the submission. Just replace the ``-validate`` flag by ``-submit`` in the ``webin-cli`` call. Do NOT remove the ``-test`` flag::
 
   cd /mnt/submission/assembly/assembly
-  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -submit -test
+  java -jar  ~/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -submit -test
  
 If everything works fine, you should receive a message like::
 
