@@ -11,7 +11,7 @@ First, we create another directory::
 
 Then, we ``gzip`` the assembly file, since it needs to be zipped for submission::
   
-  gzip /mnt/WGS-data/assembly_results/megahit_out/final.contigs.fa
+  gzip /mnt/WGS-data/megahit_out/final.contigs.fa
   
 And change to our submission directory::
   
