@@ -60,7 +60,7 @@ Then select the python 3.8 option (2).
 
 The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (correct bin fasta file, study/project accession, and taxid)::
 
-  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_11152022.gff /mnt/WGS-data/megahit_out/bin.*.fa \
+  EMBLmyGFF3 /mnt/WGS-data/megahit_out/metabat/prokka/PROKKA_YOUR_RESULT.gff /mnt/WGS-data/megahit_out/bin.YOURBIN.fa \
         --data_class STD \
         --topology linear \
         --molecule_type "genomic DNA" \
