@@ -49,7 +49,7 @@ Unfortunately, we get an error::
 
   ERROR: Submission validation failed because of a user error. Please check validation reports for further information: /mnt/submission/mags/mags/genome/mgcourse2022_mag6/validate
 
-Check the file ``/mnt/submission/mags/mags/genome/mgcourse2022_mag6/validate/mybin.embl.gz.report``::
+Check the file ``/mnt/submission/mags/mags/genome/mgcourse2022_mag6/validate/mybin.embl.gz.report`` (it's different on your system - the assemblyname is in the path)::
 
   less /mnt/submission/mags/mags/genome/mgcourse2022_mag6/validate/mybin.embl.gz.report
   
