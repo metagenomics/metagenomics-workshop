@@ -7,7 +7,7 @@ Again, We will need to create a manifest file, which contains the metadata for o
 
 First, we create another directory::
 
-  mkdir /mnt/submission/bins/bins
+  mkdir -p /mnt/submission/bins/bins
 
 Now, choose one of the bin files from the metabat results in ``/mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/`` and copy it to the metabat folder::
 
