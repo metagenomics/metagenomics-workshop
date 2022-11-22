@@ -36,8 +36,7 @@ Now we have to start the actual assembly using
 graph is built then manipulated. Let's run assemblies for both
 kmer-lengths. See the `Velvet manual
 <https://github.com/dzerbino/velvet/blob/master/Manual.pdf>`_ for more
-info about parameter settings. Again, we submit the job to the compute
-cluster::
+info about parameter settings. Run::
 
   velvetg velvet_31 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto &
   velvetg velvet_51 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto &
