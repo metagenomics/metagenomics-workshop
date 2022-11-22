@@ -23,7 +23,7 @@ Let's run a MetaBAT binning on the MEGAHIT assembly::
   
 MetaBAT will generate 11 bins from our assembly::
 
-  ls final.contigs.fa.metabat-bins
+  ls -l final.contigs.fa.metabat-bins*
   
   bin.1.fa
   bin.2.fa
