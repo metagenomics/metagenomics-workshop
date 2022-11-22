@@ -164,5 +164,5 @@ Now let's submit our bin for this sample.
 
 References
 ^^^^^^^^^^
-TODO: add bin submission link from ENA
+**ENA - Submitting Binned Metagenome Assemblies** https://ena-docs.readthedocs.io/en/latest/submit/assembly/metagenome/binned.html
 **ENA - Registering a Sample** https://ena-docs.readthedocs.io/en/latest/submit/samples.html
