@@ -69,6 +69,10 @@ to (change to your bin-ID)::
 
   FASTA   /mnt/WGS-data/megahit_out/metabat/bin.*.fa.gz
   
+make sure, it is zipped::
+
+  gzip /mnt/WGS-data/megahit_out/metabat/bin.*.fa.gz  
+
 And validate again::
 
   java -jar ~/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=genome -manifest=manifest -validate -test
