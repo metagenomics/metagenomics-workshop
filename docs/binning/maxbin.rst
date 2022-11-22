@@ -23,9 +23,7 @@ Then::
 
   pileup.sh in=../megahit_sorted.bam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
-  (should be?):
-  awk '{print $2"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
-  
+
 Next, we can run MaxBin::
 
   run_MaxBin.pl -thread 28 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
