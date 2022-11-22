@@ -56,7 +56,7 @@ First we need to change the default python3 version to python3.8 using::
 
   sudo update-alternatives --config python3
   
-Then select the python 3.8 option (1).
+Then select the python 3.8 option (2).
 
 The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (correct bin fasta file, study/project accession, and taxid)::
 
