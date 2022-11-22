@@ -10,6 +10,10 @@ By checking the mandatory fields, we need an information, that is missing so far
 Computing completeness and contamination using CheckM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Source the environment to make sure, the check database path is set as variable::
+
+  source /etc/environment
+
 Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
 
   checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
@@ -47,6 +51,12 @@ Unfortunately, prokka does not produce a format, that we can submit to ENA. Howe
 An important note: In order to submit annotated sequences to ENA, you would need to get a locus tag prefix for each of your MAGs. See: https://ena-docs.readthedocs.io/en/latest/faq/locus_tags.html
 
 These need to be registered along with your study and take at least 24 hours to be available. The test service however, does not allow registration of locus tags. We just use the placeholder LOCUSTAG instead. 
+
+First we need to change the default python3 version to python3.8 using::
+
+  sudo update-alternatives --config python3
+  
+Then select the python 3.8 option (1).
 
 The following command yields us an EMBL compatible flat file, you need to fill in some of the fields (correct bin fasta file, study/project accession, and taxid)::
 
