@@ -27,7 +27,7 @@ IDBA-UD it should use 28 parallel threads::
 
   cd /mnt/WGS-data
 
-  idba_ud -r reads12.fas --num_threads 29 -o idba_ud_out
+  idba_ud -r reads12.fas --num_threads 28 -o idba_ud_out
 
 The contig sequences are located in the `idba_ud_out` directory in file `contig.fa`. Again, let's get some  basic statistics on the contigs::
 
