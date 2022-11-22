@@ -16,7 +16,7 @@ Source the environment to make sure, the check database path is set as variable:
 
 Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
 
-  checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
+  sudo checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
 
 Now, the results can be found in the file ``checkm.log``::
 
