@@ -21,9 +21,10 @@ tar archive (please be patient ;)::
   wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvz
   
 Now we need to set an environment variable that stores the path to
-the database::
+the database and put GTDBtk in our path::
 
   export GTDBTK_DATA_PATH=/mnt/release207_v2
+  export PATH=~/.local/bin/:$PATH
   
 Next, let's assign taxonomic labels to our binning results using
 GTDB-Tk::
