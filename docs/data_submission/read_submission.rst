@@ -25,7 +25,7 @@ Create the manifest file
 See this page on details for the content of the manifest file:
 https://ena-docs.readthedocs.io/en/latest/submit/reads/webin-cli.html
 
-TODO: which insert size??
+We just use an arbitrary number of 200 for the insert size.
 
 We will use this short manifest template for our submission::
 
