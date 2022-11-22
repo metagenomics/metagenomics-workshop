@@ -18,9 +18,6 @@ generate an abundance file from the mappes reads::
   mkdir maxbin
   cd maxbin
  
-Activate the conda base environment to get MaxBin into the PATH::
-
-  conda activate base
 
 Then::
 
