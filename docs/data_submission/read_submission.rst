@@ -48,7 +48,7 @@ Validating the read submission
 
 Before actually submitting, we are validating our manifest file. To do so, we use the option ``-validate`` in our call of ``webin-cli``. Also, make sure, to use the ``-test`` flag to submit to the ENA test server. We also use ``-context=read`` since we are submitting reads. Other options are your ``-username``, ``-password`` and the path to the ``-manifest`` file::
 
-  java -jar /mnt/submission/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -validate -test
+  java -jar ~/webin-cli-5.2.0.jar -username=$ENA_USER -password=$ENA_PWD -context=reads -manifest=manifest -validate -test
 
 When everything was successfully validated, you should get a message like::
 
