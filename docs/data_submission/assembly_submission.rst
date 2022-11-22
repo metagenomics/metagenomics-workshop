@@ -32,7 +32,7 @@ We will use this short manifest template for our submission, fill in YOUR values
   PLATFORM   ILLUMINA
   MOLECULETYPE   genomic DNA
   DESCRIPTION   MEGAHIT assembly of the MG course 2022 dataset
-  FASTA   /mnt/WGS-data/assembly_results/megahit_out/final.contigs.fa.gz
+  FASTA   /mnt/WGS-data/megahit_out/final.contigs.fa.gz
   
 Create a file named ``manifest`` and fill it with the content above - fill the fields marked with TODO with the appropriate content. Then continue with the next step.
 
