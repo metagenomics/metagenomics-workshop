@@ -6,9 +6,11 @@ There are two ways to submit a study to ENA:
 1) Using the Webinterface
 -----------------------
 The Webinterface for the dev submission database can be found at: 
+
 https://wwwdev.ebi.ac.uk/ena/submit/webin/login
 
 You could follow this guide: 
+
 https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html
 
 2) Registering a study programmatically
