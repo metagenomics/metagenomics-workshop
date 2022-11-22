@@ -59,7 +59,7 @@ Now, that our assembly submission is validated successfully, we can go on with t
  
 If everything works fine, you should receive a message like::
 
-INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following analysis accession was assigned to the submission: ERZ14243535
+  INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following analysis accession was assigned to the submission: ERZ14243535
 
 Great! Now let's go on by adding bins and MAGs to this assembly.
 
