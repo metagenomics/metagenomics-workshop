@@ -17,13 +17,14 @@ outputs two files in an output directory (creating it if necessary), Sequences
 and Roadmaps, which are necessary for running ``velvetg`` in the next step.
 
 Let's create multiple hashtables using kmer-lengths of 31 and 51. We
-are going to run two jobs in parallel::
+are going to run two jobs::
 
   cd /mnt/WGS-data
   
-  velveth velvet_31 31 -shortPaired -fastq -separate read1.fq read2.fq &
-  velveth velvet_51 51 -shortPaired -fastq -separate read1.fq read2.fq &
-
+  velveth velvet_31 31 -shortPaired -fastq -separate read1.fq read2.fq
+  
+  velveth velvet_51 51 -shortPaired -fastq -separate read1.fq read2.fq
+  
 Once the two jobs are finished (use `top` to monitor your jobs), you 
 should have two output directories for the two different kmer-lengths: 
 `velvet_31` and `velvet_51`.
