@@ -152,7 +152,7 @@ Also note, that this number is only valid for today (as for the study accession)
 
 Note your accession number somewhere, you will need it for the next steps.
 
-Now let's submit our environmental sample for this study.
+Now let's submit our reads for this study.
 
 
 
