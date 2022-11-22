@@ -5,9 +5,13 @@ There are two ways to submit a sample to ENA (the same as for studies):
 
 1) Using the Webinterface
 -----------------------
-The Webinterface for the dev submission database can be found at: https://wwwdev.ebi.ac.uk/ena/submit/webin/login
+The Webinterface for the dev submission database can be found at: 
 
-You could follow this guide: https://ena-docs.readthedocs.io/en/latest/submit/samples/interactive.html
+https://wwwdev.ebi.ac.uk/ena/submit/webin/login
+
+You could follow this guide: 
+
+https://ena-docs.readthedocs.io/en/latest/submit/samples/interactive.html
 
 2) Registering a sample programmatically
 -----------------------
