@@ -139,7 +139,7 @@ Submit the sample
 
 Now, it is time to submit::
   
-  cd /mnt/submission/assembly/sample
+  cd /mnt/submission/bins/sample
   curl -u $ENA_USER:$ENA_PWD -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/" > receipt.xml
 
 Make sure to use wwwdev to submit to the ENA test server.
