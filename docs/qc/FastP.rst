@@ -65,12 +65,11 @@ So the sequence that needs to be trimmed off from our reads are::
   
 We can the feed these into cutdapt to trim the 3' ends of the reads::
 
-  cutadapt -f fastq \
-  	--nextseq-trim=15 \
+  cutadapt -f fastq \  	
   	-e 0.15 -O 4 -m 25 \
   	-a CTGTCTCTTATACACATCTCCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG \
   	-A CTGTCTCTTATACACATCTGACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT \
-  	-o forward_q3.fastq -p reverse_q3.fastq \
+  	-o forward_qc3.fastq -p reverse_qc3.fastq \
   	forward_qc2.fastq reverse_qc2.fastq
 
 Finally, we will unce fastqc once again to see if we solved the issue::
