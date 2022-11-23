@@ -33,3 +33,4 @@ of reports including bad data.
 .. toctree::
    :maxdepth: 1
 
+   FastP
