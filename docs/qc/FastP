@@ -9,8 +9,8 @@ First of all, lets have a look on some real sequencing data::
 
 	mkdir -p /mnt/qc
   cd /mnt/qc
-  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/mgcourse_data/qc.tar
-  tar -xvf qc.tar
+  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/mgcourse_data/qc.tgz
+  tar -xvzf qc.tgz
   fastqc *.fastq
   
 Let's again inspect the results ...
