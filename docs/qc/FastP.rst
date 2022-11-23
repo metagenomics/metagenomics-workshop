@@ -1,4 +1,3 @@
-Quality trimming reads
 Quality Treatment
 ====================================================
 In this excercise you will learn how to quality trim Illumina paired-end reads.
@@ -7,7 +6,7 @@ Illumna paired-end reads are still the most common NGS approach for metagenomics
 We will now use some reads that show some issues regarding the data quality. 
 First of all, lets have a look on some real sequencing data::
 
-	mkdir -p /mnt/qc
+  mkdir -p /mnt/qc
   cd /mnt/qc
   wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/mgcourse_data/qc.tgz
   tar -xvzf qc.tgz
@@ -27,8 +26,8 @@ First, call the hel ppage for fastp and inspect all parameters, then run fastp::
 	        -i forward.fastq \
 	        -I reverse.fastq \
 	        -o forward_qc1.fastq \
-          -O reverse_qc1.fastq \						
-		      --cut_tail -Q -A -G -w 16
+          	-O reverse_qc1.fastq \						
+		--cut_tail -Q -A -G -w 16
 
 Let's again inspect the results. Now compare the effect with the untrimmed reads::
 
@@ -42,8 +41,8 @@ Still, the reads show some issues on the 3' end. We will try ti get rid of the p
 	        -i forward.fastq \
 	        -I reverse.fastq \
 	        -o forward_qc2.fastq \
-          -O reverse_qc2.fastq \						
-		      --cut_tail -A -g --poly_g_min_len 5 -w 16
+          	-O reverse_qc2.fastq \						
+		--cut_tail -A -g --poly_g_min_len 5 -w 16
 
 And again inspect the results using fastqc::
 
@@ -67,12 +66,12 @@ So the sequence that needs to be trimmed off from our reads are::
 We can the feed these into cutdapt to trim the 3' ends of the reads::
 
   cutadapt -f fastq \
-  --nextseq-trim=15 \
-  -e 0.15 -O 4 -m 25 \
-  -a CTGTCTCTTATACACATCTCCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG \
-  -A CTGTCTCTTATACACATCTGACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT \
-  -o forward_q3.fastq -p reverse_q3.fastq \
-  forward_qc2.fastq reverse_qc2.fastq
+  	--nextseq-trim=15 \
+  	-e 0.15 -O 4 -m 25 \
+  	-a CTGTCTCTTATACACATCTCCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG \
+  	-A CTGTCTCTTATACACATCTGACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT \
+  	-o forward_q3.fastq -p reverse_q3.fastq \
+  	forward_qc2.fastq reverse_qc2.fastq
 
 Finally, we will unce fastqc once again to see if we solved the issue::
 
