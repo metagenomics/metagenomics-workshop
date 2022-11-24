@@ -67,7 +67,6 @@ So the sequence that needs to be trimmed off from our reads are::
 We can the feed these into cutdapt to trim the 3' ends of the reads::
 
   cutadapt -f fastq \
-  	--nextseq-trim=15 \
   	-e 0.15 -O 10 -m 25 \
   	-a CTGTCTCTTATACACATCT \
   	-A CTGTCTCTTATACACATCT\
