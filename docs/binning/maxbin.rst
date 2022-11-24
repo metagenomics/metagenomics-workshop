@@ -30,7 +30,7 @@ Next, we can run MaxBin::
   
 If ``run_MaxBin.pl`` can't be found, source environment::
 
-  source /etc/environment/
+  source /etc/environment
 
 ... and try again.
   
