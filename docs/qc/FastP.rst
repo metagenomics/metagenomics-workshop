@@ -54,23 +54,24 @@ Trimming adapter sequence
 
 The FastQC report still shows some adapter contamination. We can use FastP also for this, but other tolls have shown to perform better performance on this task.
 Thus, we will use cutadapt for this. But first we need to identify the primers and adapters that were used. Usually, this should be communicated with your sequencing facility.
-For this data, we can have a look on the following website:
+For this data, we can have a look on the following websites:
 
+https://dnatech.genomecenter.ucdavis.edu/wp-content/uploads/2019/03/illumina-adapter-sequences-2019-1000000002694-10.pdf
 https://teichlab.github.io/scg_lib_structs/methods_html/Illumina.html
 
 So the sequence that needs to be trimmed off from our reads are::
 
-  forward: CTGTCTCTTATACACATCTCCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG
-  reverse: CTGTCTCTTATACACATCTGACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT
+  forward: CTGTCTCTTATACACATCT
+  reverse: CTGTCTCTTATACACATCT
   
 We can the feed these into cutdapt to trim the 3' ends of the reads::
 
   cutadapt -f fastq \
   	--nextseq-trim=15 \
-  	-e 0.15 -O 4 -m 25 \
-  	-a CTGTCTCTTATACACATCTCCGAGCCCACGAGACNNNNNNNNATCTCGTATGCCGTCTTCTGCTTG \
-  	-A CTGTCTCTTATACACATCTGACGCTGCCGACGANNNNNNNNGTGTAGATCTCGGTGGTCGCCGTATCATT \
-  	-o forward_q3.fastq -p reverse_q3.fastq \
+  	-e 0.15 -O 10 -m 25 \
+  	-a CTGTCTCTTATACACATCT \
+  	-A CTGTCTCTTATACACATCT\
+  	-o forward_qc3.fastq -p reverse_qc3.fastq \
   	forward_qc2.fastq reverse_qc2.fastq
 
 Finally, we will unce fastqc once again to see if we solved the issue::
