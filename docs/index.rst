@@ -21,4 +21,5 @@ typical steps of metagenome assembly and binning.
    binning/index
    classification/index
    data_submission/index
+   nextflow_nfcore/index
    
