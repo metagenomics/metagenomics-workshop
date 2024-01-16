@@ -1,5 +1,5 @@
 ***************
-Nextflow / nf-cre
+Nextflow / nf-core
 ***************
 
 Text describing what this part of the workshop will contain.
