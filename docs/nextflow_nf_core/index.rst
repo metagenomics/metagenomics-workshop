@@ -2,7 +2,7 @@
 Nextflow / nf-core
 ***************
 
-Text describing what this part of the workshop will contain.
+Text describing what this part of the workshop will contain...
 
 .. toctree::
    :maxdepth: 1
