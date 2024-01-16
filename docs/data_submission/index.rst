@@ -16,5 +16,5 @@ When you are done with your metagenomic analysis and ready to write a publicatio
    bin_submission
    mag_annotation
    mag_sample
-
+   mag_submission
   
