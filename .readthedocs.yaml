@@ -7,8 +7,8 @@ build:
   tools:
     python: "3.12"
 
-#mkdocs:
-#  configuration: mkdocs.yml
+mkdocs:
+  configuration: mkdocs.yml
 
 # Optionally declare the Python requirements required to build your docs
 #python:
