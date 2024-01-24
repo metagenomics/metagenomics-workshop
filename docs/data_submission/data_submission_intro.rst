@@ -36,3 +36,14 @@ If you want, you can read the help message with::
   java -jar ~/webin-cli-5.2.0.jar -help
   
 We will need that tool in later steps. Study and sample will be submitted using ``curl``.
+
+
+Set credentials as environment variables
+^^^^^^^^^^^^^^^^
+
+To not type your username password every time you submit, you should store them as environment variables::
+
+  export ENA_USER=Webin-xxxx
+  export ENA_PWD=password
+
+This will allow you, to just copy and paste the submit commands in this documentation.
