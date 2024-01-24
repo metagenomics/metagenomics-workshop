@@ -1,0 +1,4 @@
+Checklist	ERC000025	GSC MIxS miscellaneous natural or artificial environment										
+tax_id	scientific_name	sample_alias	sample_title	sample_description	project name	collection date	geographic location (country and/or sea)	geographic location (latitude)	geographic location (longitude)	broad-scale environmental context	local environmental context	environmental medium
+#units	 	 	 	 	 	 	 	DD	DD	
+1839947	outdoor metagenome	course_test_environmental sample	Environmental sample for the metagenomic course 2024	DESCRIPTION	MGCourse 2022	2022-11-03	Germany	52.019101	8.531007	temperate woodland	temperate woodland	forest soil
