@@ -13,6 +13,8 @@ You could follow this guide:
 
 https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html
 
+Register a study now via the webinterface! The description below is for reference only, if you want to create a study programmatically.
+
 2) Registering a study programmatically
 -----------------------
 ... using the linux command line tool ``curl``
