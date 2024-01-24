@@ -13,6 +13,13 @@ You could follow this guide:
 
 https://ena-docs.readthedocs.io/en/latest/submit/samples/interactive.html
 
+Download the following file: 
+https://github.com/metagenomics/metagenomics-workshop/blob/denbi_nfdi_simplevm/files/environmental_sample.tsv
+
+and submit it in the webinterface as described above. 
+
+Samples can be submitted programmatically was well as described below (for reference), we will do that for the bin samples later.
+
 2) Registering a sample programmatically
 -----------------------
 ... using the linux command line tool ``curl``.
