@@ -14,11 +14,15 @@ We will use nf-core/mag workflow for metagenomics assembly and binning. It start
 
 -------
 
-The command line::
+Before running the workflow, we need to prepare the compressed fastq files as input::
 
-  cd 
+  cd WGS-data
+  pigz -k read1.fq
+  pigz -k read2.fq
 
-  nextflow run my_workflow
+Then we can start the mag workflow as follows::
 
-  Result dir is  `output_workflow`.
+  cd ..
+  mkdir outputs
+  nextflow run nf-core/mag -profile singularity --input 'WGS-data/read{1,2}.fq.gz' --outdir outputs
 
