@@ -24,6 +24,10 @@ Then::
   pileup.sh in=../megahit_sorted.bam  out=cov.txt
   awk '{print $1"\t"$5}' cov.txt | grep -v '^#' > abundance.txt
 
+Activate conda environment for MaxBin::
+
+  conda activate maxbin2
+
 Next, we can run MaxBin::
 
   run_MaxBin.pl -thread 28 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
@@ -61,3 +65,7 @@ for a (very crude!) classification::
   for i in max*fasta; do prodigal -p meta -a $i.genes.faa -d $i.genes.fna -f gff -o $i.genes.gff -i $i& done
 
 Does the abundance of the bins match the 16S profile of the community?
+
+Lastly, deactivate the conda environment::
+
+  conda deactivate
