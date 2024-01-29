@@ -24,7 +24,6 @@ Now we need to set an environment variable that stores the path to
 the database and put GTDBtk in our path::
 
   export GTDBTK_DATA_PATH=/mnt/release207_v2
-  export PATH=~/.local/bin/:$PATH
   
 Next, let's assign taxonomic labels to our binning results using
 GTDB-Tk::
