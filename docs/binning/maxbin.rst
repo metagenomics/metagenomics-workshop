@@ -32,12 +32,6 @@ Next, we can run MaxBin::
 
   run_MaxBin.pl -thread 28 -contig ../final.contigs.fa -out maxbin -abund abundance.txt
   
-If ``run_MaxBin.pl`` can't be found, source environment::
-
-  source /etc/environment
-
-... and try again.
-  
 Assume your output file prefix is (out). MaxBin will generate information using this file header as follows.
 
 +------------------+-------------------------------------------------------------+
