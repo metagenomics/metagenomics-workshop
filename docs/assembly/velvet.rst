@@ -39,8 +39,8 @@ kmer-lengths. See the `Velvet manual
 <https://github.com/dzerbino/velvet/blob/master/Manual.pdf>`_ for more
 info about parameter settings. Run::
 
-  velvetg velvet_31 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto &
-  velvetg velvet_51 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto &
+  velvetg velvet_31 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto 
+  velvetg velvet_51 -cov_cutoff auto -ins_length 270 -min_contig_lgth 500 -exp_cov auto 
 
 The contig sequences are located in the `velvet_31` and `velvet_51`
 directories in file `contigs.fa`. Let's get some very basic statistics
