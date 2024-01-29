@@ -29,10 +29,10 @@ Next, let's assign taxonomic labels to our binning results using
 GTDB-Tk::
 
   cd /mnt/WGS-data/megahit_out/maxbin
-  gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir . --out_dir gtdbtk_out
+  gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
 
 When you are done, also compute the classification for the metabat binning, since we will need the results tomorrow for the submission::
 
   cd /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins...YOUR_FOLDERNAME
-  gtdbtk classify_wf --extension fa --cpus 28 --genome_dir . --out_dir gtdbtk_out
+  gtdbtk classify_wf --extension fa --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
 
