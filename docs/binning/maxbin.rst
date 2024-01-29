@@ -56,7 +56,7 @@ Assume your output file prefix is (out). MaxBin will generate information using 
 Now you can run a gene prediction on each genome bin and BLAST one sequence for each bin
 for a (very crude!) classification::
 
-  for i in max*fasta; do prodigal -p meta -a $i.genes.faa -d $i.genes.fna -f gff -o $i.genes.gff -i $i& done
+  for i in max*fasta; do prodigal -p meta -a $i.genes.faa -d $i.genes.fna -f gff -o $i.genes.gff -i $i done
 
 Does the abundance of the bins match the 16S profile of the community?
 
