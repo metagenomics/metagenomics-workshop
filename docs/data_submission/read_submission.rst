@@ -39,7 +39,7 @@ We will use this short manifest template for our submission::
   LIBRARY_SELECTION RANDOM
   LIBRARY_STRATEGY WGS
   FASTQ path_to_fw_read_file (TODO)
-  FASTQ path_to_fw_read_file (TODO)
+  FASTQ path_to_rv_read_file (TODO)
   
 Create a file named ``manifest`` and fill it with the content above - fill the fields marked with TODO with the appropriate content. Then continue with the next step.
 
