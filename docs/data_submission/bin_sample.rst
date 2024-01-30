@@ -35,8 +35,6 @@ https://www.ebi.ac.uk/ena/browser/view/ERC000050
 Create sample.xml
 ^^^^^^^^^^
 
-TODO: format xml
-
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
 we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission.
 
@@ -57,16 +55,16 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 	    <DESCRIPTION>DESCRIPTION</DESCRIPTION>
 	    <SAMPLE_ATTRIBUTES>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>ENA-CHECKLIST</TAG>
-		      <VALUE>ERC000050</VALUE>
+	        <TAG>ENA-CHECKLIST</TAG>
+		<VALUE>ERC000050</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>project name</TAG>
-		      <VALUE>MGCourse 2022</VALUE>
+		<TAG>project name</TAG>
+		<VALUE>MGCourse 2022</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
 	        <TAG>sequencing method</TAG>
-		      <VALUE>MiSeq</VALUE>
+		<VALUE>MiSeq</VALUE>
 	      </SAMPLE_ATTRIBUTE>
               <SAMPLE_ATTRIBUTE>
 	        <TAG>assembly software</TAG>
@@ -89,42 +87,42 @@ Find out the taxid, common name and scientific name for your bin and fill the in
 		<VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>collection date</TAG>
-		      <VALUE>2022-11-03</VALUE>
+		<TAG>collection date</TAG>
+		<VALUE>2022-11-03</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (country and/or sea)</TAG>
-		      <VALUE>Germany</VALUE>
+		<TAG>geographic location (country and/or sea)</TAG>
+		<VALUE>Germany</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (latitude)</TAG>
-		      <VALUE>52.019101</VALUE>
-		      <UNITS>DD</UNITS>
+		<TAG>geographic location (latitude)</TAG>
+		<VALUE>52.019101</VALUE>
+		<UNITS>DD</UNITS>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>geographic location (longitude)</TAG>
-		      <VALUE>8.531007</VALUE>
-		      <UNITS>DD</UNITS>
+		<TAG>geographic location (longitude)</TAG>
+		<VALUE>8.531007</VALUE>
+		<UNITS>DD</UNITS>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>broad-scale environmental context</TAG>
-		      <VALUE>temperate woodland</VALUE>
+		<TAG>broad-scale environmental context</TAG>
+		<VALUE>temperate woodland</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>local environmental context</TAG>
-		      <VALUE>temperate woodland</VALUE>
+		<TAG>local environmental context</TAG>
+		<VALUE>temperate woodland</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>environmental medium</TAG>
-		      <VALUE>forest soil</VALUE>
+		<TAG>environmental medium</TAG>
+		<VALUE>forest soil</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>sample derived from</TAG>
-		      <VALUE>TODO: you environmental sample accession here!</VALUE>
+		<TAG>sample derived from</TAG>
+		<VALUE>TODO: you environmental sample accession here!</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	      <SAMPLE_ATTRIBUTE>
-		      <TAG>metagenomic source</TAG>
-		      <VALUE>outdoor metagenome</VALUE>
+		<TAG>metagenomic source</TAG>
+		<VALUE>outdoor metagenome</VALUE>
 	      </SAMPLE_ATTRIBUTE>
 	    </SAMPLE_ATTRIBUTES>
 	  </SAMPLE>
