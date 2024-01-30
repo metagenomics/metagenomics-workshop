@@ -13,7 +13,17 @@ You could follow this guide:
 
 https://ena-docs.readthedocs.io/en/latest/submit/study/interactive.html
 
-Register a study now via the webinterface! The description below is for reference only, if you want to create a study programmatically.
+First, create a directory for your submission files::
+
+  mkdir /mnt/submission/
+
+Register a study now via the webinterface! At the end of the process, you can download a file containing your submission details, you will need the project accession later on, so make sure to save the file, for example in::
+
+  /mnt/submission/study.txt
+
+
+The following description below is for reference only, if you want to create a study programmatically. Continue with the next step (register sample), when you have submitted a study.
+
 
 2) Registering a study programmatically
 -----------------------
