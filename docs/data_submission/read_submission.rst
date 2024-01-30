@@ -67,6 +67,9 @@ If everything works fine, you should receive a message like::
   INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following experiment accession was assigned to  the submission: ERX10008217
   INFO : The TEST submission has been completed successfully. This was a TEST submission and no data was submitted. The following run accession was assigned to the submission: ERR10488906
 
+IMPORTANT: Save the Accession of the read submission to a file, for example like this::
+
+  echo "YOUR_ACCESSION" > /mnt/submission/reads.txt
 
 Now we can go on and submit our assembly.
 
