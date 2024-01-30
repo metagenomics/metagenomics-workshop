@@ -18,7 +18,7 @@ Set the database path in databases.csv::
 Prepare sample sheet file samples.csv::
 
   sample,run_accession,instrument_platform,fastq_1,fastq_2,fasta
-  s1,run1,ILLUMINA,/mnt/WGS-data/read1.fq,/mnt/WGS-data/read2.fq,
+  s1,run1,ILLUMINA,/mnt/WGS-data/read1.fq.gz,/mnt/WGS-data/read2.fq.gz,
 
 
 Run the pipeline::
