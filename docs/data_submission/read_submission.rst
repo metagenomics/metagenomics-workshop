@@ -7,7 +7,7 @@ We will need to create a manifest file, which contains the metadata for our read
 
 First, we create another directory::
 
-  mkdir /mnt/submission/assembly/reads
+  mkdir -p /mnt/submission/assembly/reads
   
 
 Then, we ``gzip`` the read files, since they need to be zipped for submission::
