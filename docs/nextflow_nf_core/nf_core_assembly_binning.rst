@@ -23,6 +23,6 @@ Before running the workflow, we need to prepare the compressed fastq files as in
 Then we can start the mag workflow as follows::
 
   cd ..
-  mkdir outputs
-  nextflow run nf-core/mag -profile singularity --input 'WGS-data/read{1,2}.fq.gz' --outdir outputs
+  mkdir output_mag
+  nextflow run nf-core/mag -profile singularity --input 'WGS-data/read{1,2}.fq.gz' --outdir output_mag
 
