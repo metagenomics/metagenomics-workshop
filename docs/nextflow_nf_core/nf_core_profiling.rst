@@ -12,12 +12,12 @@ Download reference databases::
 
   mkdir -p output_taxprofiler
 
-Set the database path in databases.csv::
+Set the database path with `vi databases.csv`::
 
   tool,db_name,db_params,db_path
   motus,db_mOTU,,/mnt/db_mOTU
 
-Prepare sample sheet file samples.csv::
+Prepare sample sheet file with `vi samples.csv`::
 
   sample,run_accession,instrument_platform,fastq_1,fastq_2,fasta
   s1,run1,ILLUMINA,/mnt/WGS-data/read1.fq.gz,/mnt/WGS-data/read2.fq.gz,
