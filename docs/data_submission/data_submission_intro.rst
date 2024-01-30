@@ -8,7 +8,7 @@ Structure of this lesson
 
 The aim of this lesson is to submit everything we generated so far: raw data, assembly, binning and MAGs. To reduce the amount of work, we will submit one bin/MAG after the submission of assemblies. The complete submission will work in the following order:
 
-1. Create a study
+1. Create a study 
 2. Create a sample
 3. Submit raw reads
 4. Submit the assembly results
@@ -17,7 +17,7 @@ The aim of this lesson is to submit everything we generated so far: raw data, as
 7. Create a sample for the selected MAG we want to submit
 8. Submit the MAG (do the annotation with prokka before doing that)
 
-So there is a lot to be done. Let's get stared by getting webin-cli - a command line tool provided by ENA to allow/facilitate some submissions on the command line
+So there is a lot to be done. Let's get started by getting webin-cli - a command line tool provided by ENA to allow/facilitate some submissions on the command line
 
 Getting webin-cli
 ^^^^^^^^^^^^^^^^
@@ -26,16 +26,16 @@ Getting webin-cli is easy - just get the latest jar from this git repository:
 
 https://github.com/enasequence/webin-cli/
 
-As of today, the latest version is 5.2.0, get it using ``wget``::
+As of today, the latest version is 6.10.0, get it using ``wget``::
 
   cd
-  wget https://github.com/enasequence/webin-cli/releases/download/5.2.0/webin-cli-5.2.0.jar
+  https://github.com/enasequence/webin-cli/releases/download/6.10.0/webin-cli-6.10.0.jar
   
 If you want, you can read the help message with::
 
-  java -jar ~/webin-cli-5.2.0.jar -help
+  java -jar ~webin-cli-6.10.0.jar -help
   
-We will need that tool in later steps. Study and sample will be submitted using ``curl``.
+We will need that tool in later steps. Study and sample will be created in the web interface and bin samples will be submitted using ``curl``.
 
 
 Set credentials as environment variables
