@@ -69,7 +69,7 @@ If everything works fine, you should receive a message like::
 
 IMPORTANT: Save the Accession of the read submission to a file, for example like this::
 
-  echo "YOUR_ACCESSION" > /mnt/submission/reads.txt
+  echo "YOUR_RUN_ACCESSION" > /mnt/submission/run.txt
 
 Now we can go on and submit our assembly.
 
