@@ -16,7 +16,7 @@ We will use nf-core/mag workflow for metagenomics assembly and binning. It start
 
 Before running the workflow, we need to prepare the compressed fastq files as input::
 
-  cd WGS-data
+  cd /mnt/WGS-data
   pigz -k read1.fq
   pigz -k read2.fq
 
