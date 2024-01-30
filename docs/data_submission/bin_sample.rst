@@ -36,7 +36,7 @@ Create sample.xml
 ^^^^^^^^^^
 
 There are a number of fields to be filled. You can download the XML file to see what can be filled out. Since this is a test submission, 
-we will reduce that to the mandatory fields only, and we can copy some values from out previous environmental sample submission.
+we will reduce that to the mandatory fields only, and we can copy some values from our previous environmental sample submission.
 
 However, you will need to fill the taxon fields yourself. Have a look in the GTDBtk results, look for your bin, and search the taxa in the NCBI taxonomy:
 
