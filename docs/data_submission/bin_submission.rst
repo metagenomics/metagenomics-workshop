@@ -24,7 +24,7 @@ And change to our submission directory::
 Create the manifest file
 ^^^^^^^^^^
 
-We will use this short manifest template for our submission (almost the same as the assembly except for the 'binned metagenome' and different fasta file ofr course), fill in YOUR values for STUDY, SAMPLE and RUN accession, be careful to fill in your BINNED SAMPLE ACCESSION, not the environmental sample accession::
+We will use this short manifest template for our submission (almost the same as the assembly except for the 'binned metagenome' and different fasta file ofr course), fill in YOUR values for STUDY, SAMPLE and RUN accession, be careful to fill in your BINNED SAMPLE ACCESSION, not the environmental sample accession (webin-cli won't complain if you take the wrong one)::
 
   STUDY   TODO
   SAMPLE   TODO
