@@ -30,4 +30,5 @@ Run the pipeline::
     --databases databases.csv \
     --outdir output_taxprofiler \
     -profile singularity \
-    --run_motus
+    --run_motus \
+    --motus_use_relative_abundance
