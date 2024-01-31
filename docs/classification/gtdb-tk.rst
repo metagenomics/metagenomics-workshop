@@ -19,7 +19,7 @@ tar archive (please be patient ;)::
 
   cd /mnt
   wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvz
-  
+   ub
 Now we need to set an environment variable that stores the path to
 the database and put GTDBtk in our path::
 
@@ -36,3 +36,14 @@ When you are done, also compute the classification for the metabat binning, sinc
   cd /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins...YOUR_FOLDERNAME
   gtdbtk classify_wf --extension fa --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
 
+Load gtdbtk.backbone.bac120.classify.tree, gtdbtk.bac120.classify.tree.7.tree into the ncbi taxonomy viewer:
+
+https://www.ncbi.nlm.nih.gov/tools/treeviewer/
+
+Convert to itol format::
+
+  gtdbtk convert_to_itol --input_tree gtdbtk_out/classify/gtdbtk.backbone.bac120.classify.tree --output_tree test.itol
+
+Load into:
+
+https://itol.embl.de/upload.cgi
