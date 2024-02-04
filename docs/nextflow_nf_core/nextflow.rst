@@ -326,8 +326,8 @@ Combining operators are used to join two or more channels: ``mix``, ``join``
 
 .. code-block:: groovy
 
-   // Example: Combine three channels
-   ch1 = channel.of( 1,2,3 )
+  // Example: Combine three channels
+  ch1 = channel.of( 1,2,3 )
   ch2 = channel.of( 'X','Y' )
   ch3 = channel.of( 'mt' )
   
