@@ -260,7 +260,7 @@ We can connect different processes with channels to make a complete workflow. We
 
 After the workflow excuted, we should be able to find the final stats output file. We can view it with: 
 
-``csvtk pretty -t  output_nf/read.fastp.stats.txt``
+``csvtk pretty -t output_nf/read.fastp.stats.txt``
 
 
 Operators
