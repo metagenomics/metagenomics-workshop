@@ -1,7 +1,12 @@
 Nextflow
 ~~~~~~~~~~~
 
-Some of the examples below are from: https://carpentries-incubator.github.io/workflows-nextflow
+Some of the examples below are from: https://carpentries-incubator.github.io/workflows-nextflow. Please activate the conda env ``nf_metag`` before running any code.
+
+.. code-block:: shell
+
+   conda activate nf_metag
+   cd /mnt
 
 Nextflow/Groovy Language Basics
 <<<<<<<<<<<<
