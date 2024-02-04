@@ -355,16 +355,16 @@ Forking operators split a single channel into multiple channels.
 
 .. code-block:: groovy
    
-Channel
- .of(1, 2, 3, 40, 50)
- .branch {
-     small: it < 10
-     large: it > 10
- }
- .set { result }
-
- result.small.view { "$it is small" }
- result.large.view { "$it is large" }
+   Channel
+    .of(1, 2, 3, 40, 50)
+    .branch {
+        small: it < 10
+        large: it > 10
+    }
+    .set { result }
+   
+    result.small.view { "$it is small" }
+    result.large.view { "$it is large" }
 
 
 - **Maths**
