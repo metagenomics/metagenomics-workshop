@@ -104,7 +104,7 @@ Closures are code blocks that can be assigned to variables or passed as argument
 .. code-block:: groovy
 
   square = { it * it }
-  println(squre(3))
+  println(square(3))
 
 
 Processes
