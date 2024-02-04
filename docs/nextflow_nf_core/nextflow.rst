@@ -182,11 +182,83 @@ There are different types of channels in nextflow:
   sra_ch = Channel.fromSRA('SRP043510')
   sra_ch.view()
 
+Write the above code in ``ch2.nf``, and run it.
 
 Workflows
 ----------
 
-We can connect different processes with channels to make a complete workflow
+We can connect different processes with channels to make a complete workflow. We have already seen a minimal example of workflow in **Processes** section with only one process. We can create a workflow consists of two process in ``ch3.nf``:
+
+.. code-block:: groovy
+
+   #!/usr/bin/env nextflow
+
+   // nextflow.config file to specify using DSL2
+   nextflow.enable.dsl=2
+   
+   // Define parameters
+   params.reads = "/mnt/WGS-data/read{1,2}.fq" // Default pattern for paired-end reads
+   params.outdir = "./output_nf" // Default output directory
+   params.threads = 8
+   
+   // QC the reads
+   process seqQC {
+       tag "${sample_id}"
+   
+       // Define output dir
+       publishDir params.outdir
+       // Input file
+       input:
+       tuple val(sample_id), path(reads)
+   
+       // Output file
+   	output:
+       tuple val(sample_id), path("*.fastp.{1,2}.fq.gz")
+   	
+       script:
+       def (r1, r2) = reads
+   	"""
+   	fastp -i $r1 -I $r2 \
+           -o ${sample_id}.fastp.1.fq.gz -O ${sample_id}.fastp.2.fq.gz \
+           -5 -3 -q 20 --cut_mean_quality 20 -l 80 -w ${params.threads}
+   	"""
+   }
+
+   // Stats on the QCed reads
+   process seqStats {
+       tag "${sample_id}"
+          // Define output dir
+       publishDir params.outdir, mode: 'move'
+       // Input file
+       input:
+       tuple val(sample_id), path(reads)
+   
+       // Output file
+   	output:
+       tuple val(sample_id), path("*.fastp.stats.txt")
+   	
+       script:
+       def seqstats_out = "${sample_id}.fastp.stats.txt"
+   	"""
+       seqkit stats -T -a $reads -o $seqstats_out -j $params.threads
+   	"""
+   
+   }
+   
+   // Define a workflow that calls the process
+   workflow {
+       // Create a channel for paired-end input files
+       read_pairs_ch = Channel
+           .fromFilePairs(params.reads, size: 2, checkIfExists: true)
+       seqQC(read_pairs_ch)
+       seqStats(seqQC.out)
+   }
+
+
+After the workflow excuted, we should be able to find the final stats output file. We can view it with: 
+
+``csvtk pretty -t  output_nf/read.fastp.stats.txt``
+
 
 Operators
 ----------
@@ -300,22 +372,15 @@ The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
       .view()
 
 
-Configuration
+nf-core workflows for metagenomics
 ----------
 
-
-
-nf-core
-----------
 - List the nf-core workflows in a specified catagory and sort by stars 
 .. code-block:: shell
 
   nf-core list metagenomics -s stars
 
-  
 
-workflows for metagenomics
-----------
 +----------------+-------+----------------+--------------+-------------+----------------------+
 | Pipeline Name  | Stars | Latest Release | Released     | Last Pulled | Have latest release? |
 +================+=======+================+==============+=============+======================+
