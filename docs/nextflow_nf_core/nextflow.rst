@@ -247,7 +247,7 @@ We can connect different processes with channels to make a complete workflow. We
    workflow {
        // Create a channel for paired-end input files
        read_pairs_ch = Channel
-           .fromFilePairs(params.reads, size: 2, checkIfExists: true)
+         .fromFilePairs(params.reads, size: 2, checkIfExists: true)
        seqQC(read_pairs_ch)
        seqStats(seqQC.out)
    }
@@ -282,9 +282,9 @@ Transforming operators modify the value or data contained in the channel element
 
    // Example: Transform filenames to uppercase
    Channel
-       .fromPath('WGS-data/*.fq')
-       .map { file -> file.name.toUpperCase() }
-       .view { "Transformed filename: $it" }
+    .fromPath('WGS-data/*.fq')
+    .map { file -> file.name.toUpperCase() }
+    .view { "Transformed filename: $it" }
 
   // Converting a list into multiple items
   ch =channel
@@ -365,9 +365,9 @@ The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
 .. code-block:: groovy
 
   ch = channel
-      .of(1..22,'X','Y')
-      .count()
-      .view()
+   .of(1..22,'X','Y')
+   .count()
+   .view()
 
 
 nf-core workflows for metagenomics
@@ -376,7 +376,7 @@ nf-core workflows for metagenomics
 - List the nf-core workflows in a specified catagory and sort by stars 
 .. code-block:: shell
 
-  nf-core list metagenomics -s stars
+   nf-core list metagenomics -s stars
 
 
 +----------------+-------+----------------+--------------+-------------+----------------------+
