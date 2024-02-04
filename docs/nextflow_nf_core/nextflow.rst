@@ -354,13 +354,17 @@ Combining operators are used to join two or more channels: ``mix``, ``join``
 Forking operators split a single channel into multiple channels.
 
 .. code-block:: groovy
+   
+Channel
+ .of(1, 2, 3, 40, 50)
+ .branch {
+     small: it < 10
+     large: it > 10
+ }
+ .set { result }
 
-  Channel
-    .of( 'chr1', 'chr2', 'chr3' )
-    .into({ ch1; ch2 })
-  
-  ch1.view({"ch1 emits: $it"})
-  ch2.view({"ch2 emits: $it"})
+ result.small.view { "$it is small" }
+ result.large.view { "$it is large" }
 
 
 - **Maths**
