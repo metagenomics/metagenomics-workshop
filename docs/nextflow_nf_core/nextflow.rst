@@ -131,7 +131,7 @@ Please create a file named ``ch1.nf`` and write the following code in it:
    nextflow.enable.dsl=2
   
    // Define a process
-   process SeqStats {
+   process seqStats {
       output:
       stdout
       
@@ -142,7 +142,7 @@ Please create a file named ``ch1.nf`` and write the following code in it:
 
   // Define a workflow that calls the process
    workflow {
-      SeqStats().view()
+      seqStats().view()
    }
 
 
