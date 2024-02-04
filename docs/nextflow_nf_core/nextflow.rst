@@ -332,9 +332,9 @@ Combining operators are used to join two or more channels: ``mix``, ``join``
 .. code-block:: groovy
 
   // Example: Combine three channels
-  ch1 = channel.of( 1,2,3 )
-  ch2 = channel.of( 'X','Y' )
-  ch3 = channel.of( 'mt' )
+  ch1 = Channel.of( 1,2,3 )
+  ch2 = Channel.of( 'X','Y' )
+  ch3 = Channel.of( 'mt' )
   
   ch4 = ch1.mix(ch2,ch3).view()
 
@@ -369,7 +369,7 @@ The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
 
 .. code-block:: groovy
 
-  ch = channel
+  ch = Channel
    .of(1..22,'X','Y')
    .count()
    .view()
