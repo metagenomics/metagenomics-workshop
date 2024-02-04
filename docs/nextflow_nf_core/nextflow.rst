@@ -3,7 +3,7 @@ Nextflow
 
 Some of the examples below are from: https://carpentries-incubator.github.io/workflows-nextflow
 
-Nextflow Language Basics
+Nextflow/Groovy Language Basics
 <<<<<<<<<<<<
 
 This guide provides an overview of the basic elements of the Nextflow language.
