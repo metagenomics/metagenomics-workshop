@@ -166,26 +166,26 @@ There are different types of channels in nextflow:
 
 .. code-block:: groovy
 
-  bases = ['A', 'C', 'G', 'T']
-
-  b0_ch = Channel.value(bases)
-  b0_ch.view()
-  
-  b1_ch = Channel.of('A', 'C', 'G', 'T')
-  b1_ch.view()
-  
-  b2_ch = Channel.fromList(bases)
-  b2_ch.view()
-  
-  read1_ch = Channel.fromPath("${projectDir}/WGS-data/*.fq")
-  read1_ch.view()
-  
-  read_pairs_ch = Channel.fromFilePairs("${projectDir}/WGS-data/*{1,2}.fq")
-  read_pairs_ch.view()
-  
-  
-  sra_ch = Channel.fromSRA('SRP043510')
-  sra_ch.view()
+   bases = ['A', 'C', 'G', 'T']
+   
+   Channel.value(bases)
+     .view()
+   
+   Channel.of('A', 'C', 'G', 'T')
+     .view()
+   
+   Channel.fromList(bases)
+     .view()
+   
+   Channel.fromPath("${projectDir}/WGS-data/*.fq")
+     .view()
+   
+   Channel.fromFilePairs("${projectDir}/WGS-data/*{1,2}.fq")
+     .view()
+   
+   
+   Channel.fromSRA('SRP043510')
+     .view()
 
 Write the above code in ``ch2.nf``, and run it.
 
@@ -374,7 +374,7 @@ The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
 
 .. code-block:: groovy
 
-  ch = Channel
+  Channel
    .of(1..22,'X','Y')
    .count()
    .view()
