@@ -8,7 +8,7 @@ Nextflow/Groovy Language Basics
 
 This guide provides an overview of the basic elements of the Nextflow language.
 
-- Printing
+- **Printing**
 
 In Nextflow, you can print messages to the console using the ``println`` statement.
 Please create and open a file named ``ch0.nf`` in the ``/mnt`` directory and write the following code in it
@@ -19,7 +19,7 @@ Please create and open a file named ``ch0.nf`` in the ``/mnt`` directory and wri
 
 Save the file and run it with: ``nextflow run ch0.nf``
 
-- Methods
+- **Methods**
 
 Methods in Nextflow are defined using the Groovy syntax. Here's a simple method definition:
 
@@ -33,7 +33,7 @@ Methods in Nextflow are defined using the Groovy syntax. Here's a simple method 
 
 Replace the content of file ``ch0.nf`` with above code save and run it.
 
-- Comments
+- **Comments**
 
 Comments in Nextflow are identical to Groovy/Java:
 
@@ -46,7 +46,7 @@ Comments in Nextflow are identical to Groovy/Java:
    /* This is a
       multi-line comment */
 
-- Variables
+- **Variables**
 
 Variables are declared using the ``def`` keyword or directly with an assignment.
 
@@ -55,7 +55,7 @@ Variables are declared using the ``def`` keyword or directly with an assignment.
    def age = 25
    name = "Nextflow"
 
-- Data Types
+- **Data Types**
 
 Nextflow supports various data types, including integers, floats, strings, and booleans.
 
@@ -65,7 +65,7 @@ Nextflow supports various data types, including integers, floats, strings, and b
    def pi = 3.14  // Float
    def isActive = true  // Boolean
 
-- Strings
+- **Strings**
 
 Strings can be declared using double quotes ``"``. String interpolation is supported with ``${}``.
 
@@ -74,7 +74,7 @@ Strings can be declared using double quotes ``"``. String interpolation is suppo
    def name = "Nextflow"
    println("Hello, ${name}!")
 
-- Lists
+- **Lists**
 
 Lists in Nextflow can be defined using square brackets ``[]``.
 
@@ -83,7 +83,7 @@ Lists in Nextflow can be defined using square brackets ``[]``.
    def tools = ["Nextflow", "Docker", "Singularity"]
    println(tools[0])  // Prints "Nextflow"
 
-- Maps
+- **Maps**
 
 Maps are key-value pairs and can be defined using the syntax ``[:]``.
 
@@ -92,7 +92,7 @@ Maps are key-value pairs and can be defined using the syntax ``[:]``.
    def config = [memory: "10 GB", cpus: 4]
    println(config.memory)  // Prints "10 GB"
 
-- Closures
+- **Closures**
 
 Closures are code blocks that can be assigned to variables or passed as arguments.
 
@@ -122,34 +122,34 @@ Please create a file named ``ch1.nf`` and write the following code in it:
 
 .. code-block:: groovy
 
-  // nextflow.config file to specify using DSL2
-  nextflow.enable.dsl=2
+   // nextflow.config file to specify using DSL2
+   nextflow.enable.dsl=2
   
-  // Define a process
-  process SeqStats {
-  	output:
-  	stdout
-  	
-  	"""
-  	seqkit stats /mnt/WGS-data/read1.fq
-  	"""
-  }
-  
+   // Define a process
+   process SeqStats {
+      output:
+      stdout
+      
+      """
+      seqkit stats /mnt/WGS-data/read1.fq
+      """
+   }
+
   // Define a workflow that calls the process
-  workflow {
-  	SeqStats().view()
-  }
+   workflow {
+      SeqStats().view()
+   }
 
 
 Channels
 -----------
 There are different types of channels in nextflow:
 
-1. Value channel
+1. **Value channel**
 
   A value channel is bound to a single value and can be created with ``Channel.value`` factory method.
 
-2. Queue channel
+2. **Queue channel**
 
  Queue (consumable) channels can be created using the following channel factory methods.
 
@@ -190,9 +190,9 @@ Workflows
 We can connect different processes with channels to make a complete workflow. We have already seen a minimal example of workflow in **Processes** section with only one process. We can create a workflow consists of two process in ``ch3.nf``:
 
 .. code-block:: groovy
-
+   
    #!/usr/bin/env nextflow
-
+   
    // nextflow.config file to specify using DSL2
    nextflow.enable.dsl=2
    
@@ -203,20 +203,20 @@ We can connect different processes with channels to make a complete workflow. We
    
    // QC the reads
    process seqQC {
-       tag "${sample_id}"
-   
-       // Define output dir
-       publishDir params.outdir
-       // Input file
-       input:
-       tuple val(sample_id), path(reads)
-   
-       // Output file
-   	output:
-       tuple val(sample_id), path("*.fastp.{1,2}.fq.gz")
+      tag "${sample_id}"
+      
+      // Define output dir
+      publishDir params.outdir
+      // Input file
+      input:
+      tuple val(sample_id), path(reads)
+      
+      // Output file
+      output:
+      tuple val(sample_id), path("*.fastp.{1,2}.fq.gz")
    	
-       script:
-       def (r1, r2) = reads
+      script:
+      def (r1, r2) = reads
    	"""
    	fastp -i $r1 -I $r2 \
            -o ${sample_id}.fastp.1.fq.gz -O ${sample_id}.fastp.2.fq.gz \
@@ -226,22 +226,20 @@ We can connect different processes with channels to make a complete workflow. We
 
    // Stats on the QCed reads
    process seqStats {
-       tag "${sample_id}"
-          // Define output dir
-       publishDir params.outdir, mode: 'move'
-       // Input file
-       input:
-       tuple val(sample_id), path(reads)
-   
-       // Output file
-   	output:
-       tuple val(sample_id), path("*.fastp.stats.txt")
-   	
-       script:
-       def seqstats_out = "${sample_id}.fastp.stats.txt"
-   	"""
-       seqkit stats -T -a $reads -o $seqstats_out -j $params.threads
-   	"""
+      tag "${sample_id}"
+      publishDir params.outdir, mode: 'move'
+      
+      input:
+      tuple val(sample_id), path(reads)
+      
+      output:
+      tuple val(sample_id), path("*.fastp.stats.txt")
+      
+      script:
+      def seqstats_out = "${sample_id}.fastp.stats.txt"
+      """
+      seqkit stats -T -a $reads -o $seqstats_out -j $params.threads
+      """
    
    }
    
@@ -265,7 +263,7 @@ Operators
 
 Nextflow provides a powerful set of operators that allow manipulation and control of the data flow. These operators can be categorized into several types based on their functionality: filtering, transforming, splitting, combining, forking, and performing arithmetic operations. This document outlines examples of each category.
 
-- Filtering
+- **Filtering**
 
 The filter operator allows you to get only the items emitted by a channel that satisfy a condition and discarding all the others. 
 
@@ -276,7 +274,7 @@ The filter operator allows you to get only the items emitted by a channel that s
     .filter( ~/^a.*/ )
     .view()
 
-- Transforming
+- **Transforming**
 
 Transforming operators modify the value or data contained in the channel elements. The 
 
@@ -308,7 +306,7 @@ Transforming operators modify the value or data contained in the channel element
     .groupTuple()
     .view()
 
-- Splitting
+- **Splitting**
 
 Sometimes, it's necessary to split the content of an individual item in a channel, such as a file or string, into smaller chunks for downstream processing. This could include items stored in a CSV file, entries in FASTA or FASTQ formats, or multi-line strings/text files.
 
@@ -322,7 +320,7 @@ Each of these operators enables precise control over the handling and preprocess
     .splitCsv(sep: "\t")
     .view()
 
-- Combining
+- **Combining**
 
 Combining operators are used to join two or more channels: ``mix``, ``join``
 
@@ -345,7 +343,7 @@ Combining operators are used to join two or more channels: ``mix``, ``join``
     .join(reads2_ch)
     .view()
 
-- Forking
+- **Forking**
 
 Forking operators split a single channel into multiple channels.
 
@@ -359,7 +357,7 @@ Forking operators split a single channel into multiple channels.
   ch2.view({"ch2 emits: $it"})
 
 
-- Maths
+- **Maths**
 The maths operators allows you to apply simple math function on channels.
 
 The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
