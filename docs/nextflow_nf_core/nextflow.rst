@@ -266,7 +266,7 @@ After the workflow excuted, we should be able to find the final stats output fil
 Operators
 ----------
 
-Nextflow provides a powerful set of operators that allow manipulation and control of the data flow. These operators can be categorized into several types based on their functionality: filtering, transforming, splitting, combining, forking, and performing arithmetic operations. This document outlines examples of each category.
+Nextflow provides a powerful set of operators that allow manipulation and control of the data flow. These operators can be categorized into several types based on their functionality: filtering, transforming, splitting, combining, forking, and performing arithmetic operations. This document outlines examples of each category. You can try different operators in ``ch4.nf`` file.
 
 - **Filtering**
 
