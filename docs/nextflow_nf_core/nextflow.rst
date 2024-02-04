@@ -291,25 +291,26 @@ Transforming operators modify the value or data contained in the channel element
     .map { file -> file.name.toUpperCase() }
     .view { "Transformed filename: $it" }
 
-  // Converting a list into multiple items
-  ch =channel
+   // Converting a list into multiple items
+   Channel
     .of([1, 2, 3, 4])
     .flatten()
     .view()
-
-  // The reverse of the flatten operator is collect. 
-  // The collect operator collects all the items emitted by a 
-  //channel to a list and return the resulting object as a sole emission. 
-  ch = channel
+   
+   // The reverse of the flatten operator is collect. 
+   // The collect operator collects all the items emitted by a 
+   //channel to a list and return the resulting object as a sole emission. 
+   Channel
     .of( 1, 2, 3, 4 )
     .collect()
     .view()
-
-  // Grouping contents of a channel by a key. 
-  // The first element of tuple is the default key.
-  channel.fromPath('WGS-data/*{1,2}.fq')
-    .groupTuple()
-    .view()
+   
+   // Grouping contents of a channel by a key. 
+   // The first element of tuple is the default key.
+   Channel.fromPath('output_nf/*.fastp.{1,2}.fq.gz')
+     .map{file -> [file.name.split('\\.')[0], file]}
+     .groupTuple()
+     .view()
 
 - **Splitting**
 
@@ -340,9 +341,9 @@ Combining operators are used to join two or more channels: ``mix``, ``join``
 
   // Joins together the items emitted by two channels for which exists a matching key. 
   // The key is defined, by default, as the first element in each item emitted
-  reads1_ch = channel
+  reads1_ch = Channel
     .of(['wt', 'wt_1.fq'], ['mut','mut_1.fq'])
-  reads2_ch= channel
+  reads2_ch= Channel
     .of(['wt', 'wt_2.fq'], ['mut','mut_2.fq'])
   reads_ch = reads1_ch
     .join(reads2_ch)
@@ -354,7 +355,7 @@ Forking operators split a single channel into multiple channels.
 
 .. code-block:: groovy
 
-  channel
+  Channel
     .of( 'chr1', 'chr2', 'chr3' )
     .into({ ch1; ch2 })
   
