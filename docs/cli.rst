@@ -16,9 +16,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
    cd <br>
    touch test.txt  <br>
@@ -32,10 +29,7 @@ Tasks:
    rm file.txt  <br>
    cd ..  <br>
    rmdir tutorial
-    </code></pre>
-
-.. raw:: html
-
+   </code></pre>
    </details>
 
 Excercise 2: Links
@@ -164,7 +158,7 @@ Tasks:
    <pre><code>
 
    cd ~/linux_intro <br>
-   ln -s ~/workdir/linuxdata/Araport11_genes.gff <br><br>
+   cp ~/linuxdata/Araport11_genes.gff . <br><br>
 
    less Araport11_genes.gff <br><br>
 
