@@ -13,21 +13,22 @@ Tasks:
  6. Change to ‘tutorial’ and rename ‘test.txt’ to ‘file.txt’ and verify 
  7. Remove the directory ‘tutorial’ and its contents 
 
+Solution:
 .. raw:: html
 
    <details>
    <pre>
-   cd <br>
-   touch test.txt  <br>
-   ls -lrt  <br>
-   mkdir tutorial  <br>
-   cp test.txt tutorial/  <br>
-   rm test.txt  <br>
-   cd tutorial  <br>
-   mv test.txt file.txt  <br>
-   ls  <br>
-   rm file.txt  <br>
-   cd ..  <br>
+   cd
+   touch test.txt
+   ls -lrt
+   mkdir tutorial
+   cp test.txt tutorial/ 
+   rm test.txt
+   cd tutorial
+   mv test.txt file.txt
+   ls
+   rm file.txt
+   cd ..
    rmdir tutorial
    </pre>
    </details>
