@@ -19,14 +19,14 @@ tar archive (please be patient ;)::
 
   cd /mnt
   wget -qO- https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/denbi-mg-course/gtdbtk_v2_data.tar.gz | tar xvz
-   ub
+   
 Now we need to set an environment variable that stores the path to
 the database and put GTDBtk in our path::
 
   export GTDBTK_DATA_PATH=/mnt/release207_v2
   
 Next, let's assign taxonomic labels to our binning results using
-GTDB-T
+GTDB-TK::
 
   cd /mnt/WGS-data/megahit_out/maxbin
   gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
