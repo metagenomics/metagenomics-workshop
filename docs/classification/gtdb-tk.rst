@@ -26,17 +26,30 @@ the database and put GTDBtk in our path::
   export GTDBTK_DATA_PATH=/mnt/release207_v2
   
 Next, let's assign taxonomic labels to our binning results using
-GTDB-Tk::
+GTDB-T
 
   cd /mnt/WGS-data/megahit_out/maxbin
   gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
 
-When you are done, also compute the classification for the metabat binning, since we will need the results tomorrow for the submission::
+When you are done, also compute the classification for the metabat binning, since we will need the results for the submission::
 
   cd /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins...YOUR_FOLDERNAME
   gtdbtk classify_wf --extension fa --cpus 28 --genome_dir . --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
 
-Load gtdbtk.backbone.bac120.classify.tree, gtdbtk.bac120.classify.tree.7.tree into the ncbi taxonomy viewer:
+However, the classification was quite fast due to mash/ANI fast identification (see https://ecogenomics.github.io/GTDBTk/commands/classify_wf.html). Marker gene based classification did not happen, we will repeat the classification with another - non artifical - sample. 
+Create a new folder and download the data::
+
+  mkdir /mnt/mgexample/
+  cd /mnt/mgexample/
+  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/mgexample/examplesample.tar.gz
+  tar -xzvf examplesample.tar.gz
+
+We will do the process for the maxbin results again, step by step::
+
+  gtdbtk classify_wf --extension fasta --cpus 28 --genome_dir examplesample --out_dir gtdbtk_out --mash_db /mnt/release207_v2/mash.msh
+
+
+Load gtdbtk.backbone.bac120.classify.tree, gtdbtk.bac120.classify.tree.3.tree into the ncbi taxonomy viewer:
 
 https://www.ncbi.nlm.nih.gov/tools/treeviewer/
 
