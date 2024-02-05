@@ -44,4 +44,26 @@ sudo chown ubuntu:ubuntu quality
 cd
 ln -s /mnt/quality
 </code></pre></details>
+
+## Excercise 3: Display File Content
+
+Before you can do the next excercise, you need to donwload the sequencing data:
+```
+
+
+<u>Tasks:</u>
+
+ Use head and tail to inspect the file
+ Print the first and last entry of the fasta file to the command line
+ Browse the file using less, search for start codons
+ 
+**Note:** this cannot be done using normal permission. use sudo for operating with root privileges
+
+<details><summary>Show solution</summary><pre><code>
+cd /mnt
+sudo mkdir quality
+sudo chown ubuntu:ubuntu quality
+cd
+ln -s /mnt/quality
+</code></pre></details>
  
