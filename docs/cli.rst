@@ -44,17 +44,18 @@ Tasks:
 
 **Note:** this cannot be done using normal permission. Use sudo for operating with root privileges
 
+Solution:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-
-   cd /mnt <br>
-   sudo mkdir linux_intro <br>
-   sudo chown ubuntu:ubuntu linux_intro <br>
-   cd <br>
-   ln -s /mnt/linux_intro <br>
-   </code></pre>
+   <pre>
+   cd /mnt
+   sudo mkdir linux_intro
+   sudo chown ubuntu:ubuntu linux_intro
+   cd
+   ln -s /mnt/linux_intro
+   </pre>
    </details>
 
 Excercise 3: Display File Content
@@ -73,18 +74,18 @@ Tasks:
  2. Print the first and last entry of the fasta file to the command line 
  3. Browse the file using less, search for start codons
 
+Solution:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-   head seqs.fasta <br>
-   tail seqs.fasta <br> <br>
-
-   head -n 2 seqs.fasta <br>
-   tail -n 2 seqs.fasta <br> <br>
-
-   less seqs.fasta <br>   
-   </code></pre>
+   <pre>
+   head seqs.fasta
+   tail seqs.fasta <br>
+   head -n 2 seqs.fasta
+   tail -n 2 seqs.fasta <br>
+   less seqs.fasta   
+   </pre>
    </details>
 
 Excercise 4: Wildcards
@@ -103,23 +104,21 @@ Tasks:
  3. List all tools in /usr/local/bin/ starting with ‘a’ or ‘b’ and ending with ‘c’ or ‘d’ 
  4. Copy all sequence files from the directory linuxdata to the linux_intro directory (except seqs.fasta)
 
+Solution:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-
-   ls /usr/local/bin/blast* <br><br>
-
-   ls /usr/local/bin/blast? <br><br>
-
-   ls /usr/local/bin/[ab]*[cd] <br><br>
-
-   cd ~/linux_intro <br>
-   cp ~/linuxdata/sequences* ~/linux_intro/ <br>
-   cp ~/linuxdata/sequences_?.fasta ~/linux_intro/ <br>
-   cp ~/linuxdata/sequences_[1-4].fasta ~/linux_intro/ <br>
-   cp ~/linuxdata/sequences_{1..4}.fasta ~/linux_intro/ <br>
-   </code></pre>
+   <pre>
+   ls /usr/local/bin/blast* <br>
+   ls /usr/local/bin/blast? <br>
+   ls /usr/local/bin/[ab]*[cd] <br>
+   cd ~/linux_intro
+   cp ~/linuxdata/sequences* ~/linux_intro/
+   cp ~/linuxdata/sequences_?.fasta ~/linux_intro/
+   cp ~/linuxdata/sequences_[1-4].fasta ~/linux_intro/
+   cp ~/linuxdata/sequences_{1..4}.fasta ~/linux_intro/
+   </pre>
    </details>
 
 Excercise 5: grep and wc
@@ -133,24 +132,20 @@ Tasks:
  5. Find all entries related to ‘Auxin’ 
  6. Use the command “grep” to find a file inside the “linuxdata” directory that contains the words “Romeo and Juliet”
 
+Solutoin:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-
-   cd ~/linux_intro <br>
-   cp ~/linuxdata/Araport11_genes.gff . <br><br>
-
-   less Araport11_genes.gff <br><br>
-
-   wc -l Araport11_genes.gff <br><br>
-
-   grep -c “^Chr1” Araport11_genes.gff <br><br>
-
-   grep Auxin Araport11_genes.gff <br><br>
-
-   grep -r “Romeo und Juliet” ~/linuxdata/ <br>
-   </code></pre>
+   <pre>
+   cd ~/linux_intro
+   cp ~/linuxdata/Araport11_genes.gff . 
+   less Araport11_genes.gff 
+   wc -l Araport11_genes.gff 
+   grep -c “^Chr1” Araport11_genes.gff <br>
+   grep Auxin Araport11_genes.gff <br>
+   grep -r “Romeo und Juliet” ~/linuxdata/ 
+   </pre>
    </details>
 
 Excercise 6: Streams
@@ -165,22 +160,20 @@ Tasks:
  6. Also store the first 50 headers in a separate file. Do this in one command by using “tee” ! 
  7. Use *grep* and *wc* to find out the number of bases in sequences.fasta
 
+Solutoin:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-
-   cat sequences_[1-4].fasta > sequences.fasta <br><br>
-
-   head -n 4 | tail -n 2 sequences.fasta <br><br>
-
-   grep “>” sequences.fasta > headers.txt <br>
-   grep “>” sequences.fasta | head -n 20 | tail -n 10 > headers_2.txt <br>
-   grep “>” sequences.fasta | head -n 50 | tail -n 10 >> headers_2.txt <br>
+   <pre>
+   cat sequences_[1-4].fasta > sequences.fasta <br>
+   head -n 4 | tail -n 2 sequences.fasta <br>
+   grep “>” sequences.fasta > headers.txt 
+   grep “>” sequences.fasta | head -n 20 | tail -n 10 > headers_2.txt 
+   grep “>” sequences.fasta | head -n 50 | tail -n 10 >> headers_2.txt 
    grep '>' sequences.fasta | head -n 50 | tee headers50.txt | tail -n 10 >> headers_2.txt <br>
-
-   grep -v “>” sequences.fasta | wc <br>
-   </code></pre>
+   grep -v “>” sequences.fasta | wc 
+   </pre>
    </details>
 
 Excercise 7: Tabular Data
@@ -193,15 +186,14 @@ Tasks:
   **Hint:** cut can select multiple columns 
  3. How many genes with a ‘kinase’ annotation are there per chromosome?
 
+Solution:
+
 .. raw:: html
 
    <details>
-   <pre><code>
-
-   cut -f 3 Araport11_genes.gff | sort | uniq -c | grep -v ‘#’ <br><br>
-
-   cut -f 1,3 Araport11_genes.gff | sort | uniq -c | grep -v '##' <br><br>
-
-   grep kinase Araport11_genes.gff | cut -f 1,3 | grep gene | cut -f 1 | sort | uniq -c <br>
-   </code></pre>
+   <pre>
+   cut -f 3 Araport11_genes.gff | sort | uniq -c | grep -v ‘#’ <br>
+   cut -f 1,3 Araport11_genes.gff | sort | uniq -c | grep -v '##' <br>
+   grep kinase Araport11_genes.gff | cut -f 1,3 | grep gene | cut -f 1 | sort | uniq -c
+   </pre>
    </details>
