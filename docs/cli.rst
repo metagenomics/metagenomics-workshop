@@ -16,7 +16,7 @@ Tasks:
 .. raw:: html
 
    <details>
-   <pre><code>
+   <pre>
    cd <br>
    touch test.txt  <br>
    ls -lrt  <br>
@@ -29,7 +29,7 @@ Tasks:
    rm file.txt  <br>
    cd ..  <br>
    rmdir tutorial
-   </code></pre>
+   </pre>
    </details>
 
 Excercise 2: Links
