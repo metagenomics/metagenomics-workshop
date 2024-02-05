@@ -142,9 +142,9 @@ Solutoin:
    cp ~/linuxdata/Araport11_genes.gff . 
    less Araport11_genes.gff 
    wc -l Araport11_genes.gff 
-   grep -c “^Chr1” Araport11_genes.gff <br>
+   grep -c "^Chr1" Araport11_genes.gff <br>
    grep Auxin Araport11_genes.gff <br>
-   grep -r “Romeo und Juliet” ~/linuxdata/ 
+   grep -r "Romeo und Juliet" ~/linuxdata/ 
    </pre>
    </details>
 
@@ -168,11 +168,11 @@ Solutoin:
    <pre>
    cat sequences_[1-4].fasta > sequences.fasta <br>
    head -n 4 | tail -n 2 sequences.fasta <br>
-   grep “>” sequences.fasta > headers.txt 
-   grep “>” sequences.fasta | head -n 20 | tail -n 10 > headers_2.txt 
-   grep “>” sequences.fasta | head -n 50 | tail -n 10 >> headers_2.txt 
-   grep '>' sequences.fasta | head -n 50 | tee headers50.txt | tail -n 10 >> headers_2.txt <br>
-   grep -v “>” sequences.fasta | wc 
+   grep ">" sequences.fasta > headers.txt 
+   grep ">" sequences.fasta | head -n 20 | tail -n 10 > headers_2.txt 
+   grep ">" sequences.fasta | head -n 50 | tail -n 10 >> headers_2.txt 
+   grep ">" sequences.fasta | head -n 50 | tee headers50.txt | tail -n 10 >> headers_2.txt <br>
+   grep -v ">" sequences.fasta | wc 
    </pre>
    </details>
 
@@ -192,8 +192,8 @@ Solution:
 
    <details>
    <pre>
-   cut -f 3 Araport11_genes.gff | sort | uniq -c | grep -v ‘#’ <br>
-   cut -f 1,3 Araport11_genes.gff | sort | uniq -c | grep -v '##' <br>
+   cut -f 3 Araport11_genes.gff | sort | uniq -c | grep -v "#" <br>
+   cut -f 1,3 Araport11_genes.gff | sort | uniq -c | grep -v "##" <br>
    grep kinase Araport11_genes.gff | cut -f 1,3 | grep gene | cut -f 1 | sort | uniq -c
    </pre>
    </details>
