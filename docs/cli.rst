@@ -45,9 +45,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
 
    cd /mnt <br>
@@ -56,9 +53,6 @@ Tasks:
    cd <br>
    ln -s /mnt/linux_intro <br>
    </code></pre>
-
-.. raw:: html
-
    </details>
 
 Excercise 3: Display File Content
@@ -80,9 +74,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
    head seqs.fasta <br>
    tail seqs.fasta <br> <br>
@@ -92,9 +83,6 @@ Tasks:
 
    less seqs.fasta <br>   
    </code></pre>
-
-.. raw:: html
-
    </details>
 
 Excercise 4: Wildcards
@@ -116,9 +104,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
 
    ls /usr/local/bin/blast* <br><br>
@@ -133,9 +118,6 @@ Tasks:
    cp ~/linuxdata/sequences_[1-4].fasta ~/linux_intro/ <br>
    cp ~/linuxdata/sequences_{1..4}.fasta ~/linux_intro/ <br>
    </code></pre>
-
-.. raw:: html
-
    </details>
 
 Excercise 5: grep and wc
@@ -152,9 +134,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
 
    cd ~/linux_intro <br>
@@ -170,9 +149,6 @@ Tasks:
 
    grep -r “Romeo und Juliet” ~/linuxdata/ <br>
    </code></pre>
-
-.. raw:: html
-
    </details>
 
 Excercise 6: Streams
@@ -190,9 +166,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
 
    cat sequences_[1-4].fasta > sequences.fasta <br><br>
@@ -206,9 +179,6 @@ Tasks:
 
    grep -v “>” sequences.fasta | wc <br>
    </code></pre>
-
-.. raw:: html
-
    </details>
 
 Excercise 7: Tabular Data
@@ -224,9 +194,6 @@ Tasks:
 .. raw:: html
 
    <details>
-
-.. raw:: html
-
    <pre><code>
 
    cut -f 3 Araport11_genes.gff | sort | uniq -c | grep -v ‘#’ <br><br>
@@ -235,7 +202,4 @@ Tasks:
 
    grep kinase Araport11_genes.gff | cut -f 1,3 | grep gene | cut -f 1 | sort | uniq -c <br>
    </code></pre>
-
-.. raw:: html
-
    </details>
