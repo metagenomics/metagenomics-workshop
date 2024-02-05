@@ -316,9 +316,7 @@ Transforming operators modify the value or data contained in the channel element
 
 Sometimes, it's necessary to split the content of an individual item in a channel, such as a file or string, into smaller chunks for downstream processing. This could include items stored in a CSV file, entries in FASTA or FASTQ formats, or multi-line strings/text files.
 
-Nextflow provides several splitting operators to facilitate this: ``splitCsv``, ``splitFasta``, ``splitFastq``, ``splitText``
-
-Each of these operators enables precise control over the handling and preprocessing of data streams, enhancing the flexibility and efficiency of Nextflow pipelines.
+Nextflow provides several splitting operators to facilitate this: ``splitCsv``, ``splitFasta``, ``splitFastq``, ``splitText``. Each of these operators enables precise control over the handling and preprocessing of data streams, enhancing the flexibility and efficiency of Nextflow pipelines.
 
 .. code-block:: groovy
 
@@ -368,6 +366,7 @@ Forking operators split a single channel into multiple channels.
 
 
 - **Maths**
+
 The maths operators allows you to apply simple math function on channels.
 
 The maths operators are: ``count``, ``min``, ``max``, ``sum``, ``toInteger``
