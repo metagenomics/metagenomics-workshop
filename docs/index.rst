@@ -13,6 +13,7 @@ typical steps of metagenome assembly and binning.
    :maxdepth: 2
    
    simplevm
+   cli
    data
    qc/index
    assembly/index
