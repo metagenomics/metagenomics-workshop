@@ -4,6 +4,7 @@ Command Line Introduction: Excercises
 Excercise 1: Basic File Operations
 ----------------------------------
 
+Tasks:
 1. Change to your home directory *(1 command)* 
 2. Create a file named ‘test.txt’ (and check if it is there) *(2 command)* 
 3. Create a directory named ‘tutorial’ *(1 command)* 
@@ -13,8 +14,7 @@ Excercise 1: Basic File Operations
 7. Remove the directory ‘tutorial’ and its contents *(3 command)*
 
 .. raw:: html
-   <Show solution>
-.. raw:: html
+   <details>
 
    cd
    touch test.txt
@@ -31,7 +31,7 @@ Excercise 1: Basic File Operations
    
 
 .. raw:: html
-   </Show solution>
+   </details>
 
 Excercise 2: Links
 ------------------
