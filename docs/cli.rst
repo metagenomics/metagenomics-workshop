@@ -40,29 +40,26 @@ Tasks:
 
 Excercise 2: Links
 ------------------
+Tasks:
+ 1. change to /mnt/ 
+ 2. Create a directory with the name “linux_intro” and give it to the user ubuntu 
+ 3. Go back to your home directory 
+ 4. Create a soft link called ‘linux_intro’ to /mnt/linux_intro
 
-1. change to /mnt/ *(1 command)* 2. Create a directory with the
-name “quality” and give it to the user ubuntu *(2 command)* 3. Go back
-to your home directory *(1 command)* 4. Create a soft link called
-‘quality’ to /mnt/quality *(1 command)*
-
-**Note:** this cannot be done using normal permission. use sudo for
-operating with root privileges
+**Note:** this cannot be done using normal permission. Use sudo for operating with root privileges
 
 .. raw:: html
 
    <details>
 
-Show solution
-
 .. raw:: html
 
    <pre><code>
-   cd /mnt
-   sudo mkdir quality
-   sudo chown ubuntu:ubuntu quality
-   cd
-   ln -s /mnt/quality
+   cd /mnt <br>
+   sudo mkdir linux_intro <br>
+   sudo chown ubuntu:ubuntu linux_intro <br>
+   cd <br>
+   ln -s /mnt/linux_intro <br>
    </code></pre>
 
 .. raw:: html
@@ -77,30 +74,28 @@ sequencing data:
 
 ::
 
-   cd ~/workdir
+   cd ~/linux_intro
    wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/linuxcourse/seqs.fasta
 
-Tasks: 1. Use head and tail to inspect the file 2. Print the first and
-last entry of the fasta file to the command line 3. Browse the file
-using less, search for start codons
+Tasks: 
+ 1. Use head and tail to inspect the file 
+ 2. Print the first and last entry of the fasta file to the command line 
+ 3. Browse the file using less, search for start codons
 
 .. raw:: html
 
    <details>
 
-Show solution
-
 .. raw:: html
 
    <pre><code>
-   head seqs.fasta
-   tail seqs.fasta
+   head seqs.fasta <br>
+   tail seqs.fasta <br> <br>
 
-   head -n 2 seqs.fasta
-   tail -n 2 seqs.fasta
+   head -n 2 seqs.fasta <br>
+   tail -n 2 seqs.fasta <br> <br>
 
-   less seqs.fasta
-   (/ATG to search for start codons)
+   less seqs.fasta <br>   
    </code></pre>
 
 .. raw:: html
