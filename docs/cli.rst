@@ -14,6 +14,7 @@ Tasks:
  7. Remove the directory ‘tutorial’ and its contents 
 
 Solution:
+
 .. raw:: html
 
    <details>
