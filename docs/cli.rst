@@ -5,15 +5,16 @@ Excercise 1: Basic File Operations
 ----------------------------------
 
 Tasks:
-1. Change to your home directory *(1 command)* 
-2. Create a file named ‘test.txt’ (and check if it is there) *(2 command)* 
-3. Create a directory named ‘tutorial’ *(1 command)* 
-4. Copy ‘test.txt’ into the directory ‘tutorial’ *(1 command)* 
-5. Delete ‘test.txt’ (in your home) *(1 command)* 
-6. Change to ‘tutorial’ and rename ‘test.txt’ to ‘file.txt’ and verify *(3 command)* 
-7. Remove the directory ‘tutorial’ and its contents *(3 command)*
+ 1. Change to your home directory *(1 command)* 
+ 2. Create a file named ‘test.txt’ (and check if it is there) *(2 command)* 
+ 3. Create a directory named ‘tutorial’ *(1 command)* 
+ 4. Copy ‘test.txt’ into the directory ‘tutorial’ *(1 command)* 
+ 5. Delete ‘test.txt’ (in your home) *(1 command)* 
+ 6. Change to ‘tutorial’ and rename ‘test.txt’ to ‘file.txt’ and verify *(3 command)* 
+ 7. Remove the directory ‘tutorial’ and its contents *(3 command)*
 
 .. raw:: html
+
    <details>
 
    cd
@@ -31,6 +32,7 @@ Tasks:
    
 
 .. raw:: html
+
    </details>
 
 Excercise 2: Links
