@@ -1,7 +1,7 @@
 nf-core pipeline for taxonomy profiling
 ================
 
-The nf-core/taxpfoiler will be used in this training. It consists of serveral best practice profilers: e.g., ``mOTUs`` and ``metaPhlAn``.
+The nf-core/taxpfoiler (https://nf-co.re/taxprofiler) will be used in this training. It consists of serveral best practice profilers: e.g., ``mOTUs`` and ``metaPhlAn``.
 
 Download reference databases::
 
