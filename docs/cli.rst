@@ -125,7 +125,7 @@ Excercise 5: grep and wc
 ------------------------
 
 Tasks: 
- 1. Create a soft link to the Araport11_genes.gff from the previously uncompressed ‘linuxdata.tar.gz’-archive into your linux_intro
+ 1. Copy the Araport11_genes.gff from the previously uncompressed ‘linuxdata.tar.gz’-archive into your linux_intro
  2. Inspect the file using less 
  3. How many lines does the file contain?
  4. How many entries are there for Chromosome 1? 
