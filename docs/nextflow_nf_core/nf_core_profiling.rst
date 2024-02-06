@@ -32,3 +32,5 @@ Run the pipeline::
     -profile singularity \
     --run_motus \
     --motus_use_relative_abundance
+
+After the pipeline finished, we can will have all results in the ``output_taxprofiler`` directory.
