@@ -1,7 +1,7 @@
 nf-core assembly and binning
 ================
 
-We will use nf-core/mag workflow for metagenomics assembly and binning. It starts from reads quality control using ``fastp``, and ``FastQC``. Then:
+We will use nf-core/mag (https://nf-co.re/mag) workflow for metagenomics assembly and binning. It starts from reads quality control using ``fastp``, and ``FastQC``. Then:
 
 - assigns taxonomy to reads using ``Centrifuge`` and/or ``Kraken2``
 - performs assembly using ``MEGAHIT`` and ``SPAdes``, and checks their quality using ``Quast``
