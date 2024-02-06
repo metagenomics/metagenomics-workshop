@@ -37,3 +37,4 @@ Then we can start the mag workflow as follows::
     --skip_gtdbtk \
     --skip_binqc
 
+In the above command we skipped many software due to limited time and resource. After the pipeline finished, we can view the results stored in the ``output_mag`` directory.
