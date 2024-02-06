@@ -14,13 +14,17 @@ We will use nf-core/mag (https://nf-co.re/mag) workflow for metagenomics assembl
 
 -------
 
-Before running the workflow, we need to prepare the compressed fastq files as input::
+- Before running the workflow, we need to prepare the compressed fastq files as input:
 
+.. code-block:: shell
+  
   cd /mnt/WGS-data
   pigz -k read1.fq
   pigz -k read2.fq
 
-Then we can start the mag workflow as follows::
+- Then we can start the mag workflow as follows:
+
+.. code-block:: shell
 
   cd ..
   mkdir -p output_mag
