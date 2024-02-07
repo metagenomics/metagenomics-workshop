@@ -25,6 +25,11 @@ the database and put GTDBtk in our path::
 
   export GTDBTK_DATA_PATH=/mnt/release207_v2
   
+We need to download the mash database, since it takes some time to create::
+
+  cd /mnt/release207_v2
+  wget https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/mg_databases/mash.msh
+
 Next, let's assign taxonomic labels to our binning results using GTDB-TK::
 
   cd /mnt/WGS-data/megahit_out/maxbin
