@@ -11,7 +11,7 @@ See the `CheckM home page <https://ecogenomics.github.io/CheckM/>`_ for more inf
 
 Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
 
-  sudo checkm lineage_wf -t 28 -x fa /mnt/WGS-data/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/WGS-data/megahit_out/metabat/checkm/ > /mnt/WGS-data/megahit_out/metabat/checkm.log
+  sudo checkm lineage_wf -t 28 -x fa /mnt/megahit_out/metabat/final.contigs.fa.metabat-bins-*/ /mnt/megahit_out/metabat/checkm/ > /mnt/megahit_out/metabat/checkm.log
 
 Now, the results can be found in the file ``checkm.log``::
 
