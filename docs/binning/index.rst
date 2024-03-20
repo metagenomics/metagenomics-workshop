@@ -12,3 +12,4 @@ the samples community.
 
    maxbin
    metabat
+   bin_quality
