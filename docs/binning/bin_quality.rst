@@ -9,7 +9,7 @@ Computing completeness and contamination using CheckM
 CheckM provides a set of tools for assessing the quality of genomes recovered from isolates, single cells, or metagenomes. It provides robust estimates of genome completeness and contamination by using collocated sets of genes that are ubiquitous and single-copy within a phylogenetic lineage. Assessment of genome quality can also be examined using plots depicting key genomic characteristics (e.g., GC, coding density) which highlight sequences outside the expected distributions of a typical genome. CheckM also provides tools for identifying genome bins that are likely candidates for merging based on marker set compatibility, similarity in genomic characteristics, and proximity within a reference genome tree.
 See the `CheckM home page <https://ecogenomics.github.io/CheckM/>`_ for more info.
 
-Run checkm on all bins (replace the bin folder name with the correct path from your metabat binning)::
+Run checkm on all bins::
 
   cd /mnt/megahit_out/metabat/
 
