@@ -21,7 +21,7 @@ And the same for the maxbin results::
 
   cd /mnt/megahit_out/maxbin/
 
-  checkm lineage_wf -t 28 -x fasta  checkm_maxbin > ../check_maxbin.log  
+  checkm lineage_wf -t 28 -x fasta . checkm_maxbin > ../check_maxbin.log  
 
 
 Now, the results can be found in the file ``checkm_metabat.log`` and ``checkm_maxbin.log``::
