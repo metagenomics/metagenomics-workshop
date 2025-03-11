@@ -4,6 +4,8 @@ Command Line Introduction: Excercises
 Excercise 1: Basic File Operations
 ----------------------------------
 
+This is a test.
+
 Tasks:
  1. Change to your home directory 
  2. Create a file named ‘test.txt’ (and check if it is there) 
